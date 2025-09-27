@@ -8,24 +8,7 @@
 Atualmente curso **Ciência da Computação (5º período)** e sigo em formação **Full Stack Developer** no **DevClub**, com foco em **Front-End, Back-End, Banco de Dados e UX/UI Design**.  
 Tenho paixão por tecnologia e inovação, com interesse crescente em **Inteligência Artificial Generativa**, que utilizo para acelerar meu aprendizado e explorar novas soluções no desenvolvimento de software.  
 
-Busco unir **design funcional**, **código limpo** e **foco na experiência do usuário** para criar soluções tecnológicas que gerem impacto real.  
-
----
-
-## 💼 Experiência  
-- **Freelancer (2023 – atual)**  
-  Desenvolvimento de projetos web responsivos, landing pages e integrações de APIs REST utilizando **HTML, CSS, JavaScript, React.js, Node.js e TypeScript**.  
-  Utilização de metodologias ágeis (Scrum) e versionamento com **Git/GitHub**.  
-
-- **Supervisor de IA – Cartório do 1° Ofício de Registro de Imóveis (2024 – 2025)**  
-  - Implementação de soluções de IA (Sião Privacy) em conformidade com a **LGPD**.  
-  - Criação de automações e integrações com **n8n**.  
-  - Suporte, supervisão de prazos e padrões de qualidade.  
-
-- **Auxiliar Administrativo – Cartório (2024 – 2025)**  
-  - Digitador e transcritor de matrículas e certidões.  
-  - Cadastro e gestão de banco de dados.  
-  - Organização e arquivamento físico de registros.  
+Busco unir **design funcional**, **código limpo** e **foco na experiência do usuário** para criar soluções tecnológicas que gerem impacto real.
 
 ---
 
