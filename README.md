@@ -1,45 +1,81 @@
-# 👋 Olá, me chamo Pedro Vygotsky  
+# 👨‍💻 Olá, me chamo Pedro Vygotsky  
 
-🎓 Estudante de **Ciência da Computação** e em formação como **Desenvolvedor Full Stack**.  
-💻 Apaixonado por tecnologia, programação e desenvolvimento de soluções criativas.  
-🚀 Buscando constantemente evoluir minhas habilidades e contribuir para projetos que impactem positivamente pessoas e negócios.  
+🎯 *Desenvolvedor Front-End | Full Stack em formação | Explorando IA Generativa*  
 
 ---
 
-## 📊 Estatísticas do GitHub  
+## 📌 Sobre mim  
+Atualmente curso **Ciência da Computação (5º período)** e sigo em formação **Full Stack Developer** no **DevClub**, com foco em **Front-End, Back-End, Banco de Dados e UX/UI Design**.  
+Tenho paixão por tecnologia e inovação, com interesse crescente em **Inteligência Artificial Generativa**, que utilizo para acelerar meu aprendizado e explorar novas soluções no desenvolvimento de software.  
+
+Busco unir **design funcional**, **código limpo** e **foco na experiência do usuário** para criar soluções tecnológicas que gerem impacto real.  
+
+---
+
+## 💼 Experiência  
+- **Freelancer (2023 – atual)**  
+  Desenvolvimento de projetos web responsivos, landing pages e integrações de APIs REST utilizando **HTML, CSS, JavaScript, React.js, Node.js e TypeScript**.  
+  Utilização de metodologias ágeis (Scrum) e versionamento com **Git/GitHub**.  
+
+- **Supervisor de IA – Cartório do 1° Ofício de Registro de Imóveis (2024 – 2025)**  
+  - Implementação de soluções de IA (Sião Privacy) em conformidade com a **LGPD**.  
+  - Criação de automações e integrações com **n8n**.  
+  - Suporte, supervisão de prazos e padrões de qualidade.  
+
+- **Auxiliar Administrativo – Cartório (2024 – 2025)**  
+  - Digitador e transcritor de matrículas e certidões.  
+  - Cadastro e gestão de banco de dados.  
+  - Organização e arquivamento físico de registros.  
+
+---
+
+## 🎓 Formação  
+- **Ciência da Computação** – Estácio (2023 – 2027)  
+- **Formação Full-Stack** – DevClub (2024 – 2025)  
+- **Formação Back-End** – Alura (2025)  
+- **Técnico em Desenvolvimento de Sistemas** – ETE Senador Wilson Campos (2016 – 2018)  
+
+---
+
+## 🛠️ Habilidades Técnicas  
+
+<div style="display: inline_block"><br>
+  <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+  <img align="center" alt="JS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  <img align="center" alt="TS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
+  <img align="center" alt="React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+  <img align="center" alt="Node" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg">
+  <img align="center" alt="Angular" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg">
+  <img align="center" alt="Figma" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg">
+  <img align="center" alt="Git" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg">
+  <img align="center" alt="Github" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg">
+</div>
+
+---
+
+## 📊 Estatísticas  
 
 <picture>
-  <source
-    srcset="https://github-readme-stats.vercel.app/api?username=pedrovyg&show_icons=true&theme=dark"
-    media="(prefers-color-scheme: dark)"
-  />
-  <source
-    srcset="https://github-readme-stats.vercel.app/api?username=pedrovyg&show_icons=true"
-    media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
-  />
+  <source srcset="https://github-readme-stats.vercel.app/api?username=pedrovyg&show_icons=true&theme=dark" media="(prefers-color-scheme: dark)" />
+  <source srcset="https://github-readme-stats.vercel.app/api?username=pedrovyg&show_icons=true" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
   <img src="https://github-readme-stats.vercel.app/api?username=pedrovyg&show_icons=true" />
 </picture>
 
 ---
 
-## 🛠️ Tecnologias e Ferramentas  
-
-<div style="display: inline_block"><br>
-  <img align="center" alt="Pedro-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-  <img align="center" alt="Pedro-Ts" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
-  <img align="center" alt="Pedro-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
-  <img align="center" alt="Pedro-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-  <img align="center" alt="Pedro-React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
-  <img align="center" alt="Pedro-Node" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg">
-</div>
+## 🚀 Projetos em Destaque  
+- 🔗 [Portfólio Pessoal](https://github.com/pedrovyg)  
+- 💡 Landing Pages e Sistemas Web com foco em **UX/UI e responsividade**  
+- 🤖 Automação com **n8n** aplicada a fluxos administrativos e de IA  
 
 ---
 
-## 📫 Contato  
-
-🌐 [LinkedIn](https://www.linkedin.com/in/pedrovygotsky)  
+## 📬 Contato  
 📧 E-mail: **pedrovygotsky010@gmail.com**  
+🔗 LinkedIn: [linkedin.com/in/pedrovygotsky](https://www.linkedin.com/in/pedrovygotsky)  
+💻 GitHub: [github.com/pedrovyg](https://github.com/pedrovyg)  
 
 ---
+✨ Sempre aberto a novas oportunidades, colaborações e projetos que envolvam **desenvolvimento, inovação e Inteligência Artificial**.
 
-✨ Sempre aberto a aprender coisas novas, trocar experiências e colaborar em projetos!
