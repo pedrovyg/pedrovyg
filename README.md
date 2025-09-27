@@ -1,4 +1,4 @@
-# 👋 Olá, eu sou o Pedro Vygotsky  
+# 👋 Olá, me chamo Pedro Vygotsky  
 
 🎓 Estudante de **Ciência da Computação** e em formação como **Desenvolvedor Full Stack**.  
 💻 Apaixonado por tecnologia, programação e desenvolvimento de soluções criativas.  
