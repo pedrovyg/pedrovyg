@@ -47,9 +47,6 @@ Busco unir **design funcional**, **código limpo** e **foco na experiência do u
 - 💡 Landing Pages e Sistemas Web com foco em **UX/UI e responsividade**  
 - 🤖 Automação com **n8n** aplicada a fluxos administrativos e de IA  
 
-
----
-
 ## 📬 Contato  
 
 <h2 align="center">Entre em contato comigo</h2>
