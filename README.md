@@ -2,7 +2,6 @@
 
 🎯 *Desenvolvedor Front-End | Full Stack em formação | Explorando IA Generativa*  
 
----
 
 ## 📌 Sobre mim  
 Atualmente curso **Ciência da Computação (5º período)** e sigo em formação **Full Stack Developer** no **DevClub**, com foco em **Front-End, Back-End, Banco de Dados e UX/UI Design**.  
@@ -10,7 +9,6 @@ Tenho paixão por tecnologia e inovação, com interesse crescente em **Intelig�
 
 Busco unir **design funcional**, **código limpo** e **foco na experiência do usuário** para criar soluções tecnológicas que gerem impacto real.
 
----
 
 ## 🎓 Formação  
 - **Ciência da Computação** – Estácio (2023 – 2027)  
@@ -18,7 +16,6 @@ Busco unir **design funcional**, **código limpo** e **foco na experiência do u
 - **Formação Back-End** – Alura (2025)  
 - **Técnico em Desenvolvimento de Sistemas** – ETE Senador Wilson Campos (2016 – 2018)  
 
----
 
 ## 🛠️ Habilidades Técnicas  
 
@@ -35,7 +32,6 @@ Busco unir **design funcional**, **código limpo** e **foco na experiência do u
   <img align="center" alt="Github" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg">
 </div>
 
----
 
 ## 📊 Estatísticas  
 
@@ -45,20 +41,17 @@ Busco unir **design funcional**, **código limpo** e **foco na experiência do u
   <img src="https://github-readme-stats.vercel.app/api?username=pedrovyg&show_icons=true" />
 </picture>
 
----
 
 ## 🚀 Projetos em Destaque  
 - 🔗 [Portfólio Pessoal](https://github.com/pedrovyg)  
 - 💡 Landing Pages e Sistemas Web com foco em **UX/UI e responsividade**  
 - 🤖 Automação com **n8n** aplicada a fluxos administrativos e de IA  
 
----
 
 ## 📬 Contato  
 📧 E-mail: **pedrovygotsky010@gmail.com**  
 🔗 LinkedIn: [linkedin.com/in/pedrovygotsky](https://www.linkedin.com/in/pedrovygotsky)  
 💻 GitHub: [github.com/pedrovyg](https://github.com/pedrovyg)  
 
----
 ✨ Sempre aberto a novas oportunidades, colaborações e projetos que envolvam **desenvolvimento, inovação e Inteligência Artificial**.
 
