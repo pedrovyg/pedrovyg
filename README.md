@@ -48,22 +48,5 @@ Busco unir **design funcional**, **código limpo** e **foco na experiência do u
 </picture>
 
 
-## 🚀 Projetos em Destaque  
-- 🔗 [Portfólio Pessoal](https://github.com/pedrovyg)  
-- 💡 Landing Pages e Sistemas Web com foco em **UX/UI e responsividade**  
-- 🤖 Automação com **n8n** aplicada a fluxos administrativos e de IA  
-
-## 📬 Contato  
-
-<p align="center">
-  <a href="https://www.linkedin.com/in/pedrovygotsky">
-    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0A66C2&logoColor=white&labelColor=&style=for-the-badge" height="32" alt="linkedin logo" />
-  </a>
-  <a href="mailto:pedrovygotsky010@gmail.com">
-    <img src="https://img.shields.io/static/v1?message=Email&logo=gmail&label=&color=EA4335&logoColor=white&labelColor=&style=for-the-badge" height="32" alt="email logo" />
-  </a>
-</p>
-
-
 ✨ Sempre aberto a novas oportunidades, colaborações e projetos que envolvam **desenvolvimento, inovação e Inteligência Artificial**.
 
