@@ -3,12 +3,9 @@
 # Pedro Vygotsky  
 
 🎯 *Desenvolvedor Front-End | Full Stack em formação | Explorando IA Generativa*  
-<p align="center">
+<p align="left">
   <a href="https://www.linkedin.com/in/pedrovygotsky">
     <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0A66C2&logoColor=white&labelColor=&style=for-the-badge" height="32" alt="linkedin logo" />
-  </a>
-  <a href="mailto:pedrovygotsky010@gmail.com">
-    <img src="https://img.shields.io/static/v1?message=Email&logo=gmail&label=&color=EA4335&logoColor=white&labelColor=&style=for-the-badge" height="32" alt="email logo" />
   </a>
 </p>
 
