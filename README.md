@@ -1,4 +1,4 @@
-<img src="<img src="https://raw.githubusercontent.com/pedrovyg/pedrovyg/main/images/notebook-verde.png" alt="notebook verde cartoon" width="400px" align="right"/>
+<img src="https://raw.githubusercontent.com/pedrovyg/pedrovyg/main/images/notebook-verde.png" alt="notebook verde cartoon" width="400px" align="right"/>
 
 # Pedro Vygotsky  
 
