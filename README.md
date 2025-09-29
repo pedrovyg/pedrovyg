@@ -1,4 +1,6 @@
-# 👨‍💻 Olá, me chamo Pedro Vygotsky  
+<img src="https://drive.google.com/file/d/1fEaiFHveUC2PYBqYDq9PPt_PQvUnBYGF/view?usp=sharing" alt="notebook verde cartoon" width="400px" align="right"/>
+
+# Pedro Vygotsky  
 
 🎯 *Desenvolvedor Front-End | Full Stack em formação | Explorando IA Generativa*  
 
