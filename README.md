@@ -47,10 +47,6 @@ Busco unir **design funcional**, **código limpo** e **foco na experiência do u
   <img src="https://github-readme-stats.vercel.app/api?username=pedrovyg&show_icons=true" />
 </picture>
 
-<br clear="both">
-
-<img src="https://raw.githubusercontent.com/maurodesouza/maurodesouza/output/snake.svg" alt="Snake animation" />
-
 
 ✨ Sempre aberto a novas oportunidades, colaborações e projetos que envolvam **desenvolvimento, inovação e Inteligência Artificial**.
 
