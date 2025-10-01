@@ -16,12 +16,6 @@ Tenho paixão por tecnologia e inovação, com interesse crescente em **Intelig�
 Busco unir **design funcional**, **código limpo** e **foco na experiência do usuário** para criar soluções tecnológicas que gerem impacto real.
 
 
-## 🎓 Formação  
-- **Ciência da Computação** – Estácio (2023 – 2027)  
-- **Formação Full-Stack** – DevClub (2024 – 2025)  
-- **Formação Back-End** – Alura (2025)  
-- **Técnico em Desenvolvimento de Sistemas** – ETE Senador Wilson Campos (2016 – 2018)  
-
 
 ## 🛠️ Habilidades Técnicas  
 
