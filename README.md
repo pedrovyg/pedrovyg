@@ -11,16 +11,6 @@ Atualmente estudo **Ciência da Computação** e me aprofundo em **IA Generativa
   </a>
 </p>
 
-## 📌 Sobre mim  
-Atualmente curso **Ciência da Computação (5º período)** e sigo em formação **Full Stack Developer** no **DevClub**, com foco em **Front-End, Back-End, Banco de Dados e UX/UI Design**.  
-Tenho paixão por tecnologia e inovação, com interesse crescente em **Inteligência Artificial Generativa**, que utilizo para acelerar meu aprendizado e explorar novas soluções no desenvolvimento de software.  
-
-Busco unir **design funcional**, **código limpo** e **foco na experiência do usuário** para criar soluções tecnológicas que gerem impacto real.
-
-
-
-## 🛠️ Habilidades Técnicas  
-
 <div style="display: inline_block"><br>
   <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
   <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
