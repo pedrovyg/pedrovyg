@@ -1,8 +1,10 @@
 <img src="https://raw.githubusercontent.com/pedrovyg/notebook-verde.png/main/notebook-verde.png" alt="notebook verde cartoon" width="400px" align="right"/>
 
-# Pedro Vygotsky  
+### Olá, eu sou o Pedro Vygotsky <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30">
 
-🎯 *Desenvolvedor Front-End | Full Stack em formação | Explorando IA Generativa*  
+Sou **Desenvolvedor Front-End** e **Full Stack em formação**, apaixonado por tecnologia, inovação e pela criação de soluções que unem **design funcional** e **código limpo**. <br>
+Atualmente estudo **Ciência da Computação** e me aprofundo em **IA Generativa** para acelerar meus aprendizados e desenvolver projetos mais inteligentes e eficientes. 🚀
+ 
 <p align="left">
   <a href="https://www.linkedin.com/in/pedrovygotsky">
     <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0A66C2&logoColor=white&labelColor=&style=for-the-badge" height="32" alt="linkedin logo" />
