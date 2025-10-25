@@ -14,24 +14,16 @@ Atualmente estudo **Ciência da Computação** e me aprofundo em **IA Generativa
 ## 🧰 Ferramentas & Tecnologias
 
 <div align="left" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px;">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="45" alt="HTML5" title="HTML5" style="transition: transform 0.2s, filter 0.2s;"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="45" alt="CSS3" title="CSS3" style="transition: transform 0.2s, filter 0.2s;"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" height="45" alt="JavaScript" title="JavaScript" style="transition: transform 0.2s, filter 0.2s;"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" height="45" alt="TypeScript" title="TypeScript" style="transition: transform 0.2s, filter 0.2s;"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="45" alt="React" title="React" style="transition: transform 0.2s, filter 0.2s;"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="45" alt="Node.js" title="Node.js" style="transition: transform 0.2s, filter 0.2s;"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="45" alt="Figma" title="Figma" style="transition: transform 0.2s, filter 0.2s;"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="45" alt="Git" title="Git" style="transition: transform 0.2s, filter 0.2s;"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="45" alt="GitHub" title="GitHub" style="transition: transform 0.2s, filter 0.2s;"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="45" alt="HTML5" title="HTML5" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="45" alt="CSS3" title="CSS3" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" height="45" alt="JavaScript" title="JavaScript" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" height="45" alt="TypeScript" title="TypeScript" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="45" alt="React" title="React" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="45" alt="Node.js" title="Node.js" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="45" alt="Figma" title="Figma" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="45" alt="Git" title="Git" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="45" alt="GitHub" title="GitHub" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
 </div>
-
-<style>
-  div img:hover {
-    transform: scale(1.15);
-    filter: drop-shadow(0 0 6px #00FF7F);
-  }
-</style>
-
 
 ##
 
