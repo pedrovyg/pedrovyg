@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/pedrovyg/notebook-verde.png/main/notebook-verde.png" alt="notebook verde cartoon" width="400px" align="right"/>
+<img src="https://cdn.jsdelivr.net/gh/pedrovyg/notebook-verde.png/notebook-verde.png" alt="notebook verde cartoon" width="400px" align="right"/>
 
 ### Hi, I'm Pedro <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30">
 
