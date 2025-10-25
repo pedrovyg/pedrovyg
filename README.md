@@ -11,6 +11,8 @@ Atualmente estudo **Ciência da Computação** e me aprofundo em **IA Generativa
   </a>
 </p>
 
+##
+
 <div align="left" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px;">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="45" alt="HTML5" title="HTML5" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="45" alt="CSS3" title="CSS3" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
