@@ -1,4 +1,4 @@
-<img src="https://cdn.jsdelivr.net/gh/pedrovyg/notebook-verde.png/notebook-verde.png" alt="notebook verde cartoon" width="300px" align="right"/>
+<img src="https://cdn.jsdelivr.net/gh/pedrovyg/notebook-verde.png/notebook-verde.png" alt="notebook verde cartoon" width="350px" align="right"/>
 
 ### Hi, I'm Pedro <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30">
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=pedrovyg&color=green" alt="Profile views" /> </p>
