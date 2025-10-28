@@ -5,7 +5,7 @@
 
 Sou **Desenvolvedor Front-End** e **Full Stack em formação**, apaixonado por tecnologia, inovação e pela criação de soluções que unem **design funcional** e **código limpo**. 
 <br>
-Atualmente estudo **Ciência da Computação** e me aprofundo em **IA Generativa** para acelerar meus aprendizados e desenvolver projetos mais inteligentes e eficientes. 🚀
+Atualmente estudo **Ciência da Computação** e me aprofundo em **IA Generativa** para acelerar meus aprendizados e desenvolver projetos mais inteligentes e eficientes.
  
 <!-- Botões personalizados com links -->
 <div align="left">
