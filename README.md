@@ -28,26 +28,9 @@ Atualmente estudo **Ciência da Computação** e me aprofundo em **IA Generativa
 
 ##
 
-<!-- Botões personalizados com links -->
-<a href="https://www.linkedin.com/in/pedrovygotsky" target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-</a>
-
-<a href="https://discord.com/users/276544649148235776" target="_blank">
-  <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"/>
-</a>
-
-<a href="https://www.instagram.com/pedrovygotsky" target="_blank">
-  <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
-</a>
-
-<a href="https://open.spotify.com/user/pedrovygotsky" target="_blank">
-  <img src="https://img.shields.io/badge/Spotify-1DB954?style=for-the-badge&logo=spotify&logoColor=white" alt="Spotify"/>
-</a>
-
-<a href="https://github.com/pedrovyg" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
-</a>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pedrovygotsky)
+[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/users/276544649148235776)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/pedrovyg/)
 
 <details>
   <summary>Github Stats ⚡</summary>
