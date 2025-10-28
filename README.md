@@ -27,27 +27,6 @@ Atualmente estudo **Ciência da Computação** e me aprofundo em **IA Generativa
 
 </div>
 
-
-<div align="left">
-
-  <a href="https://www.linkedin.com/in/pedrovygotsky" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=social&logo=linkedin" alt="LinkedIn"/>
-  </a>
-
-  <a href="https://discord.com/users/276544649148235776" target="_blank">
-    <img src="https://img.shields.io/badge/Discord-Join-5865F2?style=social&logo=discord" alt="Discord"/>
-  </a>
-
-  <a href="https://www.instagram.com/pedrovygotsky" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-Follow-E4405F?style=social&logo=instagram" alt="Instagram"/>
-  </a>
-
-  <a href="https://open.spotify.com/user/pedrovygotsky" target="_blank">
-    <img src="https://img.shields.io/badge/Spotify-Listen-1DB954?style=social&logo=spotify" alt="Spotify"/>
-  </a>
-
-</div>
-
 ##
 
 <div align="left" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px;">
