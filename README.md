@@ -19,7 +19,7 @@ Atualmente estudo **Ciência da Computação** e me aprofundo em **IA Generativa
   <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
 </a>
 
-<a href="https://open.spotify.com/user/pedrovygotsky" target="_blank">
+<a href="https://open.spotify.com/user/3133x6sj6gqlej6cnrq2ub4g27ru" target="_blank">
   <img src="https://img.shields.io/badge/Spotify-1DB954?style=for-the-badge&logo=spotify&logoColor=white" alt="Spotify"/>
 </a>
 
