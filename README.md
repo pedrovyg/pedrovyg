@@ -6,11 +6,22 @@
 Sou **Desenvolvedor Front-End** e **Full Stack em formação**, apaixonado por tecnologia, inovação e pela criação de soluções que unem **design funcional** e **código limpo**. <br>
 Atualmente estudo **Ciência da Computação** e me aprofundo em **IA Generativa** para acelerar meus aprendizados e desenvolver projetos mais inteligentes e eficientes. 🚀
  
-<p align="left">
-  <a href="https://www.linkedin.com/in/pedrovygotsky">
-    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0A66C2&logoColor=white&labelColor=&style=for-the-badge" height="32" alt="linkedin logo" />
-  </a>
-</p>
+<!-- Botões personalizados com links -->
+<a href="https://www.linkedin.com/in/pedrovygotsky" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+</a>
+
+<a href="https://discord.com/users/276544649148235776" target="_blank">
+  <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"/>
+</a>
+
+<a href="https://www.instagram.com/pedrovygotsky" target="_blank">
+  <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
+</a>
+
+<a href="https://open.spotify.com/user/pedrovygotsky" target="_blank">
+  <img src="https://img.shields.io/badge/Spotify-1DB954?style=for-the-badge&logo=spotify&logoColor=white" alt="Spotify"/>
+</a>
 
 ##
 
@@ -27,10 +38,6 @@ Atualmente estudo **Ciência da Computação** e me aprofundo em **IA Generativa
 </div>
 
 ##
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pedrovygotsky)
-[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/users/276544649148235776)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/pedrovyg/)
 
 <details>
   <summary>Github Stats ⚡</summary>
