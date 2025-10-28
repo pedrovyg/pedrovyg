@@ -41,8 +41,8 @@ Atualmente estudo **Ciência da Computação** e me aprofundo em **IA Generativa
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="45" alt="GitHub" title="GitHub" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
 </div>
 
-
-
+<br>
+ 
 <details>
   <summary>Github Stats</summary>
 
