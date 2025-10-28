@@ -29,17 +29,7 @@ Atualmente estudo **Ciência da Computação** e me aprofundo em **IA Generativa
 
 ##
 
-<div align="left" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px;">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="45" alt="HTML5" title="HTML5" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="45" alt="CSS3" title="CSS3" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" height="45" alt="JavaScript" title="JavaScript" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" height="45" alt="TypeScript" title="TypeScript" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="45" alt="React" title="React" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="45" alt="Node.js" title="Node.js" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="45" alt="Figma" title="Figma" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="45" alt="Git" title="Git" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="45" alt="GitHub" title="GitHub" style="filter: drop-shadow(0 0 3px #00FF7F); transform: scale(1.05);"/>
-</div>
+[![My Skills](https://skillicons.dev/icons?i=js,ts,html,css,react,nodejs,figma,java,git,github,vscode,idea&theme=dark)](https://skillicons.dev)
 
 <br>
  
