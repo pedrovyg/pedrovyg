@@ -1,8 +1,5 @@
 <img src="https://cdn.jsdelivr.net/gh/pedrovyg/notebook-verde.png/notebook-verde.png" alt="notebook verde cartoon" width="350px" align="right"/>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=25F70E&width=435&lines=The+five+boxing+wizards+jump+quickly)](https://git.io/typing-svg)
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=25F70E&width=435&lines=The+five+boxing+wizards+jump+quickly" alt="Typing SVG" /></a>
-
 ### Hi, I'm Pedro <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30">
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=pedrovyg&color=green" alt="Profile views" /> </p>
 
