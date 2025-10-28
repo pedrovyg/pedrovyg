@@ -7,45 +7,25 @@ Sou **Desenvolvedor Front-End** e **Full Stack em formação**, apaixonado por t
 Atualmente estudo **Ciência da Computação** e me aprofundo em **IA Generativa** para acelerar meus aprendizados e desenvolver projetos mais inteligentes e eficientes. 🚀
  
 <!-- Botões personalizados com links -->
-<a href="https://www.linkedin.com/in/pedrovygotsky" target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-</a>
-
-<a href="https://discord.com/users/418561090532671500" target="_blank">
-  <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"/>
-</a>
-
-<a href="https://www.instagram.com/pedrovyg" target="_blank">
-  <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
-</a>
-
-<a href="https://open.spotify.com/user/3133x6sj6gqlej6cnrq2ub4g27ru" target="_blank">
-  <img src="https://img.shields.io/badge/Spotify-1DB954?style=for-the-badge&logo=spotify&logoColor=white" alt="Spotify"/>
-</a>
-
-##
-
 <div align="left">
 
   <a href="https://www.linkedin.com/in/pedrovygotsky" target="_blank">
-    <img src="https://img.shields.io/badge/connect_on-LinkedIn-0D1117?style=flat-square&logo=linkedin&logoColor=0A66C2&labelColor=0D1117" alt="LinkedIn"/>
+    <img src="https://img.shields.io/badge/connect_on-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
 
   <a href="https://discord.com/users/276544649148235776" target="_blank">
-    <img src="https://img.shields.io/badge/join_me_on-Discord-0D1117?style=flat-square&logo=discord&logoColor=5865F2&labelColor=0D1117" alt="Discord"/>
+    <img src="https://img.shields.io/badge/join_me_on-Discord-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord"/>
   </a>
 
   <a href="https://www.instagram.com/pedrovygotsky" target="_blank">
-    <img src="https://img.shields.io/badge/follow_on-Instagram-0D1117?style=flat-square&logo=instagram&logoColor=E4405F&labelColor=0D1117" alt="Instagram"/>
+    <img src="https://img.shields.io/badge/follow_on-Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white" alt="Instagram"/>
   </a>
 
   <a href="https://open.spotify.com/user/pedrovygotsky" target="_blank">
-    <img src="https://img.shields.io/badge/listening_on-Spotify-0D1117?style=flat-square&logo=spotify&logoColor=1DB954&labelColor=0D1117" alt="Spotify"/>
+    <img src="https://img.shields.io/badge/listening_on-Spotify-1DB954?style=flat-square&logo=spotify&logoColor=white" alt="Spotify"/>
   </a>
 
 </div>
-
-
 
 ##
 
