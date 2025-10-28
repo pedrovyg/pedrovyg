@@ -44,7 +44,7 @@ Atualmente estudo **Ciência da Computação** e me aprofundo em **IA Generativa
 ##
 
 <details>
-  <summary>Github Stats ⚡</summary>
+  <summary>Github Stats</summary>
 
   <a href="#">
     <img 
