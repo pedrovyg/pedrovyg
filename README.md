@@ -28,22 +28,23 @@ Atualmente estudo **Ciência da Computação** e me aprofundo em **IA Generativa
 <div align="left">
 
   <a href="https://www.linkedin.com/in/pedrovygotsky" target="_blank">
-    <img src="https://img.shields.io/badge/connect_on-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+    <img src="https://img.shields.io/badge/connect_on-LinkedIn-0D1117?style=flat-square&logo=linkedin&logoColor=0A66C2&labelColor=0D1117" alt="LinkedIn"/>
   </a>
 
   <a href="https://discord.com/users/276544649148235776" target="_blank">
-    <img src="https://img.shields.io/badge/join_me_on-Discord-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord"/>
+    <img src="https://img.shields.io/badge/join_me_on-Discord-0D1117?style=flat-square&logo=discord&logoColor=5865F2&labelColor=0D1117" alt="Discord"/>
   </a>
 
   <a href="https://www.instagram.com/pedrovygotsky" target="_blank">
-    <img src="https://img.shields.io/badge/follow_on-Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white" alt="Instagram"/>
+    <img src="https://img.shields.io/badge/follow_on-Instagram-0D1117?style=flat-square&logo=instagram&logoColor=E4405F&labelColor=0D1117" alt="Instagram"/>
   </a>
 
   <a href="https://open.spotify.com/user/pedrovygotsky" target="_blank">
-    <img src="https://img.shields.io/badge/listening_on-Spotify-1DB954?style=flat-square&logo=spotify&logoColor=white" alt="Spotify"/>
+    <img src="https://img.shields.io/badge/listening_on-Spotify-0D1117?style=flat-square&logo=spotify&logoColor=1DB954&labelColor=0D1117" alt="Spotify"/>
   </a>
 
 </div>
+
 
 
 ##
