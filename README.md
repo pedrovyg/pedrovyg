@@ -13,15 +13,15 @@ Atualmente estudo **Ciência da Computação** e me aprofundo em **IA Generativa
     <img src="https://img.shields.io/badge/connect_on-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
 
-  <a href="https://discord.com/users/276544649148235776" target="_blank">
+  <a href="https://discord.com/users/418561090532671500" target="_blank">
     <img src="https://img.shields.io/badge/join_me_on-Discord-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord"/>
   </a>
 
-  <a href="https://www.instagram.com/pedrovygotsky" target="_blank">
+  <a href="https://www.instagram.com/pedrovyg" target="_blank">
     <img src="https://img.shields.io/badge/follow_on-Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white" alt="Instagram"/>
   </a>
 
-  <a href="https://open.spotify.com/user/pedrovygotsky" target="_blank">
+  <a href="https://open.spotify.com/user/3133x6sj6gqlej6cnrq2ub4g27ru" target="_blank">
     <img src="https://img.shields.io/badge/listening_on-Spotify-1DB954?style=flat-square&logo=spotify&logoColor=white" alt="Spotify"/>
   </a>
 
