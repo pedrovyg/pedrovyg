@@ -51,20 +51,12 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 
   <br>
 
-  <a href="#">
-    <img 
-      src="https://github-readme-stats.vercel.app/api?username=pedrovyg&theme=dark&show_icons=true&count_private=true&hide_border=true&rank_icon=github" 
-      alt="Pedro Vygotsky GitHub Stats" 
-      height="180em"
-    />
-  </a>
+  <div align="left">
 
-  <a href="#">
-    <img 
-      src="https://github-readme-stats.vercel.app/api/top-langs/?username=pedrovyg&layout=compact&theme=dark&count_private=true&hide_border=true" 
-      alt="Pedro Vygotsky Top Languages" 
-      height="180em"
-    />
-  </a>
+[![Pedro's GitHub Stats](https://github-readme-stats.vercel.app/api?username=pedrovyg\&show_icons=true\&theme=github_dark\&hide_border=true\&include_all_commits=true)](https://github.com/pedrovyg)
+
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=pedrovyg\&layout=compact\&theme=github_dark\&hide_border=true\&langs_count=8)](https://github.com/pedrovyg)
+
+  </div>
 
 </details>
