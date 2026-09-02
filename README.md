@@ -1,3 +1,12 @@
+<a href="https://github.com/pedrovyg">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/pedrovyg/pedrovyg/main/profile/neofetch-dark.svg">
+<img src="https://raw.githubusercontent.com/pedrovyg/pedrovyg/main/profile/neofetch-light.svg" alt="Pedro Vygotsky Neofetch GitHub profile" width="100%">
+</picture>
+</a>
+
+<br>
+
 <img src="https://cdn.jsdelivr.net/gh/pedrovyg/notebook-verde.png/notebook-verde.png" alt="notebook verde cartoon" width="350px" align="right"/>
 
 ### Hi, I'm Pedro <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30">

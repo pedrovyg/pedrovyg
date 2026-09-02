@@ -1,0 +1,42 @@
+name: Update Neofetch Profile
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "20 4 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: neofetch-profile-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate light and dark cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/update_neofetch.py
+
+      - name: Commit updated cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/neofetch-dark.svg profile/neofetch-light.svg
+          if git diff --cached --quiet; then
+            echo "No Neofetch changes detected."
+            exit 0
+          fi
+          git commit -m "chore: update Neofetch profile"
+          git push
