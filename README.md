@@ -53,9 +53,17 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 
   <div align="left">
 
-<img src="./profile/stats.svg" alt="Pedro Vygotsky GitHub Stats" />
+    <img
+      src="./profile/stats.svg"
+      alt="Pedro Vygotsky GitHub Stats"
+      height="180"
+    />
 
-<img src="./profile/top-langs.svg" alt="Pedro Vygotsky Top Languages" />
+    <img
+      src="./profile/top-langs.svg"
+      alt="Pedro Vygotsky Top Languages"
+      height="180"
+    />
 
   </div>
 
