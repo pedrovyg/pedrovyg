@@ -53,9 +53,9 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 
   <div align="left">
 
-[![Pedro's GitHub Stats](https://github-readme-stats.vercel.app/api?username=pedrovyg\&show_icons=true\&theme=github_dark\&hide_border=true\&include_all_commits=true)](https://github.com/pedrovyg)
+<img src="./profile/stats.svg" alt="Pedro Vygotsky GitHub Stats" />
 
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=pedrovyg\&layout=compact\&theme=github_dark\&hide_border=true\&langs_count=8)](https://github.com/pedrovyg)
+<img src="./profile/top-langs.svg" alt="Pedro Vygotsky Top Languages" />
 
   </div>
 
