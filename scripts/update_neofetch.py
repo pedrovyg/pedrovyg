@@ -16,33 +16,11 @@ BIRTHDAY = dt.date(2001, 10, 5)
 OUTPUT_DIR = Path("profile")
 CARD_WIDTH = 850
 INFO_X = 335
-ASCII_ART = [
-    "                .                 ",
-    "          .-=+*###*+-:            ",
-    "        .+##%##%%%%%%#*+:         ",
-    "       -#%#%######%####%#+        ",
-    "      =%#%%%%####%%%%%%%%%*.      ",
-    "     -%%%%%#%%%%#*+==**%%#%+      ",
-    "     *####*-:---.   ...=#%#*      ",
-    "    .#%#+=-..        ...=%%+      ",
-    "     *%#-..          ..:.=%=      ",
-    "     -%=-====-:  .=+**++=:*-.     ",
-    "     .*=##**###- -****++-:=-=     ",
-    "    -=*=-+**=-== .::-=-: .=-.     ",
-    "    .=*=..::. :- ..      :-..     ",
-    "     :+=-.    ::  ..    .--..     ",
-    "     .-+=:.   -+=-=:    .--       ",
-    "       :+=..  .-:... ...:-.       ",
-    "        -+-..-=-::--=:..:-        ",
-    "        .=+-::==----:..-==-       ",
-    "         .*+=::--::...-*=:**=-:   ",
-    "         :*##=:.   .:=*=..-#%##*=:",
-    "       :+%+=*#*+++**#+:  .=###**+-",
-    "    .-=#%#+--+####*+=:   :####**+-",
-    " :-+#%#####=.:=+==-:..  :*%###**+:",
-    ":+**######%*-..:-:... .=#%####**+.",
-    ".-=+****#####+=:--::-+###**#**++- ",
-]
+ASCII_ART_PATH = Path("profile/ascii-art.txt")
+ASCII_X = 5
+ASCII_TOP = 44
+ASCII_FONT_SIZE = 3
+ASCII_LINE_HEIGHT = 3.6
 
 
 def github_request(url: str, token: str, payload: dict | None = None) -> dict:
@@ -141,9 +119,10 @@ def render(theme: str, stats: dict[str, int]) -> str:
         "muted": "#6e7681" if dark else "#57606a",
         "border": "#30363d" if dark else "#d0d7de",
     }
+    ascii_lines = ASCII_ART_PATH.read_text(encoding="utf-8").splitlines()
     ascii_spans = "\n".join(
-        f'<tspan x="15" y="{30 + i * 20}">{html.escape(line)}</tspan>'
-        for i, line in enumerate(ASCII_ART)
+        f'<tspan x="{ASCII_X}" y="{ASCII_TOP + i * ASCII_LINE_HEIGHT:.1f}">{html.escape(line)}</tspan>'
+        for i, line in enumerate(ascii_lines)
     )
     today = dt.datetime.now(dt.timezone.utc).date()
     lines = [
@@ -173,11 +152,12 @@ def render(theme: str, stats: dict[str, int]) -> str:
 <svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="530" viewBox="0 0 {CARD_WIDTH} 530" role="img" aria-label="Pedro Vygotsky Neofetch profile">
 <style>
 text {{ font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }}
+.ascii {{ font-size: {ASCII_FONT_SIZE}px; }}
 .text {{ fill: {colors["text"]}; }} .key {{ fill: {colors["key"]}; }}
 .value {{ fill: {colors["value"]}; }} .muted {{ fill: {colors["muted"]}; }}
 </style>
 <rect x="0.5" y="0.5" width="{CARD_WIDTH - 1}" height="529" rx="15" fill="{colors["bg"]}" stroke="{colors["border"]}"/>
-<text class="text">{ascii_spans}</text>
+<text class="text ascii">{ascii_spans}</text>
 <text>{''.join(lines)}</text>
 </svg>
 '''
