@@ -14,32 +14,34 @@ from urllib.request import Request, urlopen
 USERNAME = "pedrovyg"
 BIRTHDAY = dt.date(2001, 10, 5)
 OUTPUT_DIR = Path("profile")
+CARD_WIDTH = 850
+INFO_X = 335
 ASCII_ART = [
-    "                   .                    ",
-    "            .-=+**###*+=-.              ",
-    "          :+##%%#%%%%%#%##*+-           ",
-    "        :*%%#%########%####%%*-         ",
-    "       -%##%%%%#####%%%%%%%%%%#+        ",
-    "      -#%%%%%##%%%%#*+==+**%%%#%=       ",
-    "      *#####*-::---.    ...=*%##*       ",
-    "     :###*==:..         ....-*%#+       ",
-    "      *%%+:..           ...:.:*%-       ",
-    "      -%+-=====-:.  .-+**+++=:-#:.      ",
-    "      .#=+#***###*: :+****++=:-+:=.     ",
-    "     ==*+==***+--+- .:.:-=--. :+:.      ",
-    "     .=*+:..::. .--  .       .--..      ",
-    "      :++-:     .-:  ..     ..=:..      ",
-    "      .-++-..   :=+=-=-     .:=:        ",
-    "        .=+-..  .:-:... .....--.        ",
-    "         .+=-..:=--:::-=-:..:--         ",
-    "          :+=-:.-+=-----...:=+=:        ",
-    "           -*+=:::--::....-++:=#*=-:.   ",
-    "           -*##+-.     .:+*=..:=####*+=:",
-    "        .-*%==*##*++++***+:  ..*###***+-",
-    "     .-=*%%#+--=*####**+-.    =####**++-",
-    " .-=*#######*=:.-=+==-::..  .=%#####**+:",
-    ":+**#########*-:..--:...  .-*%#####**+=.",
-    ".-=++**#**#####*+-:---:--+####**#***+=- ",
+    "                .                 ",
+    "          .-=+*###*+-:            ",
+    "        .+##%##%%%%%%#*+:         ",
+    "       -#%#%######%####%#+        ",
+    "      =%#%%%%####%%%%%%%%%*.      ",
+    "     -%%%%%#%%%%#*+==**%%#%+      ",
+    "     *####*-:---.   ...=#%#*      ",
+    "    .#%#+=-..        ...=%%+      ",
+    "     *%#-..          ..:.=%=      ",
+    "     -%=-====-:  .=+**++=:*-.     ",
+    "     .*=##**###- -****++-:=-=     ",
+    "    -=*=-+**=-== .::-=-: .=-.     ",
+    "    .=*=..::. :- ..      :-..     ",
+    "     :+=-.    ::  ..    .--..     ",
+    "     .-+=:.   -+=-=:    .--       ",
+    "       :+=..  .-:... ...:-.       ",
+    "        -+-..-=-::--=:..:-        ",
+    "        .=+-::==----:..-==-       ",
+    "         .*+=::--::...-*=:**=-:   ",
+    "         :*##=:.   .:=*=..-#%##*=:",
+    "       :+%+=*#*+++**#+:  .=###**+-",
+    "    .-=#%#+--+####*+=:   :####**+-",
+    " :-+#%#####=.:=+==-:..  :*%###**+:",
+    ":+**######%*-..:-:... .=#%####**+.",
+    ".-=+****#####+=:--::-+###**#**++- ",
 ]
 
 
@@ -119,11 +121,12 @@ def load_stats(token: str) -> dict[str, int]:
 
 def tspan(y: int, label: str, value: str, *, heading: bool = False) -> str:
     if heading:
-        return f'<tspan x="390" y="{y}" class="text">{html.escape(label)}</tspan>'
+        return f'<tspan x="{INFO_X}" y="{y}" class="text">{html.escape(label)}</tspan>'
+    leader = "." * max(2, 22 - len(label))
     return (
-        f'<tspan x="390" y="{y}" class="muted">. </tspan>'
+        f'<tspan x="{INFO_X}" y="{y}" class="muted">. </tspan>'
         f'<tspan class="key">{html.escape(label)}</tspan>'
-        f'<tspan class="muted">: </tspan>'
+        f'<tspan class="muted">: {leader} </tspan>'
         f'<tspan class="value">{html.escape(value)}</tspan>'
     )
 
@@ -144,7 +147,7 @@ def render(theme: str, stats: dict[str, int]) -> str:
     )
     today = dt.datetime.now(dt.timezone.utc).date()
     lines = [
-        tspan(30, "pedro@vygotsky  ─────────────────────────────────────", "", heading=True),
+        tspan(30, "pedro@vygotsky  ───────────────────────────────────", "", heading=True),
         tspan(50, "OS", "Windows 11, WSL/Linux, Android"),
         tspan(70, "Uptime", age_since(BIRTHDAY, today)),
         tspan(90, "Host", "Computer Science — Estácio"),
@@ -154,26 +157,26 @@ def render(theme: str, stats: dict[str, int]) -> str:
         tspan(190, "Languages.Web", "HTML, CSS, React, Node.js"),
         tspan(210, "Tools.Development", "Git, GitHub, Docker, Maven, Gradle"),
         tspan(230, "Languages.Real", "Portuguese, English (learning)"),
-        tspan(250, "Interests.Technology", "Generative AI, Web Development"),
-        tspan(270, "Interests.Culture", "Anime, Manga, Geek Culture, Formula 1"),
-        tspan(310, "- Contact ─────────────────────────────────────────────", "", heading=True),
-        tspan(330, "Email", "pedrovyg.dev@gmail.com"),
-        tspan(350, "LinkedIn", "linkedin.com/in/pedrovygotsky"),
-        tspan(370, "GitHub", "github.com/pedrovyg"),
-        tspan(410, "- GitHub Stats ─────────────────────────────────────────", "", heading=True),
+        tspan(260, "Interests.Technology", "Generative AI, Web Development"),
+        tspan(300, "- Contact ─────────────────────────────────────────", "", heading=True),
+        tspan(320, "Email", "pedrovyg.dev@gmail.com"),
+        tspan(340, "LinkedIn", "linkedin.com/in/pedrovygotsky"),
+        tspan(360, "GitHub", "github.com/pedrovyg"),
+        tspan(380, "Location", "Recife, Pernambuco, Brazil"),
+        tspan(410, "- GitHub Stats ─────────────────────────────────────", "", heading=True),
         tspan(430, "Repositories", f'{stats["repos"]:,}  |  Stars: {stats["stars"]:,}'),
         tspan(450, "Contributions (1y)", f'{stats["contributions"]:,}'),
         tspan(470, "Public commits", f'{stats["commits"]:,}  |  Followers: {stats["followers"]:,}'),
         tspan(510, "Updated", today.isoformat()),
     ]
     return f'''<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="985" height="530" viewBox="0 0 985 530" role="img" aria-label="Pedro Vygotsky Neofetch profile">
+<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="530" viewBox="0 0 {CARD_WIDTH} 530" role="img" aria-label="Pedro Vygotsky Neofetch profile">
 <style>
-text {{ font: 15px Consolas, "Liberation Mono", monospace; white-space: pre; }}
+text {{ font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }}
 .text {{ fill: {colors["text"]}; }} .key {{ fill: {colors["key"]}; }}
 .value {{ fill: {colors["value"]}; }} .muted {{ fill: {colors["muted"]}; }}
 </style>
-<rect x="0.5" y="0.5" width="984" height="529" rx="15" fill="{colors["bg"]}" stroke="{colors["border"]}"/>
+<rect x="0.5" y="0.5" width="{CARD_WIDTH - 1}" height="529" rx="15" fill="{colors["bg"]}" stroke="{colors["border"]}"/>
 <text class="text">{ascii_spans}</text>
 <text>{''.join(lines)}</text>
 </svg>
