@@ -2,6 +2,12 @@ name: Update Neofetch Profile
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/update_neofetch.py"
+      - ".github/workflows/neofetch.yml"
   schedule:
     - cron: "20 4 * * *"
 
