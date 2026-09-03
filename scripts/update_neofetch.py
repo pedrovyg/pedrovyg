@@ -21,6 +21,11 @@ ASCII_X = 5
 ASCII_TOP = 44
 ASCII_FONT_SIZE = 3
 ASCII_LINE_HEIGHT = 3.6
+TITLE = "pedro@vygotsky"
+TEXT_CHAR_WIDTH = 8.4
+CURSOR_GAP = 5
+CURSOR_WIDTH = 8
+CURSOR_HEIGHT = 14
 
 
 def github_request(url: str, token: str, payload: dict | None = None) -> dict:
@@ -118,7 +123,18 @@ def render(theme: str, stats: dict[str, int]) -> str:
         "value": "#a5d6ff" if dark else "#0969da",
         "muted": "#6e7681" if dark else "#57606a",
         "border": "#30363d" if dark else "#d0d7de",
+        "cursor": "#3fb950" if dark else "#1a7f37",
     }
+    ascii_green = (
+        ("#aff5b4", "#3fb950", "#238636")
+        if dark
+        else ("#2da44e", "#1a7f37", "#116329")
+    )
+    ascii_neutral = (
+        ("#f0f6fc", "#c9d1d9", "#8b949e")
+        if dark
+        else ("#57606a", "#424a53", "#24292f")
+    )
     ascii_lines = ASCII_ART_PATH.read_text(encoding="utf-8").splitlines()
     ascii_spans = "\n".join(
         f'<tspan x="{ASCII_X}" y="{ASCII_TOP + i * ASCII_LINE_HEIGHT:.1f}">{html.escape(line)}</tspan>'
@@ -126,7 +142,6 @@ def render(theme: str, stats: dict[str, int]) -> str:
     )
     today = dt.datetime.now(dt.timezone.utc).date()
     lines = [
-        tspan(30, "pedro@vygotsky  ───────────────────────────────────", "", heading=True),
         tspan(50, "OS", "Windows 11, WSL/Linux, Android"),
         tspan(70, "Uptime", age_since(BIRTHDAY, today)),
         tspan(90, "Host", "Computer Science — Estácio"),
@@ -148,16 +163,46 @@ def render(theme: str, stats: dict[str, int]) -> str:
         tspan(470, "Public commits", f'{stats["commits"]:,}  |  Followers: {stats["followers"]:,}'),
         tspan(510, "Updated", today.isoformat()),
     ]
+    cursor_x = INFO_X + len(TITLE) * TEXT_CHAR_WIDTH + CURSOR_GAP
+    divider_x = cursor_x + CURSOR_WIDTH + 7
+    header = (
+        f'<text x="{INFO_X}" y="30" class="text">{TITLE}</text>'
+        f'<rect class="cursor" x="{cursor_x:.1f}" y="17" '
+        f'width="{CURSOR_WIDTH}" height="{CURSOR_HEIGHT}" fill="{colors["cursor"]}"/>'
+        f'<text x="{divider_x:.1f}" y="30" class="muted">'
+        '────────────────────────────────────────</text>'
+    )
+    gradient = lambda gradient_id, stops: (
+        f'<linearGradient id="{gradient_id}" x1="0" y1="0" x2="0" y2="1">'
+        f'<stop offset="0" stop-color="{stops[0]}"/>'
+        f'<stop offset="0.5" stop-color="{stops[1]}"/>'
+        f'<stop offset="1" stop-color="{stops[2]}"/>'
+        '</linearGradient>'
+    )
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="530" viewBox="0 0 {CARD_WIDTH} 530" role="img" aria-label="Pedro Vygotsky Neofetch profile">
 <style>
+@keyframes ascii-color-cycle {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0; }} }}
+@keyframes cursor-blink {{ 50% {{ opacity: 0; }} }}
+.ascii-neutral {{ animation: ascii-color-cycle 9s ease-in-out infinite; }}
+.cursor {{ animation: cursor-blink 1.1s step-end infinite; }}
+@media (prefers-reduced-motion: reduce) {{
+  .ascii-neutral {{ animation: none; opacity: 0; }}
+  .cursor {{ animation: none; opacity: 1; }}
+}}
 text {{ font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }}
 .ascii {{ font-size: {ASCII_FONT_SIZE}px; }}
 .text {{ fill: {colors["text"]}; }} .key {{ fill: {colors["key"]}; }}
 .value {{ fill: {colors["value"]}; }} .muted {{ fill: {colors["muted"]}; }}
 </style>
+<defs>
+{gradient("ascii-green", ascii_green)}
+{gradient("ascii-neutral", ascii_neutral)}
+</defs>
 <rect x="0.5" y="0.5" width="{CARD_WIDTH - 1}" height="529" rx="15" fill="{colors["bg"]}" stroke="{colors["border"]}"/>
-<text class="text ascii">{ascii_spans}</text>
+<text class="ascii" fill="url(#ascii-green)">{ascii_spans}</text>
+<text class="ascii ascii-neutral" fill="url(#ascii-neutral)">{ascii_spans}</text>
+{header}
 <text>{''.join(lines)}</text>
 </svg>
 '''
