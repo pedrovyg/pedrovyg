@@ -21,6 +21,9 @@ ASCII_X = 5
 ASCII_TOP = 44
 ASCII_FONT_SIZE = 3
 ASCII_LINE_HEIGHT = 3.6
+ASCII_FRAME_SEPARATOR = "\n===FRAME===\n"
+ASCII_FRAME_INTERVAL = 0.35
+ASCII_FRAME_FADE_RATIO = 0.5
 TITLE = "pedro@vygotsky"
 TEXT_CHAR_WIDTH = 8.4
 CURSOR_GAP = 5
@@ -135,10 +138,33 @@ def render(theme: str, stats: dict[str, int]) -> str:
         if dark
         else ("#57606a", "#424a53", "#24292f")
     )
-    ascii_lines = ASCII_ART_PATH.read_text(encoding="utf-8").splitlines()
-    ascii_spans = "\n".join(
-        f'<tspan x="{ASCII_X}" y="{ASCII_TOP + i * ASCII_LINE_HEIGHT:.1f}">{html.escape(line)}</tspan>'
-        for i, line in enumerate(ascii_lines)
+    ascii_source = ASCII_ART_PATH.read_text(encoding="utf-8").rstrip("\n")
+    ascii_frames = [
+        frame.splitlines() for frame in ascii_source.split(ASCII_FRAME_SEPARATOR)
+    ]
+    if not ascii_frames or any(not frame for frame in ascii_frames):
+        raise ValueError("ASCII animation source contains an empty frame")
+
+    frame_count = len(ascii_frames)
+    motion_duration = frame_count * ASCII_FRAME_INTERVAL
+    frame_step = 100 / frame_count
+    fade_step = frame_step * ASCII_FRAME_FADE_RATIO
+    frame_styles = "\n".join(
+        f'.ascii-frame-{index} {{ animation-delay: '
+        f'{index * ASCII_FRAME_INTERVAL - motion_duration:.2f}s; }}'
+        for index in range(frame_count)
+    )
+    ascii_layers = "\n".join(
+        f'<text class="ascii ascii-frame ascii-frame-{frame_index}" '
+        f'fill="url(#ascii-color)">'
+        + "\n".join(
+            f'<tspan x="{ASCII_X}" '
+            f'y="{ASCII_TOP + line_index * ASCII_LINE_HEIGHT:.1f}">'
+            f'{html.escape(line)}</tspan>'
+            for line_index, line in enumerate(frame)
+        )
+        + "</text>"
+        for frame_index, frame in enumerate(ascii_frames)
     )
     today = dt.datetime.now(dt.timezone.utc).date()
     lines = [
@@ -172,22 +198,43 @@ def render(theme: str, stats: dict[str, int]) -> str:
         f'<text x="{divider_x:.1f}" y="30" class="muted">'
         '────────────────────────────────────────</text>'
     )
-    gradient = lambda gradient_id, stops: (
-        f'<linearGradient id="{gradient_id}" x1="0" y1="0" x2="0" y2="1">'
-        f'<stop offset="0" stop-color="{stops[0]}"/>'
-        f'<stop offset="0.5" stop-color="{stops[1]}"/>'
-        f'<stop offset="1" stop-color="{stops[2]}"/>'
-        '</linearGradient>'
-    )
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="530" viewBox="0 0 {CARD_WIDTH} 530" role="img" aria-label="Pedro Vygotsky Neofetch profile">
 <style>
-@keyframes ascii-color-cycle {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0; }} }}
+@keyframes ascii-frame-motion {{
+  0% {{ opacity: 0; }}
+  {fade_step:.3f}% {{ opacity: 1; }}
+  {frame_step:.3f}% {{ opacity: 1; }}
+  {frame_step + fade_step:.3f}% {{ opacity: 0; }}
+  100% {{ opacity: 0; }}
+}}
+@keyframes ascii-top-color {{
+  0%, 100% {{ stop-color: {ascii_neutral[0]}; }}
+  50% {{ stop-color: {ascii_green[0]}; }}
+}}
+@keyframes ascii-middle-color {{
+  0%, 100% {{ stop-color: {ascii_neutral[1]}; }}
+  50% {{ stop-color: {ascii_green[1]}; }}
+}}
+@keyframes ascii-bottom-color {{
+  0%, 100% {{ stop-color: {ascii_neutral[2]}; }}
+  50% {{ stop-color: {ascii_green[2]}; }}
+}}
 @keyframes cursor-blink {{ 50% {{ opacity: 0; }} }}
-.ascii-neutral {{ animation: ascii-color-cycle 9s ease-in-out infinite; }}
+.ascii-frame {{
+  opacity: 0;
+  animation: ascii-frame-motion {motion_duration:.1f}s linear infinite;
+}}
+{frame_styles}
+.ascii-frame-0 {{ opacity: 1; }}
+.ascii-stop-top {{ animation: ascii-top-color 9s ease-in-out infinite; }}
+.ascii-stop-middle {{ animation: ascii-middle-color 9s ease-in-out infinite; }}
+.ascii-stop-bottom {{ animation: ascii-bottom-color 9s ease-in-out infinite; }}
 .cursor {{ animation: cursor-blink 1.1s step-end infinite; }}
 @media (prefers-reduced-motion: reduce) {{
-  .ascii-neutral {{ animation: none; opacity: 0; }}
+  .ascii-frame {{ animation: none; opacity: 0; }}
+  .ascii-frame-0 {{ opacity: 1; }}
+  .ascii-stop-top, .ascii-stop-middle, .ascii-stop-bottom {{ animation: none; }}
   .cursor {{ animation: none; opacity: 1; }}
 }}
 text {{ font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }}
@@ -196,12 +243,14 @@ text {{ font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }}
 .value {{ fill: {colors["value"]}; }} .muted {{ fill: {colors["muted"]}; }}
 </style>
 <defs>
-{gradient("ascii-green", ascii_green)}
-{gradient("ascii-neutral", ascii_neutral)}
+<linearGradient id="ascii-color" x1="0" y1="0" x2="0" y2="1">
+  <stop class="ascii-stop-top" offset="0" stop-color="{ascii_green[0]}"/>
+  <stop class="ascii-stop-middle" offset="0.5" stop-color="{ascii_green[1]}"/>
+  <stop class="ascii-stop-bottom" offset="1" stop-color="{ascii_green[2]}"/>
+</linearGradient>
 </defs>
 <rect x="0.5" y="0.5" width="{CARD_WIDTH - 1}" height="529" rx="15" fill="{colors["bg"]}" stroke="{colors["border"]}"/>
-<text class="ascii" fill="url(#ascii-green)">{ascii_spans}</text>
-<text class="ascii ascii-neutral" fill="url(#ascii-neutral)">{ascii_spans}</text>
+{ascii_layers}
 {header}
 <text>{''.join(lines)}</text>
 </svg>

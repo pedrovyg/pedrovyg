@@ -7,7 +7,7 @@ on:
       - main
     paths:
       - "scripts/update_neofetch.py"
-      - "profile/ascii-art.txt"
+      - "scripts/generate_ascii_animation.py"
       - ".github/workflows/neofetch.yml"
   schedule:
     - cron: "20 4 * * *"
@@ -31,16 +31,18 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Generate light and dark cards
+      - name: Generate ASCII animation and light/dark cards
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/update_neofetch.py
+        run: |
+          python scripts/generate_ascii_animation.py
+          python scripts/update_neofetch.py
 
       - name: Commit updated cards
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/neofetch-dark.svg profile/neofetch-light.svg
+          git add profile/ascii-art.txt profile/neofetch-dark.svg profile/neofetch-light.svg
           if git diff --cached --quiet; then
             echo "No Neofetch changes detected."
             exit 0
