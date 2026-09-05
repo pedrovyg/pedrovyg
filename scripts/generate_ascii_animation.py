@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create Pedro's looping abstract ASCII halftone animation source."""
+"""Generate Pedro's seamless fluid diamond-halftone animation matrix."""
 
 from __future__ import annotations
 
@@ -7,16 +7,110 @@ import math
 from pathlib import Path
 
 
-WIDTH = 180
-HEIGHT = 123
-FRAME_COUNT = 24
+WIDTH = 40
+HEIGHT = 55
+FRAME_COUNT = 72
 SEPARATOR = "===FRAME==="
-RAMP = " .`':-=+*xX#%@"
+OUTPUT_PATH = Path("profile/ascii-art.txt")
+
+# Ordered 4x4 Bayer matrix. It keeps the bitmap texture spatially stable while
+# the continuous density field moves through it.
+BAYER_4X4 = (
+    (0, 8, 2, 10),
+    (12, 4, 14, 6),
+    (3, 11, 1, 9),
+    (15, 7, 13, 5),
+)
+
+
+def clamp(value: float, low: float = 0.0, high: float = 1.0) -> float:
+    return min(high, max(low, value))
 
 
 def smoothstep(edge0: float, edge1: float, value: float) -> float:
-    value = min(1.0, max(0.0, (value - edge0) / (edge1 - edge0)))
+    value = clamp((value - edge0) / (edge1 - edge0))
     return value * value * (3.0 - 2.0 * value)
+
+
+def loop_noise(x: float, y: float, phase: float, seed: float) -> float:
+    """Periodic multi-scale wave noise with an exact 2π temporal loop."""
+    value = 0.0
+    weight = 0.0
+    amplitude = 1.0
+
+    for octave in range(4):
+        frequency = 1.0 + octave * 0.82
+        temporal = float((octave % 3) + 1)
+        first = math.sin(
+            frequency * (2.17 * x + 1.31 * y)
+            + temporal * phase
+            + seed
+            + octave * 0.73
+        )
+        second = math.cos(
+            frequency * (-1.43 * x + 2.61 * y)
+            - temporal * phase
+            + seed * 1.71
+            - octave * 0.41
+        )
+        value += amplitude * first * second
+        weight += amplitude
+        amplitude *= 0.52
+
+    return 0.5 + 0.5 * value / weight
+
+
+def density_at(nx: float, ny: float, phase: float) -> float:
+    """Build a looped fluid field using noise-driven coordinate warping."""
+    warp_x = loop_noise(nx * 1.18, ny * 1.06, phase, 0.8) - 0.5
+    warp_y = loop_noise(nx * 1.04, ny * 1.21, phase, 4.2) - 0.5
+    x = nx + warp_x * 0.48 + 0.07 * math.sin(3.4 * ny + phase)
+    y = ny + warp_y * 0.38 + 0.05 * math.cos(3.1 * nx - phase)
+
+    broad = loop_noise(x * 1.22, y * 1.08, phase, 8.3)
+    medium = loop_noise(x * 2.12, y * 1.86, -phase, 12.7)
+    detail = loop_noise(x * 3.65, y * 3.10, phase, 17.9)
+
+    # Folded noise produces cellular ridges; the travelling sine term forms
+    # the broad bright/dark waves visible in the reference.
+    cellular = 1.0 - abs(2.0 * broad - 1.0)
+    travelling_wave = 0.5 + 0.5 * math.sin(
+        4.8 * x + 3.2 * y + 3.1 * (medium - 0.5) + phase
+    )
+    density = broad * 0.44 + medium * 0.22 + detail * 0.08
+    density += cellular * 0.12 + travelling_wave * 0.24
+
+    # Two orbiting depressions make regions contract and disperse while still
+    # returning exactly to their starting positions at the end of the cycle.
+    void_a_x = 0.46 * math.sin(phase)
+    void_a_y = 0.38 * math.cos(phase)
+    void_b_x = -0.52 * math.cos(phase)
+    void_b_y = 0.44 * math.sin(phase)
+    void_a = math.exp(-(((x - void_a_x) / 0.42) ** 2 + ((y - void_a_y) / 0.31) ** 2))
+    void_b = math.exp(-(((x - void_b_x) / 0.34) ** 2 + ((y - void_b_y) / 0.40) ** 2))
+    density -= 0.18 * void_a + 0.13 * void_b
+
+    # Fade the matrix softly at its bounds, leaving the animation layer itself
+    # transparent instead of drawing a rectangular background.
+    edge = smoothstep(1.06, 0.86, abs(nx))
+    edge *= smoothstep(1.06, 0.88, abs(ny))
+    return clamp(smoothstep(0.18, 0.86, density) * edge)
+
+
+def diamond_for(density: float, col: int, row: int) -> str:
+    """Quantize density into bitmap-like geometric glyph sizes."""
+    threshold = BAYER_4X4[row % 4][col % 4] / 15.0
+    level = clamp(density + (threshold - 0.5) * 0.13)
+
+    if level < 0.22:
+        return " "
+    if level < 0.36:
+        return "·"
+    if level < 0.52:
+        return "⋄"
+    if level < 0.76:
+        return "◇"
+    return "◆"
 
 
 def frame_at(index: int) -> list[str]:
@@ -26,67 +120,9 @@ def frame_at(index: int) -> list[str]:
     for row in range(HEIGHT):
         ny = (row / (HEIGHT - 1)) * 2.0 - 1.0
         chars: list[str] = []
-
         for col in range(WIDTH):
             nx = (col / (WIDTH - 1)) * 2.0 - 1.0
-
-            # A continuously warped coordinate system creates the fluid motion.
-            wx = nx + 0.11 * math.sin(5.2 * ny + phase)
-            wx += 0.045 * math.sin(12.0 * ny - phase * 1.7)
-            wy = ny + 0.055 * math.sin(5.5 * nx - phase)
-
-            # Three intertwined vertical ribbons, inspired by halftone fabric.
-            centers = (
-                -0.62 + 0.19 * math.sin(4.3 * wy + phase),
-                -0.06 + 0.23 * math.sin(3.6 * wy - phase + 1.4),
-                0.55 + 0.20 * math.sin(4.8 * wy + phase + 3.0),
-            )
-            widths = (
-                0.18 + 0.035 * math.sin(3.2 * wy - phase),
-                0.22 + 0.040 * math.sin(4.0 * wy + phase + 0.6),
-                0.19 + 0.030 * math.sin(3.7 * wy - phase + 2.1),
-            )
-
-            ribbon = 0.0
-            contour = 0.0
-            for ribbon_index, (center, width) in enumerate(zip(centers, widths)):
-                distance = abs(wx - center)
-                body = math.exp(-((distance / width) ** 4))
-                ridge_phase = 38.0 * distance + 6.0 * wy
-                ridge_phase += phase * (1.0 if ribbon_index % 2 == 0 else -1.0)
-                ridges = 0.38 + 0.62 * (0.5 + 0.5 * math.cos(ridge_phase))
-                ribbon = max(ribbon, body * ridges)
-                contour = max(contour, body * (0.5 + 0.5 * math.sin(18.0 * wy + ridge_phase)))
-
-            # A soft central membrane connects the ribbons and opens moving voids.
-            membrane_shape = math.exp(-((wx / 0.72) ** 6 + (wy / 1.08) ** 8))
-            membrane_wave = 0.5 + 0.5 * math.sin(
-                17.0 * wx + 8.0 * wy + 2.4 * math.sin(3.2 * wy + phase) - phase
-            )
-            membrane = membrane_shape * membrane_wave * 0.62
-
-            # Slow elliptical voids prevent the result from becoming a solid block.
-            void_x = 0.30 * math.sin(phase + 2.1 * wy)
-            void_y = 0.26 * math.cos(phase * 0.5)
-            void = math.exp(-(((wx - void_x) / 0.31) ** 2 + ((wy - void_y) / 0.24) ** 2))
-
-            edge_fade = smoothstep(1.02, 0.72, abs(ny))
-            edge_fade *= smoothstep(1.04, 0.87, abs(nx))
-            density = max(ribbon, membrane, contour * 0.74)
-            density *= edge_fade * (1.0 - 0.86 * void)
-
-            # Ordered dithering keeps fine dot texture stable between frames.
-            bayer = ((col * 37 + row * 17) % 16) / 15.0
-            density = min(1.0, max(0.0, density + (bayer - 0.5) * 0.10))
-
-            if density < 0.16:
-                chars.append(" ")
-                continue
-
-            normalized = (density - 0.16) / 0.84
-            ramp_index = min(len(RAMP) - 1, int(normalized * (len(RAMP) - 1)))
-            chars.append(RAMP[ramp_index])
-
+            chars.append(diamond_for(density_at(nx, ny, phase), col, row))
         rows.append("".join(chars).rstrip().ljust(WIDTH))
 
     return rows
@@ -94,7 +130,7 @@ def frame_at(index: int) -> list[str]:
 
 def main() -> None:
     frames = ["\n".join(frame_at(index)) for index in range(FRAME_COUNT)]
-    Path("profile/ascii-art.txt").write_text(
+    OUTPUT_PATH.write_text(
         f"\n{SEPARATOR}\n".join(frames) + "\n", encoding="utf-8"
     )
 

@@ -17,13 +17,13 @@ OUTPUT_DIR = Path("profile")
 CARD_WIDTH = 850
 INFO_X = 335
 ASCII_ART_PATH = Path("profile/ascii-art.txt")
-ASCII_X = 5
-ASCII_TOP = 44
-ASCII_FONT_SIZE = 3
-ASCII_LINE_HEIGHT = 3.6
+ASCII_X = 18
+ASCII_TOP = 38
+ASCII_FONT_SIZE = 12
+ASCII_LINE_HEIGHT = 8.5
 ASCII_FRAME_SEPARATOR = "\n===FRAME===\n"
-ASCII_FRAME_INTERVAL = 0.35
-ASCII_FRAME_FADE_RATIO = 0.5
+ASCII_FRAME_INTERVAL = 0.1
+ASCII_FRAME_FADE_RATIO = 1.0
 TITLE = "pedro@vygotsky"
 TEXT_CHAR_WIDTH = 8.4
 CURSOR_GAP = 5
@@ -223,7 +223,7 @@ def render(theme: str, stats: dict[str, int]) -> str:
 @keyframes cursor-blink {{ 50% {{ opacity: 0; }} }}
 .ascii-frame {{
   opacity: 0;
-  animation: ascii-frame-motion {motion_duration:.1f}s linear infinite;
+  animation: ascii-frame-motion {motion_duration:.1f}s ease-in-out infinite;
 }}
 {frame_styles}
 .ascii-frame-0 {{ opacity: 1; }}
@@ -238,7 +238,11 @@ def render(theme: str, stats: dict[str, int]) -> str:
   .cursor {{ animation: none; opacity: 1; }}
 }}
 text {{ font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }}
-.ascii {{ font-size: {ASCII_FONT_SIZE}px; }}
+.ascii {{
+  font-size: {ASCII_FONT_SIZE}px;
+  font-family: Consolas, "DejaVu Sans Mono", "Liberation Mono", monospace;
+  text-rendering: geometricPrecision;
+}}
 .text {{ fill: {colors["text"]}; }} .key {{ fill: {colors["key"]}; }}
 .value {{ fill: {colors["value"]}; }} .muted {{ fill: {colors["muted"]}; }}
 </style>
