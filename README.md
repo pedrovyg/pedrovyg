@@ -31,7 +31,7 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
   <a href="https://www.instagram.com/pedrovyg/" target="_blank"><img src="https://img.shields.io/badge/connect_on-Instagram-E4405F?style=flat&amp;logo=instagram&amp;logoColor=white" alt="Instagram" height="20"/></a>
   <a href="https://wa.me/5581999367665" target="_blank"><img src="https://img.shields.io/badge/connect_on-WhatsApp-25D366?style=flat&amp;logo=whatsapp&amp;logoColor=white" alt="WhatsApp" height="20"/></a>
   <a href="https://discord.com/users/1472784954671890453" target="_blank"><img src="https://img.shields.io/badge/connect_on-Discord-5865F2?style=flat&amp;logo=discord&amp;logoColor=white" alt="Discord" height="20"/></a>
-  <a href="https://github.com/pedrovyg" target="_blank"><img src="https://img.shields.io/badge/connect_on-GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white" alt="GitHub" height="20"/></a>
+  </a>
 </p>
 
 <h3>Technologies & Tools ◇</h3>
