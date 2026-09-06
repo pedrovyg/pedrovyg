@@ -15,9 +15,9 @@
   <img src="https://komarev.com/ghpvc/?username=pedrovyg&color=green" alt="Profile views" />
 </p>
 
-Sou **Desenvolvedor de Software**, com foco em **Front-End** e evolução contínua no ecossistema **Full Stack**.
+Sou ```Desenvolvedor de Software```, com foco em **Front-End** e evolução contínua no ecossistema **Full Stack** por meio de tecnologias de **Back-end**.
 
-Atualmente curso **Ciência da Computação** e desenvolvo projetos utilizando tecnologias web modernas, **Java** e ferramentas voltadas ao desenvolvimento, versionamento, automação e conteinerização.
+Atualmente curso ```Ciência da Computação``` e desenvolvo projetos utilizando tecnologias web modernas e ferramentas voltadas ao desenvolvimento, versionamento, automação e conteinerização.
 
 Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta de apoio ao desenvolvimento de software, prototipação, automação e criação de soluções mais eficientes.
 
