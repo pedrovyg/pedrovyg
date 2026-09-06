@@ -37,10 +37,14 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 
 </div>
 
-<details>
-<summary><h2>Technologies & Tools</h2></summary>
+<table width="100%">
+  <tr>
 
-#### Front-End
+  <td width="46%" valign="top">
+
+<h2>Technologies & Tools</h2>
+
+<h4>Front-End</h4>
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="https://skillicons.dev/icons?i=html&amp;theme=dark" alt="HTML" height="48"></a>&nbsp;
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="https://skillicons.dev/icons?i=css&amp;theme=dark" alt="CSS" height="48"></a>&nbsp;
@@ -48,7 +52,7 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 <a href="https://www.typescriptlang.org/download/" target="_blank"><img src="https://skillicons.dev/icons?i=ts&amp;theme=dark" alt="TypeScript" height="48"></a>&nbsp;
 <a href="https://react.dev/" target="_blank"><img src="https://skillicons.dev/icons?i=react&amp;theme=dark" alt="React" height="48"></a>
 
-#### Back-End & Programming
+<h4>Back-End & Programming</h4>
 
 <a href="https://nodejs.org/en/download" target="_blank"><img src="https://skillicons.dev/icons?i=nodejs&amp;theme=dark" alt="Node.js" height="48"></a>&nbsp;
 <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank"><img src="https://skillicons.dev/icons?i=java&amp;theme=dark" alt="Java" height="48"></a>&nbsp;
@@ -58,7 +62,7 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 <a href="https://gradle.org/install/" target="_blank"><img src="https://skillicons.dev/icons?i=gradle&amp;theme=dark" alt="Gradle" height="48"></a>&nbsp;
 <a href="https://swagger.io/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=swagger&amp;theme=dark" alt="REST API (OpenAPI and Swagger)" height="48"></a>
 
-#### Development Tools
+<h4>Development Tools</h4>
 
 <a href="https://git-scm.com/downloads" target="_blank"><img src="https://skillicons.dev/icons?i=git&amp;theme=dark" alt="Git" height="48"></a>&nbsp;
 <a href="https://github.com/" target="_blank"><img src="https://skillicons.dev/icons?i=github&amp;theme=dark" alt="GitHub" height="48"></a>&nbsp;
@@ -68,21 +72,25 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 <a href="https://www.jetbrains.com/idea/download/" target="_blank"><img src="https://skillicons.dev/icons?i=idea&amp;theme=dark" alt="IntelliJ IDEA" height="48"></a>&nbsp;
 <a href="https://n8n.io/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=n8n&amp;theme=dark" alt="n8n" height="48"></a>
 
-#### Design
+<h4>Design</h4>
 
 <a href="https://www.figma.com/downloads/" target="_blank"><img src="https://skillicons.dev/icons?i=figma&amp;theme=dark" alt="Figma" height="48"></a>&nbsp;
 <a href="https://www.framer.com/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=framer&amp;theme=dark" alt="Framer" height="48"></a>&nbsp;
 <a href="https://www.uxpin.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/UXPin_logo.png" alt="UXPin" width="48" height="48"></a>
 
-</details>
+  </td>
 
-<details>
-<summary><h2>GitHub Stats</h2></summary>
+  <td width="54%" valign="top" align="center">
 
-<br>
+<h2 align="left">GitHub Stats</h2>
 
-<div align="center">
-  <img width="70%" src="https://stats.hyo.dev/api/github-stats-advanced?login=pedrovyg" alt="GitHub Streak"/>
-</div>
+<img
+  width="100%"
+  src="https://stats.hyo.dev/api/github-stats-advanced?login=pedrovyg"
+  alt="Pedro Vygotsky GitHub Stats"
+/>
 
-</details>
+  </td>
+
+  </tr>
+</table>
