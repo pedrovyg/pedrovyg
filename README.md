@@ -15,7 +15,7 @@
 
 <h3>About Me ◇</h3>
 
-<a href="https://pedrovyg-dev.vercel.app/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/pedrovyg/notebook-verde.png/notebook-verde.png" alt="notebook verde cartoon" width="200px" align="right"/></a>
+<a href="https://pedrovyg-dev.vercel.app/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/pedrovyg/notebook-verde.png/notebook-verde.png" alt="notebook verde cartoon" width="150px" align="right"/></a>
 
 Olá, me chamo Pedro e sou um ```Desenvolvedor de Software```, com foco em **Front-End** e evolução contínua no ecossistema **Full Stack** por meio de tecnologias de **Back-end**.
 
