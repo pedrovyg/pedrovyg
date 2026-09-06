@@ -1,4 +1,4 @@
-### Hi, I'm Pedro <img src="https://komarev.com/ghpvc/?username=pedrovyg&color=green" alt="Profile views" align="right"/>
+<h3>Hi, I'm Pedro <img src="https://komarev.com/ghpvc/?username=pedrovyg&color=green" alt="Profile views" align="right"/></h3>
 
 <a href="https://github.com/pedrovyg">
 <picture>
@@ -7,7 +7,7 @@
 </picture>
 </a>
 
-<br>
+<h3>About Me ◇</h3>
 
 <img src="https://cdn.jsdelivr.net/gh/pedrovyg/notebook-verde.png/notebook-verde.png" alt="notebook verde cartoon" width="200px" align="right"/>
 
@@ -18,8 +18,6 @@ Atualmente curso ```Ciência da Computação``` e desenvolvo projetos utilizando
 Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta de apoio ao desenvolvimento de software, prototipação, automação e criação de soluções mais eficientes.
 
 <br>
-
-<!-- Social -->
 
 <div align="left">
 
@@ -37,12 +35,7 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 
 </div>
 
-<table width="100%">
-  <tr>
-
-  <td width="46%" valign="top">
-
-<h2>Technologies & Tools</h2>
+<h3>Technologies & Tools ◇</h3>
 
 <h4>Front-End</h4>
 
@@ -77,20 +70,3 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 <a href="https://www.figma.com/downloads/" target="_blank"><img src="https://skillicons.dev/icons?i=figma&amp;theme=dark" alt="Figma" height="48"></a>&nbsp;
 <a href="https://www.framer.com/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=framer&amp;theme=dark" alt="Framer" height="48"></a>&nbsp;
 <a href="https://www.uxpin.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/UXPin_logo.png" alt="UXPin" width="48" height="48"></a>
-
-  </td>
-
-  <td width="54%" valign="top" align="center">
-
-<h2 align="left">GitHub Stats</h2>
-
-<img
-  width="100%"
-  src="https://stats.hyo.dev/api/github-stats-advanced?login=pedrovyg"
-  alt="Pedro Vygotsky GitHub Stats"
-/>
-
-  </td>
-
-  </tr>
-</table>
