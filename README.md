@@ -53,7 +53,7 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 
 [![Design](https://skillicons.dev/icons?i=figma\&theme=dark)](https://skillicons.dev)
 
-<br>
+##
 
 <details>
 <summary><strong>GitHub Stats</strong></summary>
