@@ -28,7 +28,7 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 <div align="left">
 
   <a href="https://www.linkedin.com/in/pedrovygotsky" target="_blank">
-    <img src="https://img.shields.io/badge/connect_on-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+    <img src="https://img.shields.io/badge/connect_on-LinkedIn-0A66C2?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NTV2Ni4yODZ6TTUuMzM3IDcuNDMzYy0xLjE0NCAwLTIuMDYzLS45MjYtMi4wNjMtMi4wNjUgMC0xLjEzOC45Mi0yLjA2MyAyLjA2My0yLjA2MyAxLjE0IDAgMi4wNjQuOTI1IDIuMDY0IDIuMDYzIDAgMS4xMzktLjkyNSAyLjA2NS0yLjA2NCAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAwaC4wMDN6Ii8%2BPC9zdmc%2B" alt="LinkedIn"/>
   </a>
 
   <a href="https://www.instagram.com/pedrovyg/" target="_blank">
@@ -47,23 +47,37 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 
 #### Front-End
 
-[![Front-End](https://skillicons.dev/icons?i=html,css,js,ts,react\&theme=dark)](https://skillicons.dev)
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="https://skillicons.dev/icons?i=html&amp;theme=dark" alt="HTML" height="48"></a>&nbsp;
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="https://skillicons.dev/icons?i=css&amp;theme=dark" alt="CSS" height="48"></a>&nbsp;
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="https://skillicons.dev/icons?i=js&amp;theme=dark" alt="JavaScript" height="48"></a>&nbsp;
+<a href="https://www.typescriptlang.org/download/" target="_blank"><img src="https://skillicons.dev/icons?i=ts&amp;theme=dark" alt="TypeScript" height="48"></a>&nbsp;
+<a href="https://react.dev/" target="_blank"><img src="https://skillicons.dev/icons?i=react&amp;theme=dark" alt="React" height="48"></a>
 
 #### Back-End & Programming
 
-<a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=nodejs,java,py,spring,maven,gradle&amp;theme=dark" alt="Node.js, Java, Python, Spring Boot, Maven and Gradle"></a>
-<a href="https://swagger.io"><img src="https://go-skill-icons.vercel.app/api/icons?i=swagger&amp;theme=dark" alt="REST API (OpenAPI and Swagger)" height="48"></a>
+<a href="https://nodejs.org/en/download" target="_blank"><img src="https://skillicons.dev/icons?i=nodejs&amp;theme=dark" alt="Node.js" height="48"></a>&nbsp;
+<a href="https://www.oracle.com/java/technologies/downloads/" target="_blank"><img src="https://skillicons.dev/icons?i=java&amp;theme=dark" alt="Java" height="48"></a>&nbsp;
+<a href="https://www.python.org/downloads/" target="_blank"><img src="https://skillicons.dev/icons?i=py&amp;theme=dark" alt="Python" height="48"></a>&nbsp;
+<a href="https://spring.io/projects/spring-boot" target="_blank"><img src="https://skillicons.dev/icons?i=spring&amp;theme=dark" alt="Spring Boot" height="48"></a>&nbsp;
+<a href="https://maven.apache.org/download.cgi" target="_blank"><img src="https://skillicons.dev/icons?i=maven&amp;theme=dark" alt="Apache Maven" height="48"></a>&nbsp;
+<a href="https://gradle.org/install/" target="_blank"><img src="https://skillicons.dev/icons?i=gradle&amp;theme=dark" alt="Gradle" height="48"></a>&nbsp;
+<a href="https://swagger.io/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=swagger&amp;theme=dark" alt="REST API (OpenAPI and Swagger)" height="48"></a>
 
 #### Development Tools
 
-<a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=git,github,docker,bash,vscode,idea&amp;theme=dark" alt="Git, GitHub, Docker, Bash, VS Code and IntelliJ IDEA"></a>
-<a href="https://n8n.io"><img src="https://go-skill-icons.vercel.app/api/icons?i=n8n&amp;theme=dark" alt="n8n" height="48"></a>
+<a href="https://git-scm.com/downloads" target="_blank"><img src="https://skillicons.dev/icons?i=git&amp;theme=dark" alt="Git" height="48"></a>&nbsp;
+<a href="https://github.com/" target="_blank"><img src="https://skillicons.dev/icons?i=github&amp;theme=dark" alt="GitHub" height="48"></a>&nbsp;
+<a href="https://www.docker.com/products/docker-desktop/" target="_blank"><img src="https://skillicons.dev/icons?i=docker&amp;theme=dark" alt="Docker" height="48"></a>&nbsp;
+<a href="https://www.gnu.org/software/bash/" target="_blank"><img src="https://skillicons.dev/icons?i=bash&amp;theme=dark" alt="Bash" height="48"></a>&nbsp;
+<a href="https://code.visualstudio.com/download" target="_blank"><img src="https://skillicons.dev/icons?i=vscode&amp;theme=dark" alt="Visual Studio Code" height="48"></a>&nbsp;
+<a href="https://www.jetbrains.com/idea/download/" target="_blank"><img src="https://skillicons.dev/icons?i=idea&amp;theme=dark" alt="IntelliJ IDEA" height="48"></a>&nbsp;
+<a href="https://n8n.io/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=n8n&amp;theme=dark" alt="n8n" height="48"></a>
 
 #### Design
 
-<a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=figma&amp;theme=dark" alt="Figma"></a>
-<a href="https://www.framer.com"><img src="https://go-skill-icons.vercel.app/api/icons?i=framer&amp;theme=dark" alt="Framer" height="48"></a>
-<a href="https://www.uxpin.com"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/UXPin_logo.png" alt="UXPin" width="48" height="48"></a>
+<a href="https://www.figma.com/downloads/" target="_blank"><img src="https://skillicons.dev/icons?i=figma&amp;theme=dark" alt="Figma" height="48"></a>&nbsp;
+<a href="https://www.framer.com/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=framer&amp;theme=dark" alt="Framer" height="48"></a>&nbsp;
+<a href="https://www.uxpin.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/UXPin_logo.png" alt="UXPin" width="48" height="48"></a>
 
 ##
 
