@@ -37,9 +37,8 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 
 </div>
 
-<br>
-
-### Technologies & Tools
+<details>
+<summary><h2>Technologies & Tools</h2></summary>
 
 #### Front-End
 
@@ -75,10 +74,10 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 <a href="https://www.framer.com/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=framer&amp;theme=dark" alt="Framer" height="48"></a>&nbsp;
 <a href="https://www.uxpin.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/UXPin_logo.png" alt="UXPin" width="48" height="48"></a>
 
-<br>
+</details>
 
 <details>
-<summary><strong>GitHub Stats</strong></summary>
+<summary><h2>GitHub Stats</h2></summary>
 
 <br>
 
