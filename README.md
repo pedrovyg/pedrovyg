@@ -81,8 +81,8 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 
 <br>
 
-<div align="left">
-<img width="100%" src="https://stats.hyo.dev/api/github-stats-advanced?login=pedrovyg" alt="GitHub Streak"/>
+<div align="center">
+  <img width="70%" src="https://stats.hyo.dev/api/github-stats-advanced?login=pedrovyg" alt="GitHub Streak"/>
 </div>
 
 </details>
