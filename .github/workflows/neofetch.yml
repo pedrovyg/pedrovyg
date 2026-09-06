@@ -10,7 +10,7 @@ on:
       - "scripts/generate_ascii_animation.py"
       - ".github/workflows/neofetch.yml"
   schedule:
-    - cron: "20 4 * * *"
+    - cron: "17,47 * * * *"
 
 permissions:
   contents: write
