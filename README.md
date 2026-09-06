@@ -1,9 +1,10 @@
-<img src="https://komarev.com/ghpvc/?username=pedrovyg&amp;label=profile%20views&amp;color=green&amp;style=flat" alt="Profile views" height="20" align="right"/> <a align="left">
-  <img src="https://api.statusbadges.me/badge/status/1472784954671890453?style=flat" alt="Discord presence" height="20"/>
-  <img src="https://api.statusbadges.me/badge/vscode/1472784954671890453?style=flat" alt="Visual Studio Code activity" height="20"/>
-  <img src="https://api.statusbadges.me/badge/intellij/1472784954671890453?style=flat" alt="IntelliJ IDEA activity" height="20"/>
-  <a href="https://api.statusbadges.me/openspotify/1472784954671890453" target="_blank"><img src="https://api.statusbadges.me/badge/spotify/1472784954671890453?style=flat" alt="Spotify activity" height="20"/></a>
-</a>
+<div align="left">
+  <a href="https://github.com/pedrovyg" target="_blank"><img src="https://komarev.com/ghpvc/?username=pedrovyg&amp;label=profile%20views&amp;color=green&amp;style=flat" alt="Profile views" height="20" align="right"/></a>
+  <a href="https://discord.com/users/1472784954671890453" target="_blank"><img src="https://api.statusbadges.me/badge/status/1472784954671890453?style=flat" alt="Discord presence" height="20"/></a>
+  <a href="https://github.com/pedrovyg?tab=repositories" target="_blank"><img src="https://api.statusbadges.me/badge/vscode/1472784954671890453?style=flat" alt="Visual Studio Code activity" height="20"/></a>
+  <a href="https://github.com/pedrovyg?tab=repositories" target="_blank"><img src="https://api.statusbadges.me/badge/intellij/1472784954671890453?style=flat" alt="IntelliJ IDEA activity" height="20"/></a>
+  <a href="https://open.spotify.com/user/3133x6sj6gqlej6cnrq2ub4g27ru" target="_blank"><img src="https://api.statusbadges.me/badge/spotify/1472784954671890453?style=flat" alt="Spotify activity" height="20"/></a>
+</div>
 
 <a href="https://github.com/pedrovyg">
 <picture>
@@ -14,7 +15,7 @@
 
 <h3>About Me ◇</h3>
 
-<img src="https://cdn.jsdelivr.net/gh/pedrovyg/notebook-verde.png/notebook-verde.png" alt="notebook verde cartoon" width="200px" align="right"/>
+<a href="https://pedrovyg-dev.vercel.app/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/pedrovyg/notebook-verde.png/notebook-verde.png" alt="notebook verde cartoon" width="200px" align="right"/></a>
 
 Olá, me chamo Pedro e sou um ```Desenvolvedor de Software```, com foco em **Front-End** e evolução contínua no ecossistema **Full Stack** por meio de tecnologias de **Back-end**.
 
@@ -27,6 +28,7 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 <p align="left">
   <a href="https://www.linkedin.com/in/pedrovygotsky" target="_blank"><img src="https://img.shields.io/badge/connect_on-LinkedIn-0A66C2?style=flat&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NTV2Ni4yODZ6TTUuMzM3IDcuNDMzYy0xLjE0NCAwLTIuMDYzLS45MjYtMi4wNjMtMi4wNjUgMC0xLjEzOC45Mi0yLjA2MyAyLjA2My0yLjA2MyAxLjE0IDAgMi4wNjQuOTI1IDIuMDY0IDIuMDYzIDAgMS4xMzktLjkyNSAyLjA2NS0yLjA2NCAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAwaC4wMDN6Ii8%2BPC9zdmc%2B" alt="LinkedIn" height="20"/></a>
   <a href="https://www.instagram.com/pedrovyg/" target="_blank"><img src="https://img.shields.io/badge/connect_on-Instagram-E4405F?style=flat&amp;logo=instagram&amp;logoColor=white" alt="Instagram" height="20"/></a>
+  <a href="https://discord.com/users/1472784954671890453" target="_blank"><img src="https://img.shields.io/badge/connect_on-Discord-5865F2?style=flat&amp;logo=discord&amp;logoColor=white" alt="Discord" height="20"/></a>
   <a href="https://github.com/pedrovyg" target="_blank"><img src="https://img.shields.io/badge/connect_on-GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white" alt="GitHub" height="20"/></a>
 </p>
 
