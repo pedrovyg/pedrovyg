@@ -1,3 +1,5 @@
+### Hi, I'm Pedro <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30"> <img src="https://komarev.com/ghpvc/?username=pedrovyg&color=green" alt="Profile views" align="right"/>
+
 <a href="https://github.com/pedrovyg">
 <picture>
 <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/pedrovyg/pedrovyg/main/profile/neofetch-dark.svg">
@@ -8,12 +10,6 @@
 <br>
 
 <img src="https://cdn.jsdelivr.net/gh/pedrovyg/notebook-verde.png/notebook-verde.png" alt="notebook verde cartoon" width="200px" align="right"/>
-
-### Hi, I'm Pedro <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30">
-
-<p align="left">
-  <img src="https://komarev.com/ghpvc/?username=pedrovyg&color=green" alt="Profile views" />
-</p>
 
 Sou ```Desenvolvedor de Software```, com foco em **Front-End** e evolução contínua no ecossistema **Full Stack** por meio de tecnologias de **Back-end**.
 
@@ -41,7 +37,7 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 
 </div>
 
-##
+<br>
 
 ### Technologies & Tools
 
@@ -79,7 +75,7 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 <a href="https://www.framer.com/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=framer&amp;theme=dark" alt="Framer" height="48"></a>&nbsp;
 <a href="https://www.uxpin.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/UXPin_logo.png" alt="UXPin" width="48" height="48"></a>
 
-##
+<br>
 
 <details>
 <summary><strong>GitHub Stats</strong></summary>
