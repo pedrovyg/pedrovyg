@@ -6,6 +6,8 @@
   <a href="https://open.spotify.com/user/3133x6sj6gqlej6cnrq2ub4g27ru" target="_blank"><img src="https://api.statusbadges.me/badge/spotify/1472784954671890453?style=flat" alt="Spotify activity" height="20"/></a>
 </div>
 
+<br>
+
 <a href="https://github.com/pedrovyg">
 <picture>
 <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/pedrovyg/pedrovyg/main/profile/neofetch-dark.svg">
