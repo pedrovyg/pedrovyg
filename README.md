@@ -17,13 +17,15 @@
 </picture>
 </a>
 
-<h4>About Me</h4>
+<h4><ins>About Me</ins></h4>
 
-<a href="https://pedrovyg-dev.vercel.app/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/pedrovyg/notebook-verde.png/notebook-verde.png" alt="notebook verde cartoon" width="200px" align="right"/></a>
+Hello, my name is Pedro. I'm a ***software developer*** with over three years of experience, focusing on **front-end** development while continuously expanding my skills across the **full-stack** ecosystem through **back-end** technologies.
 
-Hello, my name is Pedro. I'm a ***software developer*** with over three years of experience, focusing on **front-end** development while continuously expanding my skills across the **full-stack** ecosystem through **back-end** technologies. I am currently pursuing a bachelor's degree in ***Computer Science*** and dedicate much of my time to **programming**, **studying**, and **building** new projects. I am passionate about **technology** and **education**; outside of development, I also have a keen interest in **fitness**, **cinema**, and **music**.
+I am currently pursuing a bachelor's degree in ***Computer Science*** and dedicate much of my time to **programming**, **studying**, and **building** new projects.
 
-<h4>Technologies & Tools</h4>
+I am passionate about **technology** and **education**; outside of development, I also have a keen interest in **fitness**, **cinema**, and **music**.
+
+<h4><ins>Technologies & Tools</ins></h4>
 
 <h6>Front-End</h6>
 
@@ -57,9 +59,8 @@ Hello, my name is Pedro. I'm a ***software developer*** with over three years of
 
 <a href="https://www.figma.com/downloads/" target="_blank"><img src="https://skillicons.dev/icons?i=figma&amp;theme=dark" alt="Figma" height="48"></a>&nbsp;
 <a href="https://www.framer.com/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=framer&amp;theme=dark" alt="Framer" height="48"></a>&nbsp;
-<a href="https://www.uxpin.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/UXPin_logo.png" alt="UXPin" width="48" height="48"></a>
 
-<h4>Network</h4>
+<h4><ins>Network</ins></h4>
 
 <p align="left">
   <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=pedrovyg.dev%40gmail.com" target="_blank"><img src="https://img.shields.io/badge/connect_on-Gmail-EA4335?style=flat&amp;logo=gmail&amp;logoColor=white" alt="Gmail" height="20"/></a>
