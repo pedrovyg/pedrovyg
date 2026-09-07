@@ -6,11 +6,16 @@ on:
     branches:
       - main
     paths:
-      - "scripts/update_neofetch.py"
-      - "scripts/generate_ascii_animation.py"
+      - "scripts/**"
+      - "tests/**"
+      - "assets/**"
       - ".github/workflows/neofetch.yml"
+      - "svgo.config.mjs"
+      - "package.json"
+      - "package-lock.json"
+      - "requirements.txt"
   schedule:
-    - cron: "17,47 * * * *"
+    - cron: "17 3 * * *"
 
 permissions:
   contents: write
@@ -22,30 +27,60 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7.0.1
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7.0.0
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
 
-      - name: Generate ASCII animation and light/dark cards
+      - name: Set up Node.js
+        uses: actions/setup-node@v7.0.0
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install --disable-pip-version-check --requirement requirements.txt
+          npm ci --ignore-scripts
+
+      - name: Run integrity tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Generate, optimize, validate, and promote assets
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/build_assets.py
+
+      - name: Verify clean source and valid diff
         run: |
-          python scripts/generate_ascii_animation.py
-          python scripts/update_neofetch.py
+          git diff --check
+          if ! git diff --quiet -- scripts tests svgo.config.mjs package.json package-lock.json requirements.txt; then
+            echo "The asset build unexpectedly modified source files."
+            git diff -- scripts tests svgo.config.mjs package.json package-lock.json requirements.txt
+            exit 1
+          fi
 
       - name: Commit updated cards
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/ascii-art.txt profile/neofetch-dark.svg profile/neofetch-light.svg
+          git add \
+            profile/ascii-art.txt \
+            profile/neofetch-dark.svg \
+            profile/neofetch-light.svg \
+            profile/neofetch-dark.png \
+            profile/neofetch-light.png
           if git diff --cached --quiet; then
-            echo "No Neofetch changes detected."
+            echo "No generated asset changes detected."
             exit 0
           fi
-          git commit -m "chore: update Neofetch profile"
+          git commit -m "chore(readme): update generated assets"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
           git push

@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import math
 from pathlib import Path
 
@@ -128,11 +129,34 @@ def frame_at(index: int) -> list[str]:
     return rows
 
 
-def main() -> None:
+def render_animation() -> str:
+    """Return the complete deterministic animation source as UTF-8 text."""
     frames = ["\n".join(frame_at(index)) for index in range(FRAME_COUNT)]
-    OUTPUT_PATH.write_text(
-        f"\n{SEPARATOR}\n".join(frames) + "\n", encoding="utf-8"
+    return f"\n{SEPARATOR}\n".join(frames) + "\n"
+
+
+def write_animation(output_path: Path = OUTPUT_PATH) -> Path:
+    """Write the animation without newline or whitespace normalization."""
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with output_path.open("w", encoding="utf-8", newline="\n") as output:
+        output.write(render_animation())
+    return output_path
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=OUTPUT_PATH,
+        help="UTF-8 destination for the generated animation matrix.",
     )
+    return parser.parse_args()
+
+
+def main() -> None:
+    args = parse_args()
+    write_animation(args.output)
 
 
 if __name__ == "__main__":

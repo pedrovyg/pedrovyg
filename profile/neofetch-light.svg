@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="850" height="530" viewBox="0 0 850 530" role="img" aria-label="Pedro Vygotsky Neofetch profile">
-<style>
-@keyframes ascii-frame-motion {
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="530" aria-labelledby="svg-title svg-description" focusable="false" role="img" viewBox="0 0 850 530"><title id="svg-title">Pedro Vygotsky Neofetch profile</title><desc id="svg-description">Animated fluid diamond ASCII art with development tools, contact details, and current public GitHub statistics.</desc><style>@keyframes ascii-frame-motion {
   0% { opacity: 0; }
   1.389% { opacity: 1; }
   1.389% { opacity: 1; }
@@ -25,78 +22,7 @@
   opacity: 0;
   animation: ascii-frame-motion 7.2s ease-in-out infinite;
 }
-.ascii-frame-0 { animation-delay: -7.20s; }
-.ascii-frame-1 { animation-delay: -7.10s; }
-.ascii-frame-2 { animation-delay: -7.00s; }
-.ascii-frame-3 { animation-delay: -6.90s; }
-.ascii-frame-4 { animation-delay: -6.80s; }
-.ascii-frame-5 { animation-delay: -6.70s; }
-.ascii-frame-6 { animation-delay: -6.60s; }
-.ascii-frame-7 { animation-delay: -6.50s; }
-.ascii-frame-8 { animation-delay: -6.40s; }
-.ascii-frame-9 { animation-delay: -6.30s; }
-.ascii-frame-10 { animation-delay: -6.20s; }
-.ascii-frame-11 { animation-delay: -6.10s; }
-.ascii-frame-12 { animation-delay: -6.00s; }
-.ascii-frame-13 { animation-delay: -5.90s; }
-.ascii-frame-14 { animation-delay: -5.80s; }
-.ascii-frame-15 { animation-delay: -5.70s; }
-.ascii-frame-16 { animation-delay: -5.60s; }
-.ascii-frame-17 { animation-delay: -5.50s; }
-.ascii-frame-18 { animation-delay: -5.40s; }
-.ascii-frame-19 { animation-delay: -5.30s; }
-.ascii-frame-20 { animation-delay: -5.20s; }
-.ascii-frame-21 { animation-delay: -5.10s; }
-.ascii-frame-22 { animation-delay: -5.00s; }
-.ascii-frame-23 { animation-delay: -4.90s; }
-.ascii-frame-24 { animation-delay: -4.80s; }
-.ascii-frame-25 { animation-delay: -4.70s; }
-.ascii-frame-26 { animation-delay: -4.60s; }
-.ascii-frame-27 { animation-delay: -4.50s; }
-.ascii-frame-28 { animation-delay: -4.40s; }
-.ascii-frame-29 { animation-delay: -4.30s; }
-.ascii-frame-30 { animation-delay: -4.20s; }
-.ascii-frame-31 { animation-delay: -4.10s; }
-.ascii-frame-32 { animation-delay: -4.00s; }
-.ascii-frame-33 { animation-delay: -3.90s; }
-.ascii-frame-34 { animation-delay: -3.80s; }
-.ascii-frame-35 { animation-delay: -3.70s; }
-.ascii-frame-36 { animation-delay: -3.60s; }
-.ascii-frame-37 { animation-delay: -3.50s; }
-.ascii-frame-38 { animation-delay: -3.40s; }
-.ascii-frame-39 { animation-delay: -3.30s; }
-.ascii-frame-40 { animation-delay: -3.20s; }
-.ascii-frame-41 { animation-delay: -3.10s; }
-.ascii-frame-42 { animation-delay: -3.00s; }
-.ascii-frame-43 { animation-delay: -2.90s; }
-.ascii-frame-44 { animation-delay: -2.80s; }
-.ascii-frame-45 { animation-delay: -2.70s; }
-.ascii-frame-46 { animation-delay: -2.60s; }
-.ascii-frame-47 { animation-delay: -2.50s; }
-.ascii-frame-48 { animation-delay: -2.40s; }
-.ascii-frame-49 { animation-delay: -2.30s; }
-.ascii-frame-50 { animation-delay: -2.20s; }
-.ascii-frame-51 { animation-delay: -2.10s; }
-.ascii-frame-52 { animation-delay: -2.00s; }
-.ascii-frame-53 { animation-delay: -1.90s; }
-.ascii-frame-54 { animation-delay: -1.80s; }
-.ascii-frame-55 { animation-delay: -1.70s; }
-.ascii-frame-56 { animation-delay: -1.60s; }
-.ascii-frame-57 { animation-delay: -1.50s; }
-.ascii-frame-58 { animation-delay: -1.40s; }
-.ascii-frame-59 { animation-delay: -1.30s; }
-.ascii-frame-60 { animation-delay: -1.20s; }
-.ascii-frame-61 { animation-delay: -1.10s; }
-.ascii-frame-62 { animation-delay: -1.00s; }
-.ascii-frame-63 { animation-delay: -0.90s; }
-.ascii-frame-64 { animation-delay: -0.80s; }
-.ascii-frame-65 { animation-delay: -0.70s; }
-.ascii-frame-66 { animation-delay: -0.60s; }
-.ascii-frame-67 { animation-delay: -0.50s; }
-.ascii-frame-68 { animation-delay: -0.40s; }
-.ascii-frame-69 { animation-delay: -0.30s; }
-.ascii-frame-70 { animation-delay: -0.20s; }
-.ascii-frame-71 { animation-delay: -0.10s; }
+.ascii-frame-0{animation-delay:-7.20s}.ascii-frame-1{animation-delay:-7.10s}.ascii-frame-2{animation-delay:-7.00s}.ascii-frame-3{animation-delay:-6.90s}.ascii-frame-4{animation-delay:-6.80s}.ascii-frame-5{animation-delay:-6.70s}.ascii-frame-6{animation-delay:-6.60s}.ascii-frame-7{animation-delay:-6.50s}.ascii-frame-8{animation-delay:-6.40s}.ascii-frame-9{animation-delay:-6.30s}.ascii-frame-10{animation-delay:-6.20s}.ascii-frame-11{animation-delay:-6.10s}.ascii-frame-12{animation-delay:-6.00s}.ascii-frame-13{animation-delay:-5.90s}.ascii-frame-14{animation-delay:-5.80s}.ascii-frame-15{animation-delay:-5.70s}.ascii-frame-16{animation-delay:-5.60s}.ascii-frame-17{animation-delay:-5.50s}.ascii-frame-18{animation-delay:-5.40s}.ascii-frame-19{animation-delay:-5.30s}.ascii-frame-20{animation-delay:-5.20s}.ascii-frame-21{animation-delay:-5.10s}.ascii-frame-22{animation-delay:-5.00s}.ascii-frame-23{animation-delay:-4.90s}.ascii-frame-24{animation-delay:-4.80s}.ascii-frame-25{animation-delay:-4.70s}.ascii-frame-26{animation-delay:-4.60s}.ascii-frame-27{animation-delay:-4.50s}.ascii-frame-28{animation-delay:-4.40s}.ascii-frame-29{animation-delay:-4.30s}.ascii-frame-30{animation-delay:-4.20s}.ascii-frame-31{animation-delay:-4.10s}.ascii-frame-32{animation-delay:-4.00s}.ascii-frame-33{animation-delay:-3.90s}.ascii-frame-34{animation-delay:-3.80s}.ascii-frame-35{animation-delay:-3.70s}.ascii-frame-36{animation-delay:-3.60s}.ascii-frame-37{animation-delay:-3.50s}.ascii-frame-38{animation-delay:-3.40s}.ascii-frame-39{animation-delay:-3.30s}.ascii-frame-40{animation-delay:-3.20s}.ascii-frame-41{animation-delay:-3.10s}.ascii-frame-42{animation-delay:-3.00s}.ascii-frame-43{animation-delay:-2.90s}.ascii-frame-44{animation-delay:-2.80s}.ascii-frame-45{animation-delay:-2.70s}.ascii-frame-46{animation-delay:-2.60s}.ascii-frame-47{animation-delay:-2.50s}.ascii-frame-48{animation-delay:-2.40s}.ascii-frame-49{animation-delay:-2.30s}.ascii-frame-50{animation-delay:-2.20s}.ascii-frame-51{animation-delay:-2.10s}.ascii-frame-52{animation-delay:-2.00s}.ascii-frame-53{animation-delay:-1.90s}.ascii-frame-54{animation-delay:-1.80s}.ascii-frame-55{animation-delay:-1.70s}.ascii-frame-56{animation-delay:-1.60s}.ascii-frame-57{animation-delay:-1.50s}.ascii-frame-58{animation-delay:-1.40s}.ascii-frame-59{animation-delay:-1.30s}.ascii-frame-60{animation-delay:-1.20s}.ascii-frame-61{animation-delay:-1.10s}.ascii-frame-62{animation-delay:-1.00s}.ascii-frame-63{animation-delay:-0.90s}.ascii-frame-64{animation-delay:-0.80s}.ascii-frame-65{animation-delay:-0.70s}.ascii-frame-66{animation-delay:-0.60s}.ascii-frame-67{animation-delay:-0.50s}.ascii-frame-68{animation-delay:-0.40s}.ascii-frame-69{animation-delay:-0.30s}.ascii-frame-70{animation-delay:-0.20s}.ascii-frame-71{animation-delay:-0.10s}
 .ascii-frame-0 { opacity: 1; }
 .ascii-stop-top { animation: ascii-top-color 9s ease-in-out infinite; }
 .ascii-stop-middle { animation: ascii-middle-color 9s ease-in-out infinite; }
@@ -108,24 +34,14 @@
   .ascii-stop-top, .ascii-stop-middle, .ascii-stop-bottom { animation: none; }
   .cursor { animation: none; opacity: 1; }
 }
-text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
+text { font: 14px Consolas, &quot;Liberation Mono&quot;, monospace; white-space: pre; }
 .ascii {
   font-size: 12px;
-  font-family: Consolas, "DejaVu Sans Mono", "Liberation Mono", monospace;
+  font-family: Consolas, &quot;DejaVu Sans Mono&quot;, &quot;Liberation Mono&quot;, monospace;
   text-rendering: geometricPrecision;
 }
 .text { fill: #24292f; } .key { fill: #bc4c00; }
-.value { fill: #0969da; } .muted { fill: #57606a; }
-</style>
-<defs>
-<linearGradient id="ascii-color" x1="0" y1="0" x2="0" y2="1">
-  <stop class="ascii-stop-top" offset="0" stop-color="#2da44e"/>
-  <stop class="ascii-stop-middle" offset="0.5" stop-color="#1a7f37"/>
-  <stop class="ascii-stop-bottom" offset="1" stop-color="#116329"/>
-</linearGradient>
-</defs>
-<rect x="0.5" y="0.5" width="849" height="529" rx="15" fill="#f6f8fa" stroke="#d0d7de"/>
-<text class="ascii ascii-frame ascii-frame-0" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · · ·                        </tspan>
+.value { fill: #0969da; } .muted { fill: #57606a; }</style><defs><linearGradient id="ascii-color" x1="0" x2="0" y1="0" y2="1"><stop class="ascii-stop-top" offset="0" stop-color="#2da44e"/><stop class="ascii-stop-middle" offset="0.5" stop-color="#1a7f37"/><stop class="ascii-stop-bottom" offset="1" stop-color="#116329"/></linearGradient></defs><rect width="849" height="529" x="0.5" y="0.5" fill="#f6f8fa" stroke="#d0d7de" rx="15"/><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-0"><tspan x="18" y="38.0">           · · ·                        </tspan>
 <tspan x="18" y="46.5">  ········⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄··········   ··⋄·· </tspan>
 <tspan x="18" y="55.0"> ··⋄⋄⋄⋄⋄⋄⋄◇◇◇◆◇◆◇◇◇◇⋄⋄·⋄·⋄⋄⋄⋄⋄·· ··⋄⋄◇· </tspan>
 <tspan x="18" y="63.5"> ·⋄⋄◇⋄⋄⋄◇⋄◇◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄⋄◇◇◇◇◇⋄⋄·⋄◇◇◇⋄ </tspan>
@@ -179,8 +95,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·◇◇◆◇◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇◇◇◇◇⋄⋄⋄⋄⋄◇◇◇◇◆◇◇ </tspan>
 <tspan x="18" y="480.0"> ·⋄◇◇◇◇◇◇◆◇◆◇◇◇◇◇◇◇◇⋄⋄⋄⋄⋄⋄⋄⋄·····⋄⋄◇◇◇⋄ </tspan>
 <tspan x="18" y="488.5">  ⋄⋄◇⋄◇⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄········ · ··⋄⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">   · · · · · ·   ·                   ·  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-1" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · · ·                        </tspan>
+<tspan x="18" y="497.0">   · · · · · ·   ·                   ·  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-1"><tspan x="18" y="38.0">           · · ·                        </tspan>
 <tspan x="18" y="46.5">  · · · ··◇◇◇⋄◇⋄⋄⋄⋄⋄⋄·······⋄··   ····· </tspan>
 <tspan x="18" y="55.0"> ··⋄·⋄·⋄⋄⋄◇◆◇◆◇◇◇◇◇◇⋄⋄·⋄·⋄⋄⋄⋄◇⋄⋄···⋄⋄◇· </tspan>
 <tspan x="18" y="63.5"> ·⋄⋄⋄⋄⋄⋄◇◇◆◆◆◆◆◆◆◆◆◇◇◇⋄⋄⋄⋄◇◇◇◇◇◇⋄·⋄⋄◇◇⋄ </tspan>
@@ -234,8 +149,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·◇◆◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇◇◇◇◇◇◇⋄⋄⋄⋄⋄◇◇◇◇◆◇◇ </tspan>
 <tspan x="18" y="480.0"> ·⋄◇◇◇◇◇◇◆◇◆◇◇◇◇◇◇◇◇⋄⋄⋄⋄⋄⋄⋄⋄·····⋄⋄◇◇◇⋄ </tspan>
 <tspan x="18" y="488.5">  ⋄⋄◇⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄⋄⋄·⋄······ · ··⋄⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">   · · · · · ·   ·                   ·  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-2" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · · ·                        </tspan>
+<tspan x="18" y="497.0">   · · · · · ·   ·                   ·  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-2"><tspan x="18" y="38.0">           · · ·                        </tspan>
 <tspan x="18" y="46.5">  ·     ··◇◇◇⋄◇⋄⋄⋄⋄·········⋄·⋄··   ··· </tspan>
 <tspan x="18" y="55.0"> ··⋄·····◇◇◆◇◆◇◇◇◇◇◇⋄⋄·⋄·⋄·⋄⋄◇⋄⋄·····⋄· </tspan>
 <tspan x="18" y="63.5"> ·⋄⋄⋄⋄⋄⋄◇◇◆◆◆◆◆◆◆◆◆◇◇⋄⋄⋄⋄⋄◇⋄◇◇◆◇◇⋄⋄⋄◇⋄⋄ </tspan>
@@ -289,8 +203,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇◇◇◇◇⋄⋄⋄⋄⋄⋄⋄◇◇◇◇◆◇◇ </tspan>
 <tspan x="18" y="480.0"> ·⋄◇◇◇◇◆◇◆◇◆◇◇◇◇◇◇⋄◇⋄◇⋄⋄⋄⋄·⋄·····⋄⋄◇◇◇⋄ </tspan>
 <tspan x="18" y="488.5">  ·⋄◇⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄···⋄···· · · ··⋄⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">     · · · · ·   ·                   ·  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-3" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · · ·                        </tspan>
+<tspan x="18" y="497.0">     · · · · ·   ·                   ·  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-3"><tspan x="18" y="38.0">           · · ·                        </tspan>
 <tspan x="18" y="46.5">        ·⋄◇⋄◇⋄◇⋄⋄⋄⋄···· · ··⋄·⋄·· · · · </tspan>
 <tspan x="18" y="55.0"> ····· ·⋄◇◆◆◇◆◇◇◇◇◇◇⋄⋄···⋄·⋄⋄◇◇◇⋄⋄···⋄· </tspan>
 <tspan x="18" y="63.5"> ·⋄⋄⋄⋄⋄⋄◇◇◆◆◆◆◆◆◆◆◆◇◇⋄⋄⋄⋄⋄◇⋄◇◇◆◇◆◇◇⋄⋄⋄⋄ </tspan>
@@ -344,8 +257,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·⋄◇◆◆◆◆◆◆◆◆◆◆◆◇◆◇◇◇◇◇◇◇◇⋄⋄⋄⋄⋄⋄⋄⋄◇◇◇◆◇◇ </tspan>
 <tspan x="18" y="480.0"> ··◇◇◆◇◆◇◆◇◆◇◇◇◇◇◇⋄◇⋄◇⋄⋄⋄⋄·⋄·····⋄⋄◇◇◇⋄ </tspan>
 <tspan x="18" y="488.5">  ·⋄◇⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄·⋄·⋄·⋄···· · · ··⋄⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">     · · · · ·                       ·  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-4" fill="url(#ascii-color)"><tspan x="18" y="38.0">         · · · ·                        </tspan>
+<tspan x="18" y="497.0">     · · · · ·                       ·  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-4"><tspan x="18" y="38.0">         · · · ·                        </tspan>
 <tspan x="18" y="46.5">        ⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄···· · ····⋄⋄⋄·· · · </tspan>
 <tspan x="18" y="55.0">   ·   ·⋄◆◆◆◇◆◇◇◇◇◇◇⋄⋄···⋄·⋄⋄◇◇◇◇◇⋄⋄·⋄· </tspan>
 <tspan x="18" y="63.5"> ·⋄⋄⋄··⋄◇◆◆◆◆◆◆◆◆◆◆◇◇⋄⋄⋄⋄⋄◇⋄◇◇◆◆◆◇◇◇◇⋄⋄ </tspan>
@@ -399,8 +311,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·⋄◇◆◆◆◆◆◆◆◆◆◆◆◇◆◇◇◇◆◇◇◇◇⋄⋄⋄⋄⋄⋄⋄⋄◇◇◇◆◇◇ </tspan>
 <tspan x="18" y="480.0"> ··◇◇◆◇◆◇◆◇◆◇◇◇◇◇◇⋄◇◇◇⋄⋄⋄⋄·······⋄⋄◇◇◇⋄ </tspan>
 <tspan x="18" y="488.5">  ··◇⋄◇◇◇⋄◇⋄◇⋄⋄⋄⋄·⋄·⋄⋄⋄···· · · ··⋄⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">     · · · · ·                       ·  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-5" fill="url(#ascii-color)"><tspan x="18" y="38.0">         · · · ·                        </tspan>
+<tspan x="18" y="497.0">     · · · · ·                       ·  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-5"><tspan x="18" y="38.0">         · · · ·                        </tspan>
 <tspan x="18" y="46.5">        ⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄·· · · ····⋄⋄⋄·⋄···· </tspan>
 <tspan x="18" y="55.0">       ⋄◇◆◇◆◇◇◇◇◇◇◇◇⋄⋄···⋄·⋄⋄◇⋄◇◇◇◇⋄⋄⋄· </tspan>
 <tspan x="18" y="63.5"> ·⋄····⋄◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄·⋄⋄◇◇◇◇◇◇◆◆◆◇◇⋄⋄ </tspan>
@@ -454,8 +365,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·⋄◇◆◆◆◆◆◆◆◆◆◆◆◇◆◇◇◇◆◇◇◇◇⋄⋄⋄⋄·⋄⋄⋄⋄◇◇◆◇⋄ </tspan>
 <tspan x="18" y="480.0"> ··◇◇◆◆◆◇◆◇◆◇◇◇◇⋄◇⋄◇◇◇⋄⋄⋄⋄·· ····⋄⋄◇◇◇· </tspan>
 <tspan x="18" y="488.5">  ··⋄⋄◇◇◇⋄◇⋄◇⋄⋄⋄⋄·⋄⋄⋄·⋄···· · · ··⋄⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">     · · · · ·                       ·  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-6" fill="url(#ascii-color)"><tspan x="18" y="38.0">         · · · ·                        </tspan>
+<tspan x="18" y="497.0">     · · · · ·                       ·  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-6"><tspan x="18" y="38.0">         · · · ·                        </tspan>
 <tspan x="18" y="46.5">       ·⋄⋄◇⋄◇⋄⋄⋄⋄⋄⋄·· · · ····⋄·⋄·⋄···· </tspan>
 <tspan x="18" y="55.0">       ◇◇◆◇◆◇◇◇◇◇◇⋄⋄⋄⋄···⋄·⋄⋄⋄⋄◇◇◇◇◇⋄⋄· </tspan>
 <tspan x="18" y="63.5"> ·· ··⋄◇◆◆◆◆◆◆◆◇◆◇◇◇◇⋄⋄·⋄⋄◇◇◇◇◇◇◆◇◆◇◇◇⋄ </tspan>
@@ -509,8 +419,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·⋄◇◆◆◆◆◆◆◆◆◆◆◆◇◆◇◆◇◆◇◇◇◇⋄⋄⋄⋄·⋄⋄⋄⋄◇◇◆◇⋄ </tspan>
 <tspan x="18" y="480.0"> ··⋄◇◆◆◆◆◆◆◆◇◇◇◇⋄◇◇◇◇◇⋄⋄⋄⋄·· ····⋄⋄◇◇◇· </tspan>
 <tspan x="18" y="488.5">  ··⋄⋄◇◇◇⋄◇⋄◇⋄⋄·⋄·⋄⋄⋄······ · · ··⋄⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">     · · · · ·                       ·  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-7" fill="url(#ascii-color)"><tspan x="18" y="38.0">         · · · ·                        </tspan>
+<tspan x="18" y="497.0">     · · · · ·                       ·  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-7"><tspan x="18" y="38.0">         · · · ·                        </tspan>
 <tspan x="18" y="46.5">      ·⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄·· · · ········⋄·⋄·· </tspan>
 <tspan x="18" y="55.0">      ·◇◇◆◇◆◇◇◇◇◇◇⋄⋄⋄⋄···⋄·⋄⋄◇⋄⋄⋄◇⋄◇◇◇· </tspan>
 <tspan x="18" y="63.5"> ·· ··◇◆◆◆◆◆◆◆◆◇◆◇◇◇◇⋄⋄·⋄⋄◇◇◇◇◇◇◇◇◆◇◆◇⋄ </tspan>
@@ -564,8 +473,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·⋄◇◆◆◆◆◆◆◆◆◆◆◇◇◆◆◆◇◇◇◇◇◇◇◇⋄⋄·⋄⋄⋄⋄◇◇◆◇⋄ </tspan>
 <tspan x="18" y="480.0"> ··⋄◇◆◆◆◆◆◆◆◇◇◇◇◇◇◇◇◇⋄⋄⋄⋄⋄·⋄ · ··⋄⋄◇◇◇· </tspan>
 <tspan x="18" y="488.5">  ··⋄⋄◇◇◇⋄◇◇◇⋄⋄·⋄⋄⋄⋄⋄········ · ··⋄⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">     · · · · ·                       ·  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-8" fill="url(#ascii-color)"><tspan x="18" y="38.0">         · · ·                     ·    </tspan>
+<tspan x="18" y="497.0">     · · · · ·                       ·  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-8"><tspan x="18" y="38.0">         · · ·                     ·    </tspan>
 <tspan x="18" y="46.5">      ·⋄◇⋄◇⋄◇⋄⋄⋄⋄·⋄·· · · ········⋄⋄⋄·· </tspan>
 <tspan x="18" y="55.0">     ·⋄◇◇◆◇◆◇◇◇◇◇◇⋄⋄⋄⋄·····⋄⋄◇⋄⋄⋄◇⋄◇◇◇⋄ </tspan>
 <tspan x="18" y="63.5">    ·⋄◇◆◆◆◆◆◆◆◆◇◇◇◇◇◇⋄⋄·⋄⋄⋄◇◇◇◇◇◇◇◇◆◆◇◇ </tspan>
@@ -619,8 +527,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·⋄◇◆◆◆◆◆◆◆◆◆◇◇◇◆◆◆◇◇◇◇⋄◇◇◇⋄⋄···⋄⋄◇◇◆◇⋄ </tspan>
 <tspan x="18" y="480.0"> ··⋄◇◆◆◆◆◆◆◆◇◇◇◇◇◇◇◇⋄⋄⋄⋄·⋄⋄⋄·· ··⋄⋄◇◇◇· </tspan>
 <tspan x="18" y="488.5">  ··⋄⋄◇◇◇⋄◇◇◇⋄⋄⋄⋄⋄⋄⋄⋄········   ··⋄⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">     · · · · ·   ·                   ·  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-9" fill="url(#ascii-color)"><tspan x="18" y="38.0">         · · ·                     ·    </tspan>
+<tspan x="18" y="497.0">     · · · · ·   ·                   ·  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-9"><tspan x="18" y="38.0">         · · ·                     ·    </tspan>
 <tspan x="18" y="46.5">      ⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄·⋄·· · · ········⋄⋄⋄⋄· </tspan>
 <tspan x="18" y="55.0">    ·⋄◇◇◇◆◇◆◇◇◇◇◇◇⋄⋄·· ····⋄⋄⋄⋄⋄⋄⋄◇◆◇◇⋄ </tspan>
 <tspan x="18" y="63.5">    ⋄◇◆◆◆◆◆◆◆◆◆◇◇◇◇◇◇⋄⋄·⋄⋄⋄⋄◇◇◇◇◇◇◇◆◆◇◇ </tspan>
@@ -674,8 +581,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·⋄◇◆◆◆◆◆◆◆◆◆◇◆◆◆◆◆◇◇◇◇⋄◇◇◇⋄⋄···⋄⋄◇◇◆◇⋄ </tspan>
 <tspan x="18" y="480.0"> ··◇◇◇◇◆◇◆◇◆◇◇◇◇◇◇◇◇⋄⋄⋄⋄·⋄⋄⋄·· ··⋄⋄◇◇◇· </tspan>
 <tspan x="18" y="488.5">  ··⋄⋄◇◇◇⋄◇⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄········   ··⋄⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">     · · · · ·   ·                   ·  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-10" fill="url(#ascii-color)"><tspan x="18" y="38.0">         · · ·                     ·    </tspan>
+<tspan x="18" y="497.0">     · · · · ·   ·                   ·  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-10"><tspan x="18" y="38.0">         · · ·                     ·    </tspan>
 <tspan x="18" y="46.5">    ··⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄·⋄·· ·   · ······◇⋄⋄⋄· </tspan>
 <tspan x="18" y="55.0">    ·◇◇◆◇◆◇◆◇◇◇◇⋄◇⋄⋄·· ····⋄·⋄⋄⋄⋄◇◇◆◇◇⋄ </tspan>
 <tspan x="18" y="63.5">  ··◇◇◆◆◆◆◆◆◆◆◆◇◇◇◇⋄◇⋄⋄·⋄⋄⋄⋄◇◇◇◇◇◇◆◆◆◆◇ </tspan>
@@ -729,8 +635,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·⋄◇◆◆◆◆◆◆◆◆◆◇◆◆◆◆◆◇◇◇◇⋄◇◇◇◇◇···⋄⋄◇◇◇◇⋄ </tspan>
 <tspan x="18" y="480.0"> ·⋄◇◇◇◇◆◇◆◇◆◇◇◇◇◇◇◇◇⋄⋄⋄⋄·⋄⋄⋄·· ··⋄⋄◇◇◇· </tspan>
 <tspan x="18" y="488.5">  ··⋄⋄◇⋄◇⋄◇⋄⋄·⋄⋄⋄⋄⋄⋄⋄········   ··⋄⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">     · · · ·   · ·                 · ·  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-11" fill="url(#ascii-color)"><tspan x="18" y="38.0">         · ·                       ·    </tspan>
+<tspan x="18" y="497.0">     · · · ·   · ·                 · ·  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-11"><tspan x="18" y="38.0">         · ·                       ·    </tspan>
 <tspan x="18" y="46.5">    ··⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄···· ·   · · · ·⋄◇⋄◇⋄· </tspan>
 <tspan x="18" y="55.0">   ·⋄◇◇◆◇◆◇◆◇◇◇◇⋄⋄⋄⋄·· ······⋄·⋄⋄◇◇◆◇◇· </tspan>
 <tspan x="18" y="63.5">  ⋄⋄◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄···⋄⋄⋄⋄◇⋄◇⋄◇◇◆◆◆◆◇ </tspan>
@@ -784,8 +689,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·◇◇◆◇◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇⋄◇⋄◇⋄◇◇◇⋄··⋄⋄◇◇◇◇⋄ </tspan>
 <tspan x="18" y="480.0"> ·⋄◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇⋄⋄⋄⋄·⋄⋄◇⋄· ··⋄⋄◇◇◇· </tspan>
 <tspan x="18" y="488.5">  ⋄⋄⋄⋄◇⋄⋄⋄◇⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄···· ··⋄·· ··⋄⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">     · · · ·   · ·                 · ·  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-12" fill="url(#ascii-color)"><tspan x="18" y="38.0">         · ·                     · ·    </tspan>
+<tspan x="18" y="497.0">     · · · ·   · ·                 · ·  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-12"><tspan x="18" y="38.0">         · ·                     · ·    </tspan>
 <tspan x="18" y="46.5">  ····⋄⋄◇⋄◇⋄◇⋄⋄·⋄····     · · · ⋄⋄◇◇◇⋄· </tspan>
 <tspan x="18" y="55.0">  ·⋄⋄◇◇◆◇◆◇◆◇◇◇◇⋄⋄⋄⋄·· ········⋄⋄◆◇◆◇◇· </tspan>
 <tspan x="18" y="63.5"> ·◇◇◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄···⋄·⋄⋄⋄⋄⋄⋄◇◆◆◆◆◆◇ </tspan>
@@ -839,8 +743,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·◇◇◆◇◆◆◆◇◆◇◆◆◆◆◆◇◇◇◇⋄◇⋄◇⋄◇◇◇⋄⋄·⋄⋄◇◇◇◇⋄ </tspan>
 <tspan x="18" y="480.0"> ·⋄◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇⋄⋄·⋄·⋄⋄◇⋄⋄···⋄⋄◇◇◇· </tspan>
 <tspan x="18" y="488.5">  ⋄⋄⋄⋄◇⋄⋄⋄⋄⋄⋄⋄◇⋄⋄⋄⋄······ ··⋄·· ··⋄⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">     · · ·   · · ·                 · ·  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-13" fill="url(#ascii-color)"><tspan x="18" y="38.0">         · ·                     · ·    </tspan>
+<tspan x="18" y="497.0">     · · ·   · · ·                 · ·  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-13"><tspan x="18" y="38.0">         · ·                     · ·    </tspan>
 <tspan x="18" y="46.5">  ····⋄⋄◇⋄◇⋄⋄⋄⋄·⋄·· ·         ··⋄⋄◇◇◇⋄· </tspan>
 <tspan x="18" y="55.0"> ·⋄◇◇◇◇◆◇◆◇◇◇◇◇◇⋄⋄·⋄·· · · ····⋄◇◆◇◆◇◇· </tspan>
 <tspan x="18" y="63.5"> ⋄◇◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄···⋄·⋄·⋄⋄⋄⋄◆◆◆◆◆◆◇ </tspan>
@@ -894,8 +797,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·◇◇◆◇◆◇◆◇◇◆◆◆◆◆◆◇◇◇◇⋄◇⋄◇⋄◇◇◇◇⋄·⋄⋄◇◇◇◇⋄ </tspan>
 <tspan x="18" y="480.0"> ·⋄◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇⋄◇⋄⋄·⋄···⋄⋄◇⋄⋄·⋄⋄◇⋄◇· </tspan>
 <tspan x="18" y="488.5">  ⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄◇⋄⋄⋄⋄······ ··⋄⋄⋄···⋄⋄⋄·· </tspan>
-<tspan x="18" y="497.0">     · · ·   · · ·           ·     ·    </tspan></text>
-<text class="ascii ascii-frame ascii-frame-14" fill="url(#ascii-color)"><tspan x="18" y="38.0">         · ·                     · ·    </tspan>
+<tspan x="18" y="497.0">     · · ·   · · ·           ·     ·    </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-14"><tspan x="18" y="38.0">         · ·                     · ·    </tspan>
 <tspan x="18" y="46.5">  ⋄·⋄·⋄⋄◇⋄◇⋄⋄⋄⋄·⋄·· ·         ··◇⋄◇⋄◇⋄· </tspan>
 <tspan x="18" y="55.0"> ⋄◇◇◇◇◇◆◇◆◇◇◇◇◇◇⋄⋄·⋄·· · · · ··⋄◇◆◇◆◇◇⋄ </tspan>
 <tspan x="18" y="63.5"> ⋄◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄◇⋄⋄···⋄···⋄·⋄◇◆◆◆◆◆◆◇ </tspan>
@@ -949,8 +851,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ⋄◇◇◆◇◇◇◇◇◆◆◆◆◆◆◆◇◇⋄◇⋄⋄⋄⋄⋄⋄◇◇◇◇⋄⋄⋄◇⋄◇◇⋄ </tspan>
 <tspan x="18" y="480.0"> ·⋄◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇⋄⋄·⋄·⋄···⋄⋄◇⋄⋄·⋄⋄◇⋄◇· </tspan>
 <tspan x="18" y="488.5">  ⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄◇⋄◇⋄⋄⋄⋄···· · ··⋄⋄⋄·⋄·⋄⋄⋄·· </tspan>
-<tspan x="18" y="497.0">   · · · ·   ·               ·          </tspan></text>
-<text class="ascii ascii-frame ascii-frame-15" fill="url(#ascii-color)"><tspan x="18" y="38.0">         · ·                   · · ·    </tspan>
+<tspan x="18" y="497.0">   · · · ·   ·               ·          </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-15"><tspan x="18" y="38.0">         · ·                   · · ·    </tspan>
 <tspan x="18" y="46.5">  ⋄·⋄·⋄⋄◇⋄◇⋄⋄⋄⋄···· ·         ·⋄◇⋄◇⋄◇⋄· </tspan>
 <tspan x="18" y="55.0"> ⋄◇◇◇◇◇◆◇◆◇◇◇◇⋄◇⋄⋄·⋄·· · ·   ··◇◇◆◇◆◇◇⋄ </tspan>
 <tspan x="18" y="63.5"> ◇◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄◇⋄⋄⋄⋄·⋄·· ··◇◇◆◆◆◆◆◆◇ </tspan>
@@ -1004,8 +905,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ⋄◇◇◆◇◇◇◇◇◆◆◆◆◆◆◆◇◇⋄◇⋄⋄⋄⋄⋄⋄⋄◇◇◇◇◇⋄◇⋄◇⋄⋄ </tspan>
 <tspan x="18" y="480.0"> ⋄◇◇◇◇◇◇⋄◇◇◆◇◇◇◇◇◇⋄⋄·⋄·⋄···⋄⋄◇◇◇⋄⋄⋄⋄⋄⋄· </tspan>
 <tspan x="18" y="488.5"> ·⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄◇⋄⋄⋄⋄·⋄·· · · ··⋄⋄⋄⋄⋄·⋄⋄⋄·· </tspan>
-<tspan x="18" y="497.0">   · ·     · ·               · · ·      </tspan></text>
-<text class="ascii ascii-frame ascii-frame-16" fill="url(#ascii-color)"><tspan x="18" y="38.0">       · · ·                   · · ·    </tspan>
+<tspan x="18" y="497.0">   · ·     · ·               · · ·      </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-16"><tspan x="18" y="38.0">       · · ·                   · · ·    </tspan>
 <tspan x="18" y="46.5"> ·⋄⋄⋄·⋄⋄◇⋄◇⋄⋄⋄⋄······ ·       ⋄⋄◇⋄◇⋄◇⋄· </tspan>
 <tspan x="18" y="55.0"> ⋄◇◇◇◇◇◆◇◆◇◇◇◇⋄⋄⋄⋄·⋄·⋄····   ⋄⋄◇◆◆◇◆◇◇⋄ </tspan>
 <tspan x="18" y="63.5">·◇◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄⋄◇⋄⋄⋄⋄·· ·⋄◇◆◆◆◆◆◆◆◇ </tspan>
@@ -1059,8 +959,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ⋄◇◇◆◇◇◇◇◇◆◆◆◆◆◆◆◇◇⋄◇⋄⋄⋄⋄⋄⋄⋄◇◇◆◇◇◇◇◇◇⋄⋄ </tspan>
 <tspan x="18" y="480.0"> ⋄◇◇◇◇⋄◇⋄◇◇◆◇◇◇◇◇◇⋄⋄·⋄·····⋄⋄◇◇◇◇◇◇◇⋄⋄· </tspan>
 <tspan x="18" y="488.5"> ·⋄⋄⋄⋄⋄·⋄⋄◇⋄◇⋄⋄⋄⋄·⋄·· · · ··⋄⋄⋄⋄⋄⋄⋄⋄⋄·· </tspan>
-<tspan x="18" y="497.0">   · ·   · · ·               · · ·      </tspan></text>
-<text class="ascii ascii-frame ascii-frame-17" fill="url(#ascii-color)"><tspan x="18" y="38.0">       · · ·                   · · ·    </tspan>
+<tspan x="18" y="497.0">   · ·   · · ·               · · ·      </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-17"><tspan x="18" y="38.0">       · · ·                   · · ·    </tspan>
 <tspan x="18" y="46.5"> ·⋄⋄⋄⋄⋄⋄◇⋄◇⋄⋄·⋄···· · ·      ·⋄⋄◇⋄◇⋄◇⋄· </tspan>
 <tspan x="18" y="55.0"> ⋄◇◆◇◇◇◆◇◆◇◇◇◇⋄⋄⋄⋄···⋄····   ◇◇◆◆◆◇◆◇◇· </tspan>
 <tspan x="18" y="63.5">·◇◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄⋄⋄⋄◇⋄⋄·· ·◇◆◆◆◆◆◆◆◇⋄ </tspan>
@@ -1114,8 +1013,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ⋄◇◇◇◇◇◇◆◆◆◆◆◆◆◇◆◇◇⋄⋄⋄⋄⋄⋄⋄⋄⋄◇◇◆◇◆◆◆◇◇◇⋄ </tspan>
 <tspan x="18" y="480.0"> ⋄◇◇◇◇⋄◇◇◇◇◆◇◇◇◇◇◇⋄⋄·······⋄⋄◇◇◇◇◇◇◇⋄⋄· </tspan>
 <tspan x="18" y="488.5"> ·⋄⋄⋄⋄⋄·⋄⋄◇⋄◇⋄⋄⋄⋄···· · · ··⋄⋄◇⋄◇⋄◇⋄⋄·· </tspan>
-<tspan x="18" y="497.0">   · ·   · · ·               · · · ·    </tspan></text>
-<text class="ascii ascii-frame ascii-frame-18" fill="url(#ascii-color)"><tspan x="18" y="38.0">       · · ·                   · · ·    </tspan>
+<tspan x="18" y="497.0">   · ·   · · ·               · · · ·    </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-18"><tspan x="18" y="38.0">       · · ·                   · · ·    </tspan>
 <tspan x="18" y="46.5"> ·⋄⋄⋄⋄◇⋄◇⋄◇⋄⋄·⋄·· · · ·     ··◇⋄◇⋄◇⋄◇⋄· </tspan>
 <tspan x="18" y="55.0"> ⋄◇◆◇◆◇◆◇◆◇◇◇◇⋄⋄⋄⋄·······   ·◇◇◆◆◆◇◆◇◇· </tspan>
 <tspan x="18" y="63.5">·◇◆◆◆◆◆◆◆◆◆◆◆◇◇⋄◇⋄⋄⋄⋄⋄⋄⋄⋄·· ⋄◇◆◆◆◆◆◆◆◇⋄ </tspan>
@@ -1169,8 +1067,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·⋄◇◇◇◇◇◇◆◆◆◆◆◆◆◇◆◇◇⋄⋄⋄⋄·⋄⋄⋄⋄◇◇◇◇◆◆◆◇◇◇⋄ </tspan>
 <tspan x="18" y="480.0"> ⋄◇◇⋄◇⋄◇◇◇◇◆◇◇◇◇⋄◇⋄⋄·······⋄⋄◇◇◇◇◇◇◇◇◇· </tspan>
 <tspan x="18" y="488.5"> ·⋄⋄⋄⋄⋄⋄⋄⋄◇⋄◇⋄⋄⋄⋄···· ·   ··⋄⋄⋄⋄◇⋄◇⋄⋄·· </tspan>
-<tspan x="18" y="497.0">   · ·   · · ·               · · · ·    </tspan></text>
-<text class="ascii ascii-frame ascii-frame-19" fill="url(#ascii-color)"><tspan x="18" y="38.0">   ·   · · ·                   · · ·    </tspan>
+<tspan x="18" y="497.0">   · ·   · · ·               · · · ·    </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-19"><tspan x="18" y="38.0">   ·   · · ·                   · · ·    </tspan>
 <tspan x="18" y="46.5"> ·⋄⋄◇⋄◇⋄◇⋄◇⋄⋄·⋄·· ·         ⋄⋄◇⋄◇⋄◇⋄◇⋄· </tspan>
 <tspan x="18" y="55.0"> ⋄◇◆◆◆◇◆◇◆◇◇◇◇⋄⋄·⋄···· · · ·⋄◇◇◆◆◆◇◆◇◇· </tspan>
 <tspan x="18" y="63.5">·◇◆◆◆◆◆◆◆◆◆◇◇◇◇⋄◇⋄⋄·⋄·⋄·⋄···◇◆◆◆◆◆◆◆◆◇⋄ </tspan>
@@ -1224,8 +1121,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·⋄◇◇◇◇◇◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄⋄⋄·⋄⋄⋄⋄◇◇◇◇◆◆◆◇◆◇⋄ </tspan>
 <tspan x="18" y="480.0"> ⋄⋄◇⋄◇⋄◇◇◆◇◆◇◇◇◇⋄⋄⋄⋄···· ··⋄·⋄◇◇◇◇◇◇◇◇· </tspan>
 <tspan x="18" y="488.5"> ·⋄⋄⋄·⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄···· ·   ····⋄⋄◇⋄◇⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">       · · · ·               · · ·      </tspan></text>
-<text class="ascii ascii-frame ascii-frame-20" fill="url(#ascii-color)"><tspan x="18" y="38.0">   ·   · · ·                   · · ·    </tspan>
+<tspan x="18" y="497.0">       · · · ·               · · ·      </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-20"><tspan x="18" y="38.0">   ·   · · ·                   · · ·    </tspan>
 <tspan x="18" y="46.5">  ⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄···· ·        ·⋄⋄◇⋄◇⋄◇⋄⋄⋄· </tspan>
 <tspan x="18" y="55.0"> ⋄◇◆◆◆◇◆◇◇◇◇⋄◇⋄⋄···· · · · ⋄◇◇◇◆◇◆◇◆◇◇· </tspan>
 <tspan x="18" y="63.5">·◇◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄⋄⋄·⋄···⋄·⋄⋄◇◆◆◆◆◆◆◆◆◇⋄ </tspan>
@@ -1279,8 +1175,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·⋄◇⋄◇◇◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄⋄⋄·⋄⋄⋄⋄⋄⋄◇◇◆◆◆◇◆◇◇ </tspan>
 <tspan x="18" y="480.0"> ⋄⋄◇⋄◇◇◆◇◆◇◆◇◇◇◇⋄⋄·⋄···· ··⋄·⋄⋄◇◇◇◇◇◇◇· </tspan>
 <tspan x="18" y="488.5"> ·⋄⋄⋄⋄⋄⋄◇⋄◇⋄⋄⋄⋄⋄⋄···· ·   ····⋄⋄⋄⋄⋄⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">     · · · · ·                 · ·   ·  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-21" fill="url(#ascii-color)"><tspan x="18" y="38.0">   · · · ·                     · · ·    </tspan>
+<tspan x="18" y="497.0">     · · · · ·                 · ·   ·  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-21"><tspan x="18" y="38.0">   · · · ·                     · · ·    </tspan>
 <tspan x="18" y="46.5">  ⋄◇◇⋄◇⋄◇⋄⋄⋄⋄···· ·     · ··⋄⋄◇⋄◇⋄◇⋄⋄⋄· </tspan>
 <tspan x="18" y="55.0"> ⋄◇◆◆◆◇◆◇◇◇◇⋄⋄⋄⋄····   ··⋄·⋄◇◇◇◆◇◆◇◇◇◇· </tspan>
 <tspan x="18" y="63.5">·◇◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄⋄⋄·· ··⋄⋄⋄⋄◆◆◆◆◆◆◆◆◆◇⋄ </tspan>
@@ -1334,8 +1229,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·⋄◇⋄◇◇◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄⋄⋄·⋄⋄⋄⋄⋄⋄⋄◇◇◇◆◆◆◇◇ </tspan>
 <tspan x="18" y="480.0"> ⋄⋄⋄⋄◇◇◆◇◆◇◆◇◇◇◇⋄⋄·⋄···· ··⋄·⋄⋄◇◇◇◇◇◇◇· </tspan>
 <tspan x="18" y="488.5"> ·⋄·⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄···· ·   ····⋄⋄⋄⋄⋄⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">     · · · · ·                 · ·   ·  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-22" fill="url(#ascii-color)"><tspan x="18" y="38.0">   · · ·                     · · · ·    </tspan>
+<tspan x="18" y="497.0">     · · · · ·                 · ·   ·  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-22"><tspan x="18" y="38.0">   · · ·                     · · · ·    </tspan>
 <tspan x="18" y="46.5">  ⋄◇◇⋄◇⋄◇⋄⋄⋄⋄···· ·     ⋄···⋄⋄◇⋄◇⋄◇⋄⋄⋄· </tspan>
 <tspan x="18" y="55.0"> ⋄◇◆◆◆◇◇◇◇◇◇⋄⋄·⋄·· ·   ·⋄⋄·⋄◇◇◇◆◇◆◇◇◇◇· </tspan>
 <tspan x="18" y="63.5">·◇◆◆◆◆◆◆◆◆◆◇◇◇⋄⋄⋄·⋄··  ·◇◇◇◇◆◆◆◆◆◆◆◆◆◇⋄ </tspan>
@@ -1389,8 +1283,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·⋄◇◇◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄⋄⋄·⋄⋄⋄⋄⋄⋄⋄⋄◇◇◆◆◆◇◇ </tspan>
 <tspan x="18" y="480.0"> ⋄⋄◇◇◇◇◆◇◆◇◆◇◇◇◇⋄⋄·⋄···· ····⋄⋄◇◇◇◇◇◇◇· </tspan>
 <tspan x="18" y="488.5"> ·⋄⋄⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄···· ·   ····⋄⋄⋄⋄⋄⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">     · · · · ·                   ·   ·  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-23" fill="url(#ascii-color)"><tspan x="18" y="38.0">   · · ·               ·     · · · ·    </tspan>
+<tspan x="18" y="497.0">     · · · · ·                   ·   ·  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-23"><tspan x="18" y="38.0">   · · ·               ·     · · · ·    </tspan>
 <tspan x="18" y="46.5">  ⋄◇◇⋄◇⋄⋄⋄⋄·⋄·· · ·   ··⋄···⋄⋄◇⋄◇⋄◇⋄⋄·· </tspan>
 <tspan x="18" y="55.0"> ⋄◇◆◆◆◇◇◇◇◇◇⋄⋄····     ⋄◇◇⋄⋄◇◇◇◆◇◆◇◇◇◇· </tspan>
 <tspan x="18" y="63.5">·◇◆◆◆◆◆◆◆◇◇◇◇⋄⋄⋄⋄··   ·⋄◆◇◇◇◆◆◆◆◆◆◆◆◆◇⋄ </tspan>
@@ -1444,8 +1337,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ⋄◇◇◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄◇⋄⋄⋄⋄⋄⋄·⋄⋄⋄⋄◇◇◆◆◆◇◇ </tspan>
 <tspan x="18" y="480.0"> ⋄⋄◇◇◆◇◆◇◆◇◆◇◇◇◇⋄⋄⋄⋄·········⋄⋄◇⋄◇◇◇◇◇· </tspan>
 <tspan x="18" y="488.5"> ·⋄⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄···· ·   ····⋄⋄⋄⋄⋄⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">   · · · · ·                     · · ·  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-24" fill="url(#ascii-color)"><tspan x="18" y="38.0">   · · ·               ·     · · · ·    </tspan>
+<tspan x="18" y="497.0">   · · · · ·                     · · ·  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-24"><tspan x="18" y="38.0">   · · ·               ·     · · · ·    </tspan>
 <tspan x="18" y="46.5"> ·⋄◇◇⋄◇⋄⋄⋄⋄···· ·     ⋄⋄⋄···⋄⋄◇⋄◇⋄◇⋄⋄·· </tspan>
 <tspan x="18" y="55.0"> ⋄◇◆◇◆◇◇◇◇⋄⋄⋄⋄····    ·◇◇◇⋄⋄◇◇◇◆◇◆◇◇◇◇· </tspan>
 <tspan x="18" y="63.5">·◇◆◆◆◆◆◆◆◇◇◇◇⋄⋄·⋄··   ⋄◇◆◇◇◇◆◆◆◆◆◆◆◇◆◇⋄ </tspan>
@@ -1499,8 +1391,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ⋄◇◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄◇⋄⋄⋄⋄⋄⋄·⋄⋄⋄⋄◇◆◆◆◆◇◇ </tspan>
 <tspan x="18" y="480.0"> ⋄◇◇◇◆◇◆◇◆◇◆◇◇◇◇⋄⋄⋄⋄·⋄·······⋄⋄⋄⋄◇◇◇◇◇· </tspan>
 <tspan x="18" y="488.5"> ·⋄⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄···· ·   ····⋄⋄⋄⋄◇⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">   · · · · ·                     · ·    </tspan></text>
-<text class="ascii ascii-frame ascii-frame-25" fill="url(#ascii-color)"><tspan x="18" y="38.0">   · · ·               ·       · · ·    </tspan>
+<tspan x="18" y="497.0">   · · · · ·                     · ·    </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-25"><tspan x="18" y="38.0">   · · ·               ·       · · ·    </tspan>
 <tspan x="18" y="46.5"> ·⋄◇◇⋄◇⋄⋄⋄⋄·· ·       ⋄⋄⋄·⋄·⋄⋄◇⋄◇⋄◇⋄⋄·· </tspan>
 <tspan x="18" y="55.0"> ⋄◇◆◇◇◇◇◇◇⋄⋄⋄⋄····   ·⋄◇◇◇⋄◇◇◇◇◆◇◆◇◇◇◇· </tspan>
 <tspan x="18" y="63.5">·◇◆◆◆◆◆◇◆◇◇◇◇⋄⋄·⋄··  ·◇◆◆◆◇◇◆◆◆◆◆◆◆◇◇◇· </tspan>
@@ -1554,8 +1445,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ⋄◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇◇⋄◇⋄⋄⋄⋄·⋄·⋄·⋄⋄◆◆◆◆◆◇◇ </tspan>
 <tspan x="18" y="480.0"> ⋄◇◆◇◆◇◆◇◆◇◇◇◇◇◇⋄◇⋄⋄·⋄·······⋄⋄⋄◇◇◇◇◇◇· </tspan>
 <tspan x="18" y="488.5"> ·⋄◇◇⋄◇⋄◇⋄◇⋄⋄⋄⋄·⋄···· ·   · ··⋄·⋄⋄◇⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">   · · · · ·                     ·      </tspan></text>
-<text class="ascii ascii-frame ascii-frame-26" fill="url(#ascii-color)"><tspan x="18" y="38.0">   · · ·               ·       · · ·    </tspan>
+<tspan x="18" y="497.0">   · · · · ·                     ·      </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-26"><tspan x="18" y="38.0">   · · ·               ·       · · ·    </tspan>
 <tspan x="18" y="46.5"> ·⋄⋄◇⋄⋄⋄⋄·⋄·· ·     ··◇⋄◇⋄⋄·⋄⋄◇⋄◇⋄◇⋄⋄·· </tspan>
 <tspan x="18" y="55.0"> ⋄◇◆◇◇◇◇◇◇⋄⋄·⋄··     ⋄◇◆◇◇◇◇◇◇◇◆◇◇◇◇◇⋄· </tspan>
 <tspan x="18" y="63.5">·◇◆◆◆◆◆◇◇◇◇⋄⋄⋄⋄··   ·⋄◇◆◆◆◆◇◆◆◆◆◆◆◆◇◇⋄· </tspan>
@@ -1609,8 +1499,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ⋄◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇◇⋄◇⋄⋄⋄⋄···⋄·⋄◇◆◆◆◆◆◇⋄ </tspan>
 <tspan x="18" y="480.0"> ⋄◇◆◇◆◇◆◇◆◇◇◇◇⋄◇⋄◇⋄⋄·⋄·· · ····◇◇◆◇◇◇◇· </tspan>
 <tspan x="18" y="488.5"> ·◇◇◇⋄◇⋄◇⋄◇⋄⋄⋄⋄·⋄·⋄·· ·   · ··⋄⋄◇⋄◇⋄⋄·· </tspan>
-<tspan x="18" y="497.0">   · · · ·                       ·      </tspan></text>
-<text class="ascii ascii-frame ascii-frame-27" fill="url(#ascii-color)"><tspan x="18" y="38.0">   · ·                 · ·     · · ·    </tspan>
+<tspan x="18" y="497.0">   · · · ·                       ·      </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-27"><tspan x="18" y="38.0">   · ·                 · ·     · · ·    </tspan>
 <tspan x="18" y="46.5"> ·⋄⋄◇⋄⋄⋄⋄·⋄·· ·     ⋄⋄◇⋄◇⋄⋄⋄⋄⋄◇⋄◇⋄⋄⋄⋄·· </tspan>
 <tspan x="18" y="55.0"> ⋄◇◆◇◇◇◇⋄◇⋄⋄·· ·    ⋄◇◇◆◇◇◇◇◇◇◇◆◇◇◇◇◇⋄  </tspan>
 <tspan x="18" y="63.5">·◇◆◆◆◇◆◇◇◇◇⋄⋄·⋄··   ⋄◇◆◆◆◆◆◇◆◆◆◆◆◆◆◇◇⋄· </tspan>
@@ -1664,8 +1553,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·◇◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇◇◇◇◇⋄⋄·⋄·····⋄◇◆◆◆◆◆◇⋄ </tspan>
 <tspan x="18" y="480.0"> ⋄◇◆◇◆◇◆◇◆◇◇◇◇⋄⋄⋄◇⋄⋄⋄⋄·· · ···⋄◇◇◆◇◇◇◇· </tspan>
 <tspan x="18" y="488.5"> ·◇◇◇⋄◇⋄◇⋄◇⋄⋄·⋄·⋄⋄⋄·· ·   · ··⋄⋄◇⋄⋄⋄⋄·· </tspan>
-<tspan x="18" y="497.0">   · · · ·                     · ·      </tspan></text>
-<text class="ascii ascii-frame ascii-frame-28" fill="url(#ascii-color)"><tspan x="18" y="38.0">   ·                 · · ·     · ·      </tspan>
+<tspan x="18" y="497.0">   · · · ·                     · ·      </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-28"><tspan x="18" y="38.0">   ·                 · · ·     · ·      </tspan>
 <tspan x="18" y="46.5"> ·⋄⋄◇⋄⋄·⋄····      ·⋄⋄◇⋄◇⋄⋄⋄⋄⋄◇⋄◇⋄⋄⋄⋄·· </tspan>
 <tspan x="18" y="55.0"> ⋄◇◆◇◇◇◇⋄⋄·⋄··     ⋄◇◇◇◆◇◆◇◇◇◇◇◇◇◇◇◇⋄⋄  </tspan>
 <tspan x="18" y="63.5">·◇◆◆◆◇◇◇◇⋄◇⋄⋄··    ·◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇⋄· </tspan>
@@ -1719,8 +1607,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·◇◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇◇◇◇◇◇⋄···· ··◇◆◆◆◆◆◆◇⋄ </tspan>
 <tspan x="18" y="480.0"> ⋄◇◆◆◆◇◆◇◇◇◇◇◇⋄⋄⋄◇◇◇⋄⋄··   · ·⋄◇◇◆◇◇◇◇· </tspan>
 <tspan x="18" y="488.5"> ·◇◇◇⋄◇⋄◇⋄⋄⋄⋄·⋄·⋄⋄⋄·· ·     ··⋄⋄◇⋄⋄⋄⋄·· </tspan>
-<tspan x="18" y="497.0">   · · · ·                     · ·      </tspan></text>
-<text class="ascii ascii-frame ascii-frame-29" fill="url(#ascii-color)"><tspan x="18" y="38.0">   ·                 · · · ·   ·        </tspan>
+<tspan x="18" y="497.0">   · · · ·                     · ·      </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-29"><tspan x="18" y="38.0">   ·                 · · · ·   ·        </tspan>
 <tspan x="18" y="46.5"> ·⋄⋄⋄⋄⋄···· ·     ·⋄⋄⋄◇⋄◇⋄◇⋄⋄⋄◇⋄⋄⋄⋄⋄⋄·· </tspan>
 <tspan x="18" y="55.0"> ⋄◇◆◇◇⋄◇⋄⋄····    ·◇◇◇◇◆◇◆◇◇◇◇◇◇◇◇◇◇⋄⋄  </tspan>
 <tspan x="18" y="63.5">·◇◆◆◆◇◇◇◇⋄⋄·⋄··   ·◇◇◇◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄· </tspan>
@@ -1774,8 +1661,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·◇◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇◇◆◇◇◇◇⋄· · ⋄⋄◆◆◆◆◆◆◆◇⋄ </tspan>
 <tspan x="18" y="480.0"> ⋄◇◆◇◆◇◆◇◇◇◇◇◇⋄⋄⋄◇◇◇⋄⋄··   ··⋄◇◆◇◇◇◇◇◇· </tspan>
 <tspan x="18" y="488.5"> ·◇◇◇⋄◇⋄◇⋄⋄⋄⋄···⋄⋄⋄⋄· ·     ··⋄⋄◇⋄⋄⋄⋄·· </tspan>
-<tspan x="18" y="497.0">   · · · ·       ·           · · ·      </tspan></text>
-<text class="ascii ascii-frame ascii-frame-30" fill="url(#ascii-color)"><tspan x="18" y="38.0">   ·                 · · · ·   ·        </tspan>
+<tspan x="18" y="497.0">   · · · ·       ·           · · ·      </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-30"><tspan x="18" y="38.0">   ·                 · · · ·   ·        </tspan>
 <tspan x="18" y="46.5"> ·⋄⋄⋄⋄⋄····       ⋄⋄⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄·· </tspan>
 <tspan x="18" y="55.0"> ⋄◇◇◇◇⋄⋄⋄⋄··     ·⋄◇◇◇◇◇◇◆◇◆◇◇◇◇◇◇◇◇⋄⋄  </tspan>
 <tspan x="18" y="63.5">·◇◆◆◆◇◇◇◇⋄⋄··    ·⋄◇◆◇◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄· </tspan>
@@ -1829,8 +1715,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·◇◆◆◆◆◆◆◆◆◆◇◆◇◇◇◇◇◆◇◆◇◇⋄⋄ ··◇◇◆◆◆◆◆◇◆◇⋄ </tspan>
 <tspan x="18" y="480.0"> ⋄◇◆◇◆◇◆◇◇◇◇⋄⋄⋄⋄⋄◇◇◇⋄⋄⋄·   ··◇◇◆◇◇◇◇◇◇· </tspan>
 <tspan x="18" y="488.5"> ·◇◇◇⋄◇⋄⋄⋄⋄⋄⋄···⋄⋄⋄⋄⋄··     ⋄⋄◇⋄◇⋄⋄·⋄·· </tspan>
-<tspan x="18" y="497.0">   · · · ·       ·           · · ·      </tspan></text>
-<text class="ascii ascii-frame ascii-frame-31" fill="url(#ascii-color)"><tspan x="18" y="38.0">   ·               · · · · ·   ·        </tspan>
+<tspan x="18" y="497.0">   · · · ·       ·           · · ·      </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-31"><tspan x="18" y="38.0">   ·               · · · · ·   ·        </tspan>
 <tspan x="18" y="46.5"> ·⋄⋄⋄·⋄····     ··⋄⋄⋄⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄·⋄·· </tspan>
 <tspan x="18" y="55.0"> ⋄◇◇◇◇⋄⋄⋄⋄··    ·⋄⋄◇◇◇◇◇◇◆◇◆◇◇◇◇◇◇◇◇⋄⋄  </tspan>
 <tspan x="18" y="63.5">·◇◆◆◆◇◇⋄◇⋄⋄··   ·⋄◇◇◆◇◆◆◆◆◆◆◆◆◆◆◆◇◇⋄◇⋄· </tspan>
@@ -1884,8 +1769,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·◇◆◆◆◆◆◆◆◆◆◇◇◇◇◇◇◇◆◇◆◇◇⋄⋄··⋄◇◇◆◆◆◆◆◇◆◇⋄ </tspan>
 <tspan x="18" y="480.0"> ⋄◇◆◇◆◇◆◇◇◇◇⋄⋄⋄⋄⋄◇◇◇◇◇⋄⋄   ⋄⋄◇◇◆◇◇◇◇⋄⋄· </tspan>
 <tspan x="18" y="488.5"> ·◇◇◇⋄◇⋄⋄⋄⋄·⋄···⋄⋄⋄⋄⋄··    ·⋄⋄◇⋄◇⋄⋄·⋄·· </tspan>
-<tspan x="18" y="497.0">   · · · ·                   · · ·      </tspan></text>
-<text class="ascii ascii-frame ascii-frame-32" fill="url(#ascii-color)"><tspan x="18" y="38.0">   ·               · · · · ·   ·        </tspan>
+<tspan x="18" y="497.0">   · · · ·                   · · ·      </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-32"><tspan x="18" y="38.0">   ·               · · · · ·   ·        </tspan>
 <tspan x="18" y="46.5"> ·⋄⋄⋄·⋄·· ·     ··⋄⋄⋄⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄·⋄·· </tspan>
 <tspan x="18" y="55.0"> ⋄◇◇◇◇⋄⋄⋄⋄··   ·⋄⋄⋄◇◇◇◇◇◇◆◇◆◇◇◇◇◇◇⋄⋄⋄⋄  </tspan>
 <tspan x="18" y="63.5">·◇◆◆◆◇◇⋄⋄⋄⋄·· ··⋄⋄◇◇◆◇◆◆◆◆◆◆◆◆◆◆◆◇◇⋄⋄⋄· </tspan>
@@ -1939,8 +1823,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·◇◆◆◆◆◆◆◆◆◆◇◇◇◇⋄◇◇◇◇◇◇◇◇⋄·⋄◇◆◆◆◆◆◆◆◇◆◇⋄ </tspan>
 <tspan x="18" y="480.0"> ⋄◇◆◇◆◇◇◇◇◇◇⋄⋄⋄⋄⋄◇◇◇⋄⋄⋄⋄···◇◇◇◇◆◇◇◇◇⋄⋄  </tspan>
 <tspan x="18" y="488.5"> ·◇⋄◇⋄◇⋄⋄⋄⋄·⋄···⋄·⋄······ ··⋄⋄◇⋄⋄⋄⋄·⋄·· </tspan>
-<tspan x="18" y="497.0">   · ·                       · ·        </tspan></text>
-<text class="ascii ascii-frame ascii-frame-33" fill="url(#ascii-color)"><tspan x="18" y="38.0">   ·               · · · · ·            </tspan>
+<tspan x="18" y="497.0">   · ·                       · ·        </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-33"><tspan x="18" y="38.0">   ·               · · · · ·            </tspan>
 <tspan x="18" y="46.5"> ·⋄⋄⋄·⋄··     ····⋄⋄⋄⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄···  </tspan>
 <tspan x="18" y="55.0"> ⋄◇◇◇◇⋄⋄··   · ⋄⋄◇◇◇◇◇◇◇◇◆◇◆◇◇◇◇◇◇⋄⋄⋄⋄  </tspan>
 <tspan x="18" y="63.5">·⋄◆◇◇◇◇⋄⋄·· · ·⋄◇◇◇◇◆◇◆◆◆◆◆◆◆◆◆◆◆◇◇⋄⋄⋄· </tspan>
@@ -1994,8 +1877,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·◇◆◆◆◆◆◆◆◆◆◇◇⋄◇⋄◇◇◇◇◇◇◇◇◇⋄◇◆◆◆◆◆◆◆◆◇◇◇· </tspan>
 <tspan x="18" y="480.0"> ⋄◇◆◇◆◇◇◇◇◇◇⋄⋄⋄⋄⋄⋄⋄⋄·⋄⋄⋄··⋄◇◇◇◇◇◇◇◇◇⋄⋄  </tspan>
 <tspan x="18" y="488.5"> ·◇⋄◇⋄◇⋄⋄·⋄·········· ··· ·⋄⋄⋄◇⋄⋄⋄⋄·⋄·· </tspan>
-<tspan x="18" y="497.0">   · ·                       · ·        </tspan></text>
-<text class="ascii ascii-frame ascii-frame-34" fill="url(#ascii-color)"><tspan x="18" y="38.0">                   · · · · ·            </tspan>
+<tspan x="18" y="497.0">   · ·                       · ·        </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-34"><tspan x="18" y="38.0">                   · · · · ·            </tspan>
 <tspan x="18" y="46.5"> ·⋄⋄⋄·⋄··     ··⋄·⋄⋄⋄⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄·⋄··   </tspan>
 <tspan x="18" y="55.0"> ⋄◇◇⋄◇⋄⋄··  ···⋄⋄◇◇◇◇◇◇◇◇◆◇◆◇◇◇◇◇◇⋄⋄·⋄  </tspan>
 <tspan x="18" y="63.5">·⋄◇◇◇◇◇⋄⋄·· ··⋄⋄◇◇◇◇◆◇◆◆◆◆◆◆◆◆◆◇◆◇◇⋄⋄·· </tspan>
@@ -2049,8 +1931,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·◇◆◆◆◆◆◆◆◇◇◇◇⋄◇⋄◇⋄⋄⋄⋄⋄◇◇◆◇◆◆◆◆◆◆◆◆◆◇◇⋄· </tspan>
 <tspan x="18" y="480.0"> ⋄◇◆◇◇◇◇◇◇⋄◇⋄⋄·⋄·⋄····⋄◇⋄⋄◇◇◇◇◇◇◇◇◇◇⋄⋄  </tspan>
 <tspan x="18" y="488.5"> ·◇⋄⋄⋄⋄⋄⋄·⋄······ ·   ··⋄·⋄⋄⋄⋄◇⋄⋄⋄⋄···· </tspan>
-<tspan x="18" y="497.0">   · ·                       · ·        </tspan></text>
-<text class="ascii ascii-frame ascii-frame-35" fill="url(#ascii-color)"><tspan x="18" y="38.0">                   · · · · ·            </tspan>
+<tspan x="18" y="497.0">   · ·                       · ·        </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-35"><tspan x="18" y="38.0">                   · · · · ·            </tspan>
 <tspan x="18" y="46.5"> ·⋄⋄⋄····   · ··⋄·⋄⋄⋄⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄·⋄··   </tspan>
 <tspan x="18" y="55.0"> ⋄⋄◇⋄⋄⋄⋄·· ··⋄·⋄⋄◇◇◇◇◇◇◇◇◆◇◆◇◇◇◇◇◇⋄⋄··  </tspan>
 <tspan x="18" y="63.5">·⋄◇◇◇◇◇⋄⋄· ·⋄⋄⋄⋄◇◇◇◇◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄·· </tspan>
@@ -2104,8 +1985,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·◇◆◆◆◆◆◆◆◇◇◇◇⋄⋄⋄⋄⋄⋄·⋄⋄◇◆◆◆◆◆◆◆◆◆◆◆◆◇◇⋄· </tspan>
 <tspan x="18" y="480.0"> ⋄◇◆◇◇◇◇◇◇⋄⋄·⋄·⋄···· ·⋄◇◇◇◇◇◇◇◇◇◇◇◇◇⋄⋄  </tspan>
 <tspan x="18" y="488.5"> ·◇⋄⋄⋄⋄⋄⋄·⋄···· · ·   ·⋄⋄·⋄⋄⋄⋄◇⋄⋄·⋄···· </tspan>
-<tspan x="18" y="497.0">   · ·                       · ·        </tspan></text>
-<text class="ascii ascii-frame ascii-frame-36" fill="url(#ascii-color)"><tspan x="18" y="38.0">                   · · · · ·            </tspan>
+<tspan x="18" y="497.0">   · ·                       · ·        </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-36"><tspan x="18" y="38.0">                   · · · · ·            </tspan>
 <tspan x="18" y="46.5">  ⋄·⋄··    ·····⋄·⋄⋄⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄·⋄··   </tspan>
 <tspan x="18" y="55.0"> ⋄⋄◇⋄⋄··   ⋄⋄⋄⋄⋄⋄◇◇◇◇◇◇◇◇◆◇◇◇◇◇◇◇◇⋄⋄··  </tspan>
 <tspan x="18" y="63.5">·⋄◇◇◇⋄⋄⋄· ·⋄◇⋄⋄⋄◇◇◇◇◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄·· </tspan>
@@ -2159,8 +2039,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·◇◆◆◆◆◆◇◆◇◇⋄◇⋄⋄⋄⋄⋄⋄·⋄⋄◆◆◆◆◆◆◆◆◆◆◆◇◆◇◇⋄· </tspan>
 <tspan x="18" y="480.0"> ⋄◇◇◇◇◇◇⋄◇⋄⋄·⋄···· · ·◇◆◇◇◇◆◇◇◇◇◇◇◇◇⋄⋄  </tspan>
 <tspan x="18" y="488.5"> ·⋄⋄⋄⋄⋄⋄⋄·⋄·· ·       ⋄⋄⋄⋄⋄⋄⋄⋄◇⋄⋄·⋄···· </tspan>
-<tspan x="18" y="497.0">   · ·                 ·   · ·          </tspan></text>
-<text class="ascii ascii-frame ascii-frame-37" fill="url(#ascii-color)"><tspan x="18" y="38.0">                   · · · · ·            </tspan>
+<tspan x="18" y="497.0">   · ·                 ·   · ·          </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-37"><tspan x="18" y="38.0">                   · · · · ·            </tspan>
 <tspan x="18" y="46.5">  ⋄····   ·⋄⋄·⋄·⋄·⋄⋄⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄·⋄··   </tspan>
 <tspan x="18" y="55.0"> ⋄⋄⋄⋄⋄··  ·◇⋄⋄⋄⋄⋄◇◇◇◇◇◇◆◇◆◇◇◇◇◇◇⋄◇⋄⋄··  </tspan>
 <tspan x="18" y="63.5">·⋄◇◇◇⋄⋄·· ·◇◇⋄◇⋄◇◇◇◇◆◆◆◆◆◆◆◆◆◇◇◇◇◇⋄·⋄·  </tspan>
@@ -2214,8 +2093,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·◇◆◆◆◆◆◇◇◇◇⋄⋄⋄⋄·⋄···⋄◇◆◆◆◆◆◆◆◆◆◆◆◇◆◇◇⋄· </tspan>
 <tspan x="18" y="480.0"> ⋄◇◇◇◇◇◇⋄⋄⋄⋄···· · · ⋄◇◆◇◇◇◆◇◇◇◇◇◇⋄⋄··  </tspan>
 <tspan x="18" y="488.5"> ·⋄⋄⋄⋄⋄·⋄···· ·      ·◇⋄⋄⋄◇⋄⋄⋄◇⋄⋄·⋄···· </tspan>
-<tspan x="18" y="497.0">                       · · · ·          </tspan></text>
-<text class="ascii ascii-frame ascii-frame-38" fill="url(#ascii-color)"><tspan x="18" y="38.0">                   · · · · ·            </tspan>
+<tspan x="18" y="497.0">                       · · · ·          </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-38"><tspan x="18" y="38.0">                   · · · · ·            </tspan>
 <tspan x="18" y="46.5">  ·····   ⋄⋄⋄·⋄·⋄⋄⋄⋄⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄·⋄····   </tspan>
 <tspan x="18" y="55.0"> ·⋄⋄⋄⋄·· ·⋄◇⋄◇⋄⋄⋄◇◇◇◇◇◇◇◇◆◇◇◇◇⋄◇⋄⋄····  </tspan>
 <tspan x="18" y="63.5">·⋄◇⋄◇⋄⋄···◇◇◇◇◇⋄◇◇◇◇◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄···  </tspan>
@@ -2269,8 +2147,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·◇◆◆◆◆◆◇◇◇◇⋄⋄⋄⋄·⋄···◇◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄· </tspan>
 <tspan x="18" y="480.0"> ⋄◇◇◇◇◇◇⋄⋄⋄⋄·· ·   ··◇◆◆◇◆◇◆◇◇◇◇◇◇⋄⋄··  </tspan>
 <tspan x="18" y="488.5"> ·⋄⋄⋄⋄⋄·⋄····       ·⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄·⋄···· </tspan>
-<tspan x="18" y="497.0">                       · · · ·          </tspan></text>
-<text class="ascii ascii-frame ascii-frame-39" fill="url(#ascii-color)"><tspan x="18" y="38.0">                   · · · · ·            </tspan>
+<tspan x="18" y="497.0">                       · · · ·          </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-39"><tspan x="18" y="38.0">                   · · · · ·            </tspan>
 <tspan x="18" y="46.5">  ··· ·  ·⋄⋄⋄·⋄·⋄⋄⋄⋄⋄⋄◇⋄◇⋄◇⋄⋄·⋄······   </tspan>
 <tspan x="18" y="55.0"> ··⋄··   ⋄⋄◇◇◇⋄⋄⋄◇◇◇◇◇◇◇◇◆◇◇◇◇⋄⋄⋄⋄····  </tspan>
 <tspan x="18" y="63.5"> ·⋄⋄⋄⋄· ·⋄◇◇◇◇◇⋄◇◇◇◇◆◆◆◆◆◆◆◆◆◇◇⋄◇⋄⋄··   </tspan>
@@ -2324,8 +2201,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·◇◆◆◆◇◇◇◇◇◇⋄⋄·⋄····⋄◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄· </tspan>
 <tspan x="18" y="480.0"> ⋄◇◇◇◇⋄◇⋄⋄·⋄·· ·   ·⋄◆◆◆◇◆◇◆◇◇◇◇◇◇⋄⋄··  </tspan>
 <tspan x="18" y="488.5"> ·⋄⋄⋄·⋄····         ·⋄◇◇◇⋄◇⋄⋄⋄⋄⋄⋄···· · </tspan>
-<tspan x="18" y="497.0">                     · · · · ·          </tspan></text>
-<text class="ascii ascii-frame ascii-frame-40" fill="url(#ascii-color)"><tspan x="18" y="38.0">           ·       · · · · ·            </tspan>
+<tspan x="18" y="497.0">                     · · · · ·          </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-40"><tspan x="18" y="38.0">           ·       · · · · ·            </tspan>
 <tspan x="18" y="46.5">  ··· · ··⋄⋄⋄⋄⋄·⋄⋄◇⋄⋄⋄◇⋄◇⋄◇⋄⋄···· · ·   </tspan>
 <tspan x="18" y="55.0"> ··⋄·· ··⋄◇◇◇◇⋄⋄⋄◇◇◇◇◇◇◇◇◇◇◇◇◇⋄⋄···· ·  </tspan>
 <tspan x="18" y="63.5"> ·⋄⋄⋄···⋄⋄◇◇◆◇◇⋄◇◇◆◇◆◆◆◆◆◆◆◇◇◇◇⋄⋄····   </tspan>
@@ -2379,8 +2255,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·◇◆◆◆◇◇◇◇⋄⋄⋄⋄·····⋄◇◆◆◆◆◆◆◆◆◆◆◆◇◆◇◇⋄◇⋄· </tspan>
 <tspan x="18" y="480.0"> ⋄◇◇◇◇⋄◇⋄⋄·· ·    ·◇◇◆◆◆◇◆◇◇◇◇◇◇◇◇⋄⋄··  </tspan>
 <tspan x="18" y="488.5"> ·⋄⋄⋄·⋄····        ·⋄⋄◇◇◇⋄◇⋄⋄⋄⋄⋄⋄···· · </tspan>
-<tspan x="18" y="497.0">                     · · · · ·          </tspan></text>
-<text class="ascii ascii-frame ascii-frame-41" fill="url(#ascii-color)"><tspan x="18" y="38.0">           ·       · · · ·              </tspan>
+<tspan x="18" y="497.0">                     · · · · ·          </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-41"><tspan x="18" y="38.0">           ·       · · · ·              </tspan>
 <tspan x="18" y="46.5">  · · · ··⋄⋄⋄⋄⋄⋄⋄⋄◇⋄⋄⋄◇⋄◇⋄⋄⋄⋄···· · ·   </tspan>
 <tspan x="18" y="55.0"> ····· ·⋄⋄◇◇◇◇⋄◇⋄◇◇◇◇◇◇◇◇◇◇◇⋄⋄·⋄·· · ·  </tspan>
 <tspan x="18" y="63.5"> ·⋄·⋄···◇⋄◇◇◆◇◇◇◇◇◆◇◆◇◆◆◆◆◆◇◇⋄⋄⋄⋄·· ··· </tspan>
@@ -2434,8 +2309,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·◇◆◆◆◇◇◇◇⋄⋄·⋄·····◇◇◆◆◆◆◆◆◆◆◆◆◆◇◆◇◇⋄⋄·· </tspan>
 <tspan x="18" y="480.0"> ⋄◇◇◇◇⋄◇⋄⋄··     ·⋄◇◇◆◆◆◇◆◇◇◇◇◇◇◇◇⋄⋄··  </tspan>
 <tspan x="18" y="488.5"> ·⋄⋄⋄·⋄·· ·       ·⋄⋄⋄◇◇◇⋄◇⋄⋄⋄⋄⋄⋄···· · </tspan>
-<tspan x="18" y="497.0">                     · · · · ·          </tspan></text>
-<text class="ascii ascii-frame ascii-frame-42" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · ·     ·   · ·              </tspan>
+<tspan x="18" y="497.0">                     · · · · ·          </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-42"><tspan x="18" y="38.0">           · ·     ·   · ·              </tspan>
 <tspan x="18" y="46.5">  · · ····⋄⋄◇⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄·· ·   ·   </tspan>
 <tspan x="18" y="55.0"> ··· ··⋄⋄⋄⋄◇◇◇◇◇⋄◇◇◇◇◇◇◇◇◇◇◇⋄⋄···· ···  </tspan>
 <tspan x="18" y="63.5"> ·⋄···⋄⋄◇⋄◇◇◆◆◆◇◇◇◆◇◆◇◆◆◆◆◆◇◇⋄⋄·⋄·· ··· </tspan>
@@ -2489,8 +2363,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·⋄◆◆◆◇◇◇◇⋄⋄·····⋄⋄◆◆◆◆◆◆◆◆◆◆◆◆◆◇◆◇◇⋄⋄·· </tspan>
 <tspan x="18" y="480.0"> ⋄◇◇⋄◇⋄⋄····   · ⋄◇◇◇◆◆◆◇◆◇◇◇◇◇◇⋄◇⋄⋄··  </tspan>
 <tspan x="18" y="488.5"> ·⋄⋄⋄·⋄·· ·       ⋄⋄◇⋄◇◇◇⋄◇⋄⋄⋄⋄⋄⋄···· · </tspan>
-<tspan x="18" y="497.0">                     · · · · ·          </tspan></text>
-<text class="ascii ascii-frame ascii-frame-43" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · ·     ·   ·                </tspan>
+<tspan x="18" y="497.0">                     · · · · ·          </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-43"><tspan x="18" y="38.0">           · ·     ·   ·                </tspan>
 <tspan x="18" y="46.5">  · ······⋄⋄◇⋄◇⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄····   · ·   </tspan>
 <tspan x="18" y="55.0"> · ··⋄·⋄⋄⋄⋄◇◇◆◇◇⋄◇◇◇◇◇◇◇◇◇◇◇⋄⋄···· ···  </tspan>
 <tspan x="18" y="63.5"> ···⋄·⋄⋄◇⋄◇◇◆◆◆◇◇◇◇◇◆◇◆◆◆◆◇◇◇⋄⋄·· ··⋄·· </tspan>
@@ -2544,8 +2417,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·⋄◆◇◇◇◇◇◇⋄⋄·· ··◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◇◆◇◇⋄⋄·· </tspan>
 <tspan x="18" y="480.0"> ⋄◇◇⋄◇⋄⋄·⋄··   ··◇◇◇◇◆◆◆◇◆◇◇◇◇◇◇⋄⋄⋄⋄··  </tspan>
 <tspan x="18" y="488.5"> ·⋄⋄⋄·⋄·· ·     ··⋄⋄◇⋄◇◇◇⋄◇⋄⋄⋄⋄⋄⋄···· · </tspan>
-<tspan x="18" y="497.0">                     · · · ·            </tspan></text>
-<text class="ascii ascii-frame ascii-frame-44" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · · ·   ·   ·                </tspan>
+<tspan x="18" y="497.0">                     · · · ·            </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-44"><tspan x="18" y="38.0">           · · ·   ·   ·                </tspan>
 <tspan x="18" y="46.5">  ····⋄···⋄⋄◇⋄◇⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄····   ··· · </tspan>
 <tspan x="18" y="55.0">   ··⋄⋄⋄⋄⋄⋄◇◇◆◇◇◇◇◇◇◇◇◇◇◇◇⋄⋄⋄⋄·· ··⋄··  </tspan>
 <tspan x="18" y="63.5">  ··⋄⋄◇⋄◇⋄◇◇◆◆◆◇◇◇◇◇◆◆◆◆◆◇◇⋄◇⋄⋄·· ·⋄⋄·· </tspan>
@@ -2599,8 +2471,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·⋄◆◇◇◇◇◇◇◇◇·· ⋄⋄◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄·· </tspan>
 <tspan x="18" y="480.0"> ⋄◇◇⋄◇⋄⋄⋄⋄··   ⋄⋄◇◇◇◇◆◆◆◇◆◇◇◇◇◇◇⋄⋄·⋄··  </tspan>
 <tspan x="18" y="488.5"> ·⋄⋄⋄·⋄·· ·     ··⋄⋄◇⋄◇◇◇⋄◇⋄⋄⋄⋄⋄⋄·· ·   </tspan>
-<tspan x="18" y="497.0">                     · · · ·            </tspan></text>
-<text class="ascii ascii-frame ascii-frame-45" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · · ·   · · ·                </tspan>
+<tspan x="18" y="497.0">                     · · · ·            </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-45"><tspan x="18" y="38.0">           · · ·   · · ·                </tspan>
 <tspan x="18" y="46.5">  ····⋄···⋄⋄◇⋄◇⋄⋄·⋄⋄⋄⋄⋄⋄⋄·⋄·· ·   ··· · </tspan>
 <tspan x="18" y="55.0">  ·⋄⋄⋄⋄⋄⋄⋄⋄◇◇◆◇◇◇◇⋄◇◇◇◇◇◇◇⋄⋄·⋄·· ·⋄⋄··  </tspan>
 <tspan x="18" y="63.5">  ·⋄◇⋄◇⋄⋄⋄◇◇◆◆◆◆◇◇◇◇◆◆◆◆◆◇◇⋄⋄⋄⋄···⋄⋄⋄·⋄ </tspan>
@@ -2654,8 +2525,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·⋄◆◇◇◇◇⋄◇⋄◇⋄··◇◇◇◆◆◆◆◆◆◆◆◆◆◆◆◇◆◇◇◇◇⋄⋄·  </tspan>
 <tspan x="18" y="480.0"> ⋄◇◇⋄⋄⋄⋄·⋄··  ·⋄⋄◇◇◆◇◆◆◆◇◆◇◇◇◇◇◇⋄⋄····  </tspan>
 <tspan x="18" y="488.5"> ·⋄······ ·   ··⋄⋄◇⋄◇⋄◇◇◇⋄◇⋄⋄⋄⋄·⋄·· ·   </tspan>
-<tspan x="18" y="497.0">                   · · · · ·            </tspan></text>
-<text class="ascii ascii-frame ascii-frame-46" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · · ·   ·   ·                </tspan>
+<tspan x="18" y="497.0">                   · · · · ·            </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-46"><tspan x="18" y="38.0">           · · ·   ·   ·                </tspan>
 <tspan x="18" y="46.5">  ··⋄·⋄···⋄⋄◇⋄◇⋄⋄·⋄⋄⋄⋄⋄⋄⋄·⋄·· ·  ···· · </tspan>
 <tspan x="18" y="55.0"> ··⋄⋄⋄⋄⋄⋄⋄⋄◇◇◆◇◇◇◇⋄◇◇◇◇◇◇◇⋄⋄···· ⋄⋄⋄··· </tspan>
 <tspan x="18" y="63.5">  ⋄⋄◇⋄◇⋄⋄⋄◇◇◆◆◆◆◆◇◇◇◆◆◆◇◆◇◇⋄⋄⋄⋄··⋄◇⋄⋄⋄⋄ </tspan>
@@ -2709,8 +2579,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·⋄◇◇◇⋄⋄⋄⋄⋄⋄⋄⋄⋄◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◇◆◇◇◇⋄··   </tspan>
 <tspan x="18" y="480.0"> ⋄⋄◇⋄⋄······ ·⋄◇◇◇◇◆◇◆◆◆◇◆◇◇◇◇◇◇⋄⋄··    </tspan>
 <tspan x="18" y="488.5"> ·⋄·· · · ·   ··⋄⋄◇⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄···· ·   </tspan>
-<tspan x="18" y="497.0">                   · · · ·              </tspan></text>
-<text class="ascii ascii-frame ascii-frame-47" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · · ·                        </tspan>
+<tspan x="18" y="497.0">                   · · · ·              </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-47"><tspan x="18" y="38.0">           · · ·                        </tspan>
 <tspan x="18" y="46.5">  ⋄·······⋄⋄◇⋄◇⋄⋄·⋄⋄⋄⋄⋄⋄⋄···· · ····· · </tspan>
 <tspan x="18" y="55.0"> ·⋄⋄⋄⋄⋄⋄⋄⋄⋄◇◇◆◇◆◇◇⋄◇◇◇◇◇⋄⋄⋄⋄·· ··⋄⋄⋄··  </tspan>
 <tspan x="18" y="63.5"> ·⋄◇◇⋄◇⋄⋄⋄◇◇◆◆◆◆◆◇◇◇◆◇◆◇◇◇◇⋄⋄···⋄◇◇⋄⋄⋄⋄ </tspan>
@@ -2764,8 +2633,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·⋄◇◇◇⋄⋄·⋄·⋄⋄◇◇◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄··   </tspan>
 <tspan x="18" y="480.0"> ⋄⋄⋄···· ··⋄·⋄⋄◇◇◇◇◆◇◆◆◆◇◇◇◇◇◇◇◇⋄⋄··    </tspan>
 <tspan x="18" y="488.5">  ⋄·· ·     ··⋄⋄⋄⋄◇⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄·· ·     </tspan>
-<tspan x="18" y="497.0">                 · · · · ·              </tspan></text>
-<text class="ascii ascii-frame ascii-frame-48" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · · ·                        </tspan>
+<tspan x="18" y="497.0">                 · · · · ·              </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-48"><tspan x="18" y="38.0">           · · ·                        </tspan>
 <tspan x="18" y="46.5">  ⋄·······⋄⋄◇⋄◇⋄⋄⋄⋄⋄⋄⋄⋄·⋄···· · ··· ·   </tspan>
 <tspan x="18" y="55.0"> ·⋄⋄⋄⋄⋄⋄⋄◇⋄◇◇◆◇◆◇◇⋄◇◇◇◇◇⋄⋄·⋄·· ·⋄⋄⋄···  </tspan>
 <tspan x="18" y="63.5"> ·◇⋄◇⋄◇⋄⋄⋄◇◇◆◆◆◆◆◇◇◇◆◇◇◇◇◇⋄⋄⋄···◇◇◇⋄⋄⋄⋄ </tspan>
@@ -2819,8 +2687,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·⋄◇⋄◇⋄⋄···⋄◇◇◇◆◇◆◆◆◆◆◆◆◆◆◆◆◇◆◇◇◇◇⋄⋄··   </tspan>
 <tspan x="18" y="480.0"> ·⋄⋄····  ·⋄⋄◇◇◇◇◇◇◆◇◆◇◆◇◇◇◇◇◇◇◇⋄⋄··    </tspan>
 <tspan x="18" y="488.5">  ··· ·    ·⋄·⋄⋄⋄⋄⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄·· ·     </tspan>
-<tspan x="18" y="497.0">                 · · · · ·              </tspan></text>
-<text class="ascii ascii-frame ascii-frame-49" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · · ·                        </tspan>
+<tspan x="18" y="497.0">                 · · · · ·              </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-49"><tspan x="18" y="38.0">           · · ·                        </tspan>
 <tspan x="18" y="46.5">  ⋄·····⋄·⋄⋄⋄⋄◇⋄◇⋄⋄⋄⋄·⋄······ ····· ·   </tspan>
 <tspan x="18" y="55.0"> ·⋄⋄⋄⋄⋄⋄⋄◇⋄◇◇◆◇◆◇◇⋄◇◇◇⋄◇⋄⋄·⋄···⋄⋄⋄····  </tspan>
 <tspan x="18" y="63.5"> ·◇⋄◇⋄◇⋄⋄◇◇◇◆◆◆◆◆◆◇◇◇◇◇◇◇⋄⋄⋄⋄·⋄⋄◇◇◇⋄⋄·· </tspan>
@@ -2874,8 +2741,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·⋄◇⋄⋄⋄⋄···◇◆◆◇◆◆◆◆◆◆◆◆◆◆◆◆◆◇◆◇◇◇◇⋄⋄ ·   </tspan>
 <tspan x="18" y="480.0"> ·⋄⋄····  ·◇◇◇◇◇◇◇◇◆◇◆◇◆◇◇◇◇◇◇⋄⋄··      </tspan>
 <tspan x="18" y="488.5">  ··· ·   ·⋄⋄·⋄⋄⋄⋄⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄·⋄··       </tspan>
-<tspan x="18" y="497.0">                 · · · · ·              </tspan></text>
-<text class="ascii ascii-frame ascii-frame-50" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · · ·                        </tspan>
+<tspan x="18" y="497.0">                 · · · · ·              </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-50"><tspan x="18" y="38.0">           · · ·                        </tspan>
 <tspan x="18" y="46.5">  ······⋄·⋄⋄⋄⋄◇⋄◇⋄⋄·⋄·⋄······ ⋄····     </tspan>
 <tspan x="18" y="55.0"> ·⋄⋄⋄⋄⋄⋄⋄◇⋄◇◇◇◇◆◇◇◇◇⋄◇⋄⋄⋄⋄·····⋄⋄⋄····  </tspan>
 <tspan x="18" y="63.5"> ·◇⋄◇⋄◇⋄◇◇◇◇◆◆◆◆◆◆◇◇◇◇◇◇◇⋄⋄⋄⋄·⋄◇◇◇◇⋄⋄·· </tspan>
@@ -2929,8 +2795,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">·⋄◇⋄⋄⋄⋄···◇◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◇◆◇◇⋄⋄⋄· ·   </tspan>
 <tspan x="18" y="480.0"> ··⋄·· ·  ⋄◇◇◇◇◇◇◇◇◆◇◆◇◆◇◇◇◇⋄◇⋄⋄··      </tspan>
 <tspan x="18" y="488.5">  · · ·   ·⋄⋄⋄⋄⋄⋄⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄·⋄··       </tspan>
-<tspan x="18" y="497.0">                 · · · · ·              </tspan></text>
-<text class="ascii ascii-frame ascii-frame-51" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · · ·                        </tspan>
+<tspan x="18" y="497.0">                 · · · · ·              </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-51"><tspan x="18" y="38.0">           · · ·                        </tspan>
 <tspan x="18" y="46.5">  ······⋄·⋄⋄⋄⋄◇⋄◇⋄⋄·⋄·········⋄···· ·   </tspan>
 <tspan x="18" y="55.0"> ·⋄⋄⋄⋄⋄⋄⋄◇⋄◇◇◇◇◆◇◇◇◇⋄⋄⋄⋄⋄⋄·⋄·⋄⋄⋄⋄⋄····  </tspan>
 <tspan x="18" y="63.5"> ·◇⋄◇⋄◇⋄◇◇◇◇◆◇◆◆◆◆◆◇◇◇◇⋄◇⋄⋄⋄⋄⋄◇◇◇◇◇⋄⋄·· </tspan>
@@ -2984,8 +2849,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·⋄⋄⋄····⋄◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇◇⋄⋄·· ·   </tspan>
 <tspan x="18" y="480.0"> ····· · ·◇◆◇◇◇◇◇◇◇◆◇◆◇◆◇◇◇◇⋄◇⋄⋄··      </tspan>
 <tspan x="18" y="488.5">  · ·     ⋄⋄⋄⋄⋄⋄⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄·⋄····       </tspan>
-<tspan x="18" y="497.0">           ·     · · · · ·              </tspan></text>
-<text class="ascii ascii-frame ascii-frame-52" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · · ·                        </tspan>
+<tspan x="18" y="497.0">           ·     · · · · ·              </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-52"><tspan x="18" y="38.0">           · · ·                        </tspan>
 <tspan x="18" y="46.5">  ······⋄·⋄⋄⋄⋄◇⋄⋄⋄⋄·⋄·······⋄·⋄···· ·   </tspan>
 <tspan x="18" y="55.0"> ·⋄⋄⋄⋄⋄⋄⋄◇⋄◇◇◇◇◇◇◇◇◇⋄⋄⋄⋄⋄⋄·⋄⋄⋄⋄⋄⋄⋄⋄⋄··  </tspan>
 <tspan x="18" y="63.5"> ·◇⋄◇⋄◇⋄◇◇◇◇◆◇◆◆◆◆◇◇◇◇◇⋄◇⋄⋄⋄◇◇◇◇◇◇◇⋄⋄⋄· </tspan>
@@ -3039,8 +2903,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·⋄⋄⋄···⋄◇◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄⋄·· · · </tspan>
 <tspan x="18" y="480.0"> ··· · · ⋄◇◆◇◇◇◇◇◇◇◆◇◆◇◆◇◇⋄◇⋄⋄····   ·  </tspan>
 <tspan x="18" y="488.5">  · ·     ⋄⋄◇⋄⋄⋄⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄·⋄··       · </tspan>
-<tspan x="18" y="497.0">           · ·   · · · · ·              </tspan></text>
-<text class="ascii ascii-frame ascii-frame-53" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · · ·                        </tspan>
+<tspan x="18" y="497.0">           · ·   · · · · ·              </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-53"><tspan x="18" y="38.0">           · · ·                        </tspan>
 <tspan x="18" y="46.5">  ····⋄·⋄·⋄⋄⋄⋄◇⋄⋄⋄⋄·⋄·····⋄·⋄·⋄······   </tspan>
 <tspan x="18" y="55.0"> ·⋄⋄⋄⋄⋄⋄⋄⋄⋄◇◇◇◇◇◇◇⋄◇⋄⋄⋄⋄·⋄⋄⋄⋄◇⋄⋄⋄⋄⋄⋄⋄⋄  </tspan>
 <tspan x="18" y="63.5"> ⋄◇⋄◇⋄◇⋄◇◇◇◇◆◇◆◆◆◇◇◇◇◇◇⋄◇⋄◇⋄◇◇◇⋄◇◇◇◇◇⋄· </tspan>
@@ -3094,8 +2957,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·⋄⋄⋄···⋄◇◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄·⋄·· ··· </tspan>
 <tspan x="18" y="480.0"> ··· · ··⋄◇◆◇◇◇◇◇◇◇◆◇◆◇◇◇◇⋄⋄⋄⋄·· ·   ·  </tspan>
 <tspan x="18" y="488.5">  ·     ··◇⋄◇⋄⋄⋄⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄·· ·       · </tspan>
-<tspan x="18" y="497.0">           · ·   · · · · ·              </tspan></text>
-<text class="ascii ascii-frame ascii-frame-54" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · · ·                        </tspan>
+<tspan x="18" y="497.0">           · ·   · · · · ·              </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-54"><tspan x="18" y="38.0">           · · ·                        </tspan>
 <tspan x="18" y="46.5">  ····⋄·⋄·⋄⋄⋄⋄⋄⋄⋄·⋄·······⋄·⋄·····⋄···· </tspan>
 <tspan x="18" y="55.0"> ·⋄⋄⋄⋄⋄⋄⋄⋄⋄◇◇◇◇◇◇◇⋄⋄⋄⋄⋄⋄⋄⋄⋄◇⋄◇⋄⋄⋄⋄⋄◇⋄⋄  </tspan>
 <tspan x="18" y="63.5"> ⋄◇◇◇⋄◇⋄◇⋄◇◇◆◇◆◆◆◇◇◇◇⋄◇⋄◇⋄◇◇◇◇◇⋄◇◇◇◇◇◇⋄ </tspan>
@@ -3149,8 +3011,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·⋄·⋄·⋄⋄◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇⋄⋄⋄⋄·⋄·· ··· </tspan>
 <tspan x="18" y="480.0">  ·· ··⋄·◇◇◆◇◆◇◇◇◆◇◆◇◆◇◇◇◇⋄⋄····     ·· </tspan>
 <tspan x="18" y="488.5">  ·   · ··◇⋄◇⋄◇⋄⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄·· ·       · </tspan>
-<tspan x="18" y="497.0">           · ·   · · · ·                </tspan></text>
-<text class="ascii ascii-frame ascii-frame-55" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · ·                          </tspan>
+<tspan x="18" y="497.0">           · ·   · · · ·                </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-55"><tspan x="18" y="38.0">           · ·                          </tspan>
 <tspan x="18" y="46.5">  ····⋄·⋄·⋄⋄⋄⋄⋄⋄⋄·⋄·····⋄·⋄·⋄·····⋄·⋄·· </tspan>
 <tspan x="18" y="55.0"> ·⋄⋄⋄⋄⋄⋄⋄⋄⋄◇◇◇◇◇◇◇⋄⋄⋄⋄·⋄⋄◇◇◇⋄⋄·⋄⋄⋄⋄◇◇◇· </tspan>
 <tspan x="18" y="63.5"> ⋄◇◇◇⋄◇⋄◇⋄◇◇◆◇◆◇◇◇◇⋄◇⋄⋄⋄◇◇◇◇◇◇◇⋄◇◇◇◇◆◇⋄ </tspan>
@@ -3204,8 +3065,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·⋄·⋄⋄⋄⋄◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇⋄⋄·⋄········ </tspan>
 <tspan x="18" y="480.0">   · ··⋄⋄◇◇◆◇◆◇◇◇◆◇◆◇◇◇◇◇◇⋄⋄·· ·   · ·· </tspan>
 <tspan x="18" y="488.5">  ·   ····◇⋄◇⋄◇⋄⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄··        ·· </tspan>
-<tspan x="18" y="497.0">           · ·   · · · ·                </tspan></text>
-<text class="ascii ascii-frame ascii-frame-56" fill="url(#ascii-color)"><tspan x="18" y="38.0">           ·                            </tspan>
+<tspan x="18" y="497.0">           · ·   · · · ·                </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-56"><tspan x="18" y="38.0">           ·                            </tspan>
 <tspan x="18" y="46.5">  ····⋄·⋄·⋄⋄⋄⋄⋄·⋄·⋄·····⋄⋄⋄·⋄·····⋄·⋄·· </tspan>
 <tspan x="18" y="55.0"> ·⋄⋄⋄⋄⋄◇⋄⋄⋄◇◇◇◇◇⋄◇⋄⋄⋄⋄·⋄⋄◇⋄◇⋄⋄·⋄·⋄⋄◇◇◇· </tspan>
 <tspan x="18" y="63.5"> ⋄◇◇◇⋄◇◇◇⋄◇◇◆◇◆◇◇◇◇⋄◇⋄⋄⋄◇◇◇◇◇⋄◇⋄◇◇◇◇◆◇⋄ </tspan>
@@ -3259,8 +3119,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·⋄·⋄⋄◇⋄◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇⋄⋄·······⋄·· </tspan>
 <tspan x="18" y="480.0">   ··⋄⋄⋄⋄◇◇◆◇◆◆◆◇◆◇◆◇◇◇◇◇◇⋄⋄·· ·   · ·· </tspan>
 <tspan x="18" y="488.5">    · ····⋄⋄◇⋄◇⋄⋄⋄◇⋄◇⋄◇⋄⋄·· ·     · ··· </tspan>
-<tspan x="18" y="497.0">           · · · · · · ·                </tspan></text>
-<text class="ascii ascii-frame ascii-frame-57" fill="url(#ascii-color)"><tspan x="18" y="38.0">           ·                            </tspan>
+<tspan x="18" y="497.0">           · · · · · · ·                </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-57"><tspan x="18" y="38.0">           ·                            </tspan>
 <tspan x="18" y="46.5">  ····⋄·⋄·⋄⋄⋄⋄⋄···⋄···⋄⋄⋄⋄⋄·······⋄⋄⋄·· </tspan>
 <tspan x="18" y="55.0"> ·⋄◇⋄⋄⋄◇⋄⋄⋄◇◇◇⋄◇⋄⋄⋄⋄⋄⋄·◇◇◇⋄◇⋄⋄·⋄⋄⋄⋄◇◇◇· </tspan>
 <tspan x="18" y="63.5"> ⋄◇◇◇⋄◇◇◇⋄◇◇◇◇◇◇◇◇◇⋄◇⋄⋄◇◆◇◇◇◇⋄⋄⋄◇◇◇◇◆◇◇ </tspan>
@@ -3314,8 +3173,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5">  ⋄⋄◇⋄◇⋄◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◇⋄·⋄·····⋄·⋄⋄· </tspan>
 <tspan x="18" y="480.0">   ··⋄⋄⋄⋄◇◇◆◇◆◆◆◇◆◇◆◇◇◇◇◇◇·· · · ··· ⋄· </tspan>
 <tspan x="18" y="488.5">    ······⋄⋄◇⋄◇⋄⋄⋄◇⋄⋄⋄◇⋄⋄··       · ··· </tspan>
-<tspan x="18" y="497.0">           · · · · · ·                  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-58" fill="url(#ascii-color)"><tspan x="18" y="38.0">           ·           ·                </tspan>
+<tspan x="18" y="497.0">           · · · · · ·                  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-58"><tspan x="18" y="38.0">           ·           ·                </tspan>
 <tspan x="18" y="46.5">  ⋄···⋄·⋄·⋄⋄⋄·⋄·······⋄⋄⋄·⋄·······⋄⋄⋄⋄· </tspan>
 <tspan x="18" y="55.0"> ·⋄◇⋄⋄⋄◇⋄⋄⋄◇◇◇⋄⋄⋄⋄⋄⋄⋄⋄⋄◇◇◇⋄⋄⋄⋄·⋄⋄⋄⋄◇◇◇· </tspan>
 <tspan x="18" y="63.5"> ⋄◆◆◇◇◇⋄◇⋄◇◇◇◇◇◇◇◇◇⋄◇⋄◇◇◆◇◇◇◇⋄⋄⋄◇◇◇◇◆◆◇ </tspan>
@@ -3369,8 +3227,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·⋄⋄◇⋄◇⋄◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇⋄·⋄····⋄⋄·⋄⋄· </tspan>
 <tspan x="18" y="480.0">  ·⋄⋄⋄⋄⋄⋄◇◇◆◇◆◆◆◇◆◇◆◇◇◇◇◇⋄·· · · ··· ⋄· </tspan>
 <tspan x="18" y="488.5">  ······⋄·⋄⋄◇◇◇⋄⋄⋄◇⋄⋄⋄⋄⋄⋄··       · ··· </tspan>
-<tspan x="18" y="497.0">             · · · · ·                  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-59" fill="url(#ascii-color)"><tspan x="18" y="38.0">                       ·                </tspan>
+<tspan x="18" y="497.0">             · · · · ·                  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-59"><tspan x="18" y="38.0">                       ·                </tspan>
 <tspan x="18" y="46.5">  ⋄···⋄·⋄·⋄·⋄·⋄·······⋄⋄⋄·⋄·· ····⋄⋄⋄⋄· </tspan>
 <tspan x="18" y="55.0"> ·◇◇⋄◇⋄◇⋄⋄⋄◇⋄◇⋄⋄⋄⋄·⋄⋄⋄◇◇◇◇⋄⋄⋄⋄·⋄⋄⋄⋄◇◇◇⋄ </tspan>
 <tspan x="18" y="63.5"> ⋄◆◆◆◇◇⋄◇◇◇◇◇◇◇◇◇◇◇⋄◇⋄◇◇◆◇◇◇◇⋄⋄⋄◇◇◇◇◆◆◇ </tspan>
@@ -3424,8 +3281,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·◇◇◇⋄◇⋄◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇⋄⋄·⋄···⋄⋄⋄·⋄⋄· </tspan>
 <tspan x="18" y="480.0">  ·⋄⋄⋄⋄⋄⋄◇◇◆◇◆◆◆◇◇◇◆◇◇◇◇⋄⋄···· · ⋄·· ⋄  </tspan>
 <tspan x="18" y="488.5">  ······⋄·⋄⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄··      ·· ··· </tspan>
-<tspan x="18" y="497.0">             · · · · ·                  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-60" fill="url(#ascii-color)"><tspan x="18" y="38.0">                                        </tspan>
+<tspan x="18" y="497.0">             · · · · ·                  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-60"><tspan x="18" y="38.0">                                        </tspan>
 <tspan x="18" y="46.5">  ⋄·⋄·⋄·⋄·⋄·⋄·⋄·····⋄⋄⋄⋄⋄·⋄·· ····⋄⋄⋄⋄· </tspan>
 <tspan x="18" y="55.0"> ·◇◇◇◇⋄◇⋄◇⋄⋄⋄◇⋄⋄⋄⋄·⋄⋄◇◇◇◇◇⋄⋄·⋄·⋄⋄⋄⋄◇◇◇⋄ </tspan>
 <tspan x="18" y="63.5"> ⋄◆◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇⋄◇◇◆◇◇◇◇⋄◇⋄⋄⋄◇◇◇◇◆◆◇ </tspan>
@@ -3479,8 +3335,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·◇◇◇⋄◇◇◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇⋄⋄⋄⋄···⋄⋄⋄·⋄⋄· </tspan>
 <tspan x="18" y="480.0"> ·⋄⋄⋄⋄⋄⋄⋄◇◇◆◇◆◆◆◇◇◇◇◇◇◇◇⋄⋄···· ··⋄····  </tspan>
 <tspan x="18" y="488.5">  ····⋄·⋄⋄⋄⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄··     ··· ··· </tspan>
-<tspan x="18" y="497.0">             · · · · ·                  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-61" fill="url(#ascii-color)"><tspan x="18" y="38.0">                                        </tspan>
+<tspan x="18" y="497.0">             · · · · ·                  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-61"><tspan x="18" y="38.0">                                        </tspan>
 <tspan x="18" y="46.5">  ⋄⋄⋄·⋄⋄⋄·⋄·········⋄⋄⋄⋄⋄·⋄·· ····⋄⋄⋄⋄· </tspan>
 <tspan x="18" y="55.0"> ·⋄◇◇◇⋄◇⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄·⋄◇◇◇◇⋄◇⋄⋄·⋄·⋄⋄⋄⋄◇◇◇⋄ </tspan>
 <tspan x="18" y="63.5"> ⋄◆◆◆◆◇◇◇◇◇◇◇◇◇◇◇⋄⋄⋄◇◇◆◇◇◇◇⋄⋄⋄⋄⋄◇◇◇◇◆◆◇ </tspan>
@@ -3534,8 +3389,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·◇◇◇⋄◇◇◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇⋄⋄⋄⋄·⋄⋄⋄⋄⋄·⋄⋄· </tspan>
 <tspan x="18" y="480.0"> ·⋄⋄⋄⋄⋄⋄⋄◇◇◆◇◆◆◆◇◆◇◇◇◇◇◇⋄⋄···· ··⋄····  </tspan>
 <tspan x="18" y="488.5">  ····⋄·⋄⋄⋄⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄··     ··· · · </tspan>
-<tspan x="18" y="497.0">             · · · · ·                  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-62" fill="url(#ascii-color)"><tspan x="18" y="38.0">                   ·                    </tspan>
+<tspan x="18" y="497.0">             · · · · ·                  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-62"><tspan x="18" y="38.0">                   ·                    </tspan>
 <tspan x="18" y="46.5">  ·⋄⋄⋄⋄⋄⋄·········⋄⋄⋄⋄⋄·⋄·⋄·· · ··⋄⋄⋄⋄· </tspan>
 <tspan x="18" y="55.0"> ·⋄◇◇◇◇◇⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄◇◇◇◇◇⋄⋄⋄⋄·⋄·⋄·⋄⋄◇◇◇⋄ </tspan>
 <tspan x="18" y="63.5"> ·◇◆◆◆◆◇◇⋄◇⋄◇◇◇◇◇⋄⋄◇◆◆◇◇◇◇◇⋄⋄⋄⋄⋄◇◇◇◇◆◆◇ </tspan>
@@ -3589,8 +3443,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·◇◇◇⋄◇◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇⋄⋄⋄⋄·⋄⋄◇◇⋄·⋄⋄· </tspan>
 <tspan x="18" y="480.0"> ·⋄⋄⋄⋄⋄◇⋄◇◇◆◇◆◆◆◇◆◇◇◇◇◇◇⋄⋄·····⋄·⋄····  </tspan>
 <tspan x="18" y="488.5">  ····⋄·⋄⋄◇⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄····   · ··· · · </tspan>
-<tspan x="18" y="497.0">         ·   · · · · ·                  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-63" fill="url(#ascii-color)"><tspan x="18" y="38.0">                   ·                    </tspan>
+<tspan x="18" y="497.0">         ·   · · · · ·                  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-63"><tspan x="18" y="38.0">                   ·                    </tspan>
 <tspan x="18" y="46.5">  ·⋄⋄⋄⋄⋄⋄·········⋄⋄⋄⋄⋄···⋄·· · ··⋄⋄⋄⋄· </tspan>
 <tspan x="18" y="55.0"> ·⋄◇◇◆◇◇⋄⋄·⋄⋄⋄⋄⋄⋄⋄⋄◇◇◇⋄⋄⋄⋄⋄⋄·⋄·⋄·⋄⋄◇◇◇⋄ </tspan>
 <tspan x="18" y="63.5"> ·◇◆◆◆◆◇◇⋄◇⋄◇◇◇⋄◇⋄◇◇◆◇◇◇◇⋄◇⋄⋄⋄⋄⋄◇◇◇◇◆◆◇ </tspan>
@@ -3644,8 +3497,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·◇◇◇⋄◇◇◇◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄⋄⋄⋄⋄⋄◇◇⋄⋄⋄⋄· </tspan>
 <tspan x="18" y="480.0"> ·⋄⋄⋄⋄⋄◇◇◇◇◆◇◆◇◆◇◆◇◇◇◇◇◇⋄⋄·····⋄·⋄····  </tspan>
 <tspan x="18" y="488.5">  ⋄···⋄·⋄⋄◇⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄····   ····· ·   </tspan>
-<tspan x="18" y="497.0">         · · · · · · ·                  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-64" fill="url(#ascii-color)"><tspan x="18" y="38.0">                   ·                    </tspan>
+<tspan x="18" y="497.0">         · · · · · · ·                  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-64"><tspan x="18" y="38.0">                   ·                    </tspan>
 <tspan x="18" y="46.5">  ·⋄◇⋄◇⋄⋄···· ····⋄⋄⋄·⋄······ · ··⋄⋄⋄⋄· </tspan>
 <tspan x="18" y="55.0"> ··◇◇◆◇◇⋄⋄·⋄·⋄·⋄⋄⋄◇◇◇◇⋄⋄⋄⋄⋄⋄···⋄·⋄⋄◇◇◇⋄ </tspan>
 <tspan x="18" y="63.5"> ·◇◆◆◆◆◇◇◇◇⋄◇⋄◇⋄◇⋄◇◆◆◇◇⋄◇⋄◇⋄⋄⋄⋄⋄◇⋄◇◇◆◆◇ </tspan>
@@ -3699,8 +3551,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·◇⋄◇◇◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄⋄⋄⋄⋄⋄⋄◇◇◇⋄⋄·· </tspan>
 <tspan x="18" y="480.0"> ·⋄⋄⋄⋄⋄◇◇◇◇◆◇◆◇◆◇◇◇◇◇◇⋄◇⋄⋄···⋄·⋄⋄⋄····  </tspan>
 <tspan x="18" y="488.5">  ⋄···⋄⋄⋄⋄◇⋄⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄···· · ····· ·   </tspan>
-<tspan x="18" y="497.0">         · · · · · ·                    </tspan></text>
-<text class="ascii ascii-frame ascii-frame-65" fill="url(#ascii-color)"><tspan x="18" y="38.0">     · ·         · ·                    </tspan>
+<tspan x="18" y="497.0">         · · · · · ·                    </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-65"><tspan x="18" y="38.0">     · ·         · ·                    </tspan>
 <tspan x="18" y="46.5">  ·⋄◇⋄◇⋄⋄···· ··⋄⋄◇⋄⋄·⋄······ · · ··⋄⋄· </tspan>
 <tspan x="18" y="55.0">  ·◇◇◆◇◇◇◇⋄⋄·⋄·⋄⋄◇◇◇◇◇⋄⋄⋄⋄·⋄·····⋄⋄◇◇◇⋄ </tspan>
 <tspan x="18" y="63.5"> ·◇◇◆◆◆◇◆◇◇◇◇⋄⋄⋄◇◇◆◆◆◇◇⋄◇⋄⋄⋄⋄⋄⋄⋄◇⋄◇◇◆◆◇ </tspan>
@@ -3754,8 +3605,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ⋄◇⋄◇◇◇◇◆◆◆◆◆◆◆◆◆◆◆◇◆◇◇◇◇⋄⋄⋄◇⋄◇⋄◇◇◇⋄◇·· </tspan>
 <tspan x="18" y="480.0"> ·⋄⋄⋄⋄⋄◇◇◇◇◆◇◇◇◆◇◇◇◇◇◇⋄◇⋄⋄···⋄·⋄⋄⋄⋄⋄··  </tspan>
 <tspan x="18" y="488.5">  ⋄···⋄⋄⋄⋄◇⋄◇⋄◇⋄◇⋄◇⋄⋄·⋄···· · ·······   </tspan>
-<tspan x="18" y="497.0">         · · · · ·                      </tspan></text>
-<text class="ascii ascii-frame ascii-frame-66" fill="url(#ascii-color)"><tspan x="18" y="38.0">     · ·         · ·                    </tspan>
+<tspan x="18" y="497.0">         · · · · ·                      </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-66"><tspan x="18" y="38.0">     · ·         · ·                    </tspan>
 <tspan x="18" y="46.5">  ··◇⋄◇⋄⋄⋄⋄·· ··⋄⋄◇⋄⋄········ · · ··⋄⋄· </tspan>
 <tspan x="18" y="55.0">  ·◇◇◆◇◇◇◇⋄⋄⋄⋄·⋄◇◇◇◇◇◇⋄⋄⋄⋄·⋄·····⋄⋄◇◇◇⋄ </tspan>
 <tspan x="18" y="63.5"> ·⋄◇◆◆◆◆◆◇◇◇◇⋄⋄⋄◇◇◆◆◆◇◇⋄◇⋄◇⋄⋄·⋄⋄◇◇◇◇◆◆◇ </tspan>
@@ -3809,8 +3659,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ⋄◇⋄◇◇◇◇◆◆◆◆◆◆◆◆◆◆◆◇◆◇◇◇◇⋄⋄⋄◇⋄◇⋄◇◇◇◇◇⋄· </tspan>
 <tspan x="18" y="480.0"> ·⋄⋄⋄⋄⋄◇◇◇◇◆◇◇◇◆◇◇◇◇◇◇⋄⋄⋄⋄·⋄⋄⋄·⋄⋄◇⋄⋄··  </tspan>
 <tspan x="18" y="488.5">  ⋄···⋄⋄⋄⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄·⋄···· · ····⋄··   </tspan>
-<tspan x="18" y="497.0">         · · · · ·                      </tspan></text>
-<text class="ascii ascii-frame ascii-frame-67" fill="url(#ascii-color)"><tspan x="18" y="38.0">     · ·       · · ·                    </tspan>
+<tspan x="18" y="497.0">         · · · · ·                      </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-67"><tspan x="18" y="38.0">     · ·       · · ·                    </tspan>
 <tspan x="18" y="46.5">  ··⋄⋄◇⋄⋄⋄⋄···⋄⋄◇⋄◇⋄⋄······ ·   ····⋄⋄· </tspan>
 <tspan x="18" y="55.0">  ·◇◇◆◇◇◇◇◇◇⋄⋄·◇◇◆◇◇◇◇⋄⋄⋄⋄·⋄·· ··⋄⋄◇◇◇· </tspan>
 <tspan x="18" y="63.5"> ·⋄◇◆◆◆◆◆◇◆◇◇⋄⋄◇◆◆◆◆◆◇◇⋄◇⋄◇⋄⋄·⋄·⋄◇◇◇◆◆◇ </tspan>
@@ -3864,8 +3713,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ⋄◇◇◇◇◇◇◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄◇⋄◇⋄◇⋄◇⋄◇◇◆◇◇⋄· </tspan>
 <tspan x="18" y="480.0"> ·⋄◇⋄⋄◇◇◇◇◇◆◇◇◇◆◇◇◇◇⋄◇⋄⋄·⋄·⋄⋄⋄·⋄⋄◇◇◇⋄⋄  </tspan>
 <tspan x="18" y="488.5">  ⋄·⋄·⋄⋄⋄⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄········ · ··⋄⋄⋄·  </tspan>
-<tspan x="18" y="497.0">       · · · · · ·                      </tspan></text>
-<text class="ascii ascii-frame ascii-frame-68" fill="url(#ascii-color)"><tspan x="18" y="38.0">       ·       · ·                      </tspan>
+<tspan x="18" y="497.0">       · · · · · ·                      </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-68"><tspan x="18" y="38.0">       ·       · ·                      </tspan>
 <tspan x="18" y="46.5">  ··⋄⋄⋄⋄⋄⋄⋄⋄⋄·⋄⋄◇⋄◇⋄⋄······     ····⋄⋄· </tspan>
 <tspan x="18" y="55.0">  ·◇◇◇◇◇◇◇◇◇⋄⋄⋄◇◇◆◇◇◇◇⋄⋄⋄⋄⋄⋄·· ··⋄⋄◇◇◇· </tspan>
 <tspan x="18" y="63.5"> ·◇◇◆◇◆◇◆◇◇◇◇◇◇◇◆◆◆◇◇◇◇⋄◇◇◇⋄⋄···⋄⋄◇◇◆◆◇ </tspan>
@@ -3919,8 +3767,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ⋄◇◇◇◇◇◇◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄◇◇◇◇◇⋄◇⋄◇◇◆◇◆⋄· </tspan>
 <tspan x="18" y="480.0"> ·⋄◇⋄◇◇◇◇◇◇◆◇◇◇◆◇◇◇◇⋄⋄⋄⋄·⋄⋄⋄·⋄·⋄·◇◇◇⋄⋄  </tspan>
 <tspan x="18" y="488.5">  ⋄⋄⋄·⋄⋄⋄⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄·· ····· · ··⋄⋄⋄·· </tspan>
-<tspan x="18" y="497.0">       · · · · · ·                      </tspan></text>
-<text class="ascii ascii-frame ascii-frame-69" fill="url(#ascii-color)"><tspan x="18" y="38.0">               · ·                      </tspan>
+<tspan x="18" y="497.0">       · · · · · ·                      </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-69"><tspan x="18" y="38.0">               · ·                      </tspan>
 <tspan x="18" y="46.5">  ··⋄⋄⋄⋄⋄⋄⋄⋄⋄⋄◇⋄◇⋄⋄⋄⋄·······    · ··⋄·· </tspan>
 <tspan x="18" y="55.0">  ·◇◇◇⋄◇⋄◇◇◇◇◇◇◇◇◆◇◇⋄◇⋄⋄⋄⋄⋄⋄·· ··⋄⋄◇◇◇· </tspan>
 <tspan x="18" y="63.5"> ·◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◆◆◇◇◇◇⋄◇◇◇⋄⋄···⋄⋄◇◇◆◇◇ </tspan>
@@ -3974,8 +3821,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ⋄◇◇◇◇◇◇◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇⋄◇◇◇⋄◇⋄◇⋄◇◇◆◆◆◇· </tspan>
 <tspan x="18" y="480.0"> ·⋄◇⋄◇◇◇◇◇◇◆◇◆◇◆◇◇◇◇⋄⋄⋄⋄·⋄⋄⋄·⋄·⋄·⋄◇◇◇◇· </tspan>
 <tspan x="18" y="488.5">  ⋄⋄⋄·⋄⋄⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄·· ····· · ··⋄⋄⋄·· </tspan>
-<tspan x="18" y="497.0">   ·   · · · · · ·                   ·  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-70" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · · · ·                      </tspan>
+<tspan x="18" y="497.0">   ·   · · · · · ·                   ·  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-70"><tspan x="18" y="38.0">           · · · ·                      </tspan>
 <tspan x="18" y="46.5">  ··⋄·⋄·⋄·⋄⋄⋄⋄◇⋄◇⋄⋄⋄⋄········     ··⋄·· </tspan>
 <tspan x="18" y="55.0"> ··⋄⋄⋄⋄⋄⋄◇⋄◇◇◇◇◆◇◇◇◇⋄⋄⋄⋄⋄⋄⋄⋄··   ⋄⋄◇◇◇· </tspan>
 <tspan x="18" y="63.5"> ·◇◇◇⋄◇⋄◇◇◇◇◆◆◆◆◆◆◆◇◇◇◇⋄◇⋄◇◇◇⋄⋄·⋄⋄◇◇◆◇⋄ </tspan>
@@ -4029,8 +3875,7 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·◇◇◇◇◆◇◆◆◆◆◆◆◆◆◆◆◆◇◇◇⋄⋄◇◇◇⋄◇⋄⋄⋄◇◇◆◆◆◇⋄ </tspan>
 <tspan x="18" y="480.0"> ·⋄◇⋄◇◇◇◇◇◇◆◇◆◇◇◇◇◇◇⋄⋄·⋄⋄⋄⋄⋄·⋄·⋄·⋄⋄◇◇◇· </tspan>
 <tspan x="18" y="488.5">  ⋄⋄⋄⋄⋄⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄·· ····· · ··⋄⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">   · · · · · · · ·                   ·  </tspan></text>
-<text class="ascii ascii-frame ascii-frame-71" fill="url(#ascii-color)"><tspan x="18" y="38.0">           · · · ·                      </tspan>
+<tspan x="18" y="497.0">   · · · · · · · ·                   ·  </tspan></text><text fill="url(#ascii-color)" class="ascii ascii-frame ascii-frame-71"><tspan x="18" y="38.0">           · · · ·                      </tspan>
 <tspan x="18" y="46.5">  ····⋄···⋄⋄◇⋄◇⋄◇⋄⋄⋄⋄········     ··⋄·· </tspan>
 <tspan x="18" y="55.0"> ··⋄⋄⋄⋄⋄⋄⋄⋄◇◇◆◇◆◇◇◇◇⋄⋄·⋄⋄⋄⋄⋄⋄⋄ · ·⋄◇◇◇· </tspan>
 <tspan x="18" y="63.5"> ·◇⋄◇⋄⋄⋄◇⋄◇◇◆◆◆◆◆◆◆◇◇◇◇⋄⋄⋄◇◇◇◇⋄···◇◇◆◇⋄ </tspan>
@@ -4084,7 +3929,4 @@ text { font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }
 <tspan x="18" y="471.5"> ·◇◇◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇◇◇◇◇⋄⋄⋄⋄⋄◇◇◆◇◆◇⋄ </tspan>
 <tspan x="18" y="480.0"> ·⋄◇◇◇◇◇◇◇◇◆◇◇◇◇◇◇◇◇⋄⋄·⋄⋄⋄⋄⋄···⋄·⋄⋄◇◇◇· </tspan>
 <tspan x="18" y="488.5">  ⋄⋄⋄⋄⋄⋄◇⋄◇⋄◇⋄◇⋄⋄⋄⋄⋄⋄········ · ··⋄⋄⋄⋄· </tspan>
-<tspan x="18" y="497.0">   · · · · · · · ·                   ·  </tspan></text>
-<text x="335" y="30" class="text">pedro@vygotsky</text><rect class="cursor" x="457.6" y="17" width="8" height="14" fill="#1a7f37"/><text x="472.6" y="30" class="muted">────────────────────────────────────────</text>
-<text><tspan x="335" y="50" class="muted">. </tspan><tspan class="key">OS</tspan><tspan class="muted">: .................... </tspan><tspan class="value">Windows 11, WSL/Linux, Android</tspan><tspan x="335" y="70" class="muted">. </tspan><tspan class="key">Uptime</tspan><tspan class="muted">: ................ </tspan><tspan class="value">24 years, 11 months, 2 days</tspan><tspan x="335" y="90" class="muted">. </tspan><tspan class="key">Host</tspan><tspan class="muted">: .................. </tspan><tspan class="value">Computer Science</tspan><tspan x="335" y="110" class="muted">. </tspan><tspan class="key">Kernel</tspan><tspan class="muted">: ................ </tspan><tspan class="value">Software Developer</tspan><tspan x="335" y="130" class="muted">. </tspan><tspan class="key">IDE</tspan><tspan class="muted">: ................... </tspan><tspan class="value">VS Code, IntelliJ IDEA</tspan><tspan x="335" y="170" class="muted">. </tspan><tspan class="key">Languages.Coding</tspan><tspan class="muted">: ...... </tspan><tspan class="value">JavaScript, TypeScript, Java</tspan><tspan x="335" y="190" class="muted">. </tspan><tspan class="key">Languages.Web</tspan><tspan class="muted">: ......... </tspan><tspan class="value">HTML, CSS, React, Node.js</tspan><tspan x="335" y="210" class="muted">. </tspan><tspan class="key">Tools.Development</tspan><tspan class="muted">: ..... </tspan><tspan class="value">Git, GitHub, Docker, Maven, Gradle</tspan><tspan x="335" y="230" class="muted">. </tspan><tspan class="key">Languages.Real</tspan><tspan class="muted">: ........ </tspan><tspan class="value">Portuguese, English</tspan><tspan x="335" y="260" class="muted">. </tspan><tspan class="key">Interests.Technology</tspan><tspan class="muted">: .. </tspan><tspan class="value">Generative AI, Web Development</tspan><tspan x="335" y="300" class="text">- Contact ─────────────────────────────────────────</tspan><tspan x="335" y="320" class="muted">. </tspan><tspan class="key">Email</tspan><tspan class="muted">: ................. </tspan><tspan class="value">pedrovyg.dev@gmail.com</tspan><tspan x="335" y="340" class="muted">. </tspan><tspan class="key">LinkedIn</tspan><tspan class="muted">: .............. </tspan><tspan class="value">linkedin.com/in/pedrovygotsky</tspan><tspan x="335" y="360" class="muted">. </tspan><tspan class="key">Instagram</tspan><tspan class="muted">: ............. </tspan><tspan class="value">instagram.com/pedrovyg</tspan><tspan x="335" y="380" class="muted">. </tspan><tspan class="key">Discord</tspan><tspan class="muted">: ............... </tspan><tspan class="value">discord.com/users/pedrovyg</tspan><tspan x="335" y="410" class="text">- GitHub Stats ─────────────────────────────────────</tspan><tspan x="335" y="430" class="muted">. </tspan><tspan class="key">Repositories</tspan><tspan class="muted">: .......... </tspan><tspan class="value">19</tspan><tspan x="335" y="450" class="muted">. </tspan><tspan class="key">Contributions (1y)</tspan><tspan class="muted">: .... </tspan><tspan class="value">154</tspan><tspan x="335" y="470" class="muted">. </tspan><tspan class="key">Public commits</tspan><tspan class="muted">: ........ </tspan><tspan class="value">148</tspan><tspan x="335" y="510" class="muted">. </tspan><tspan class="key">Updated</tspan><tspan class="muted">: ............... </tspan><tspan class="value">2026-09-07</tspan></text>
-</svg>
+<tspan x="18" y="497.0">   · · · · · · · ·                   ·  </tspan></text><text x="335" y="30" class="text">pedro@vygotsky</text><rect width="8" height="14" x="457.6" y="17" fill="#1a7f37" class="cursor"/><text x="472.6" y="30" class="muted">────────────────────────────────────────</text><text><tspan x="335" y="50" class="muted">. </tspan><tspan class="key">OS</tspan><tspan class="muted">: .................... </tspan><tspan class="value">Windows 11, WSL/Linux, Android</tspan><tspan x="335" y="70" class="muted">. </tspan><tspan class="key">Uptime</tspan><tspan class="muted">: ................ </tspan><tspan class="value">24 years, 11 months, 2 days</tspan><tspan x="335" y="90" class="muted">. </tspan><tspan class="key">Host</tspan><tspan class="muted">: .................. </tspan><tspan class="value">Computer Science</tspan><tspan x="335" y="110" class="muted">. </tspan><tspan class="key">Kernel</tspan><tspan class="muted">: ................ </tspan><tspan class="value">Software Developer</tspan><tspan x="335" y="130" class="muted">. </tspan><tspan class="key">IDE</tspan><tspan class="muted">: ................... </tspan><tspan class="value">VS Code, IntelliJ IDEA</tspan><tspan x="335" y="170" class="muted">. </tspan><tspan class="key">Languages.Coding</tspan><tspan class="muted">: ...... </tspan><tspan class="value">JavaScript, TypeScript, Java</tspan><tspan x="335" y="190" class="muted">. </tspan><tspan class="key">Languages.Web</tspan><tspan class="muted">: ......... </tspan><tspan class="value">HTML, CSS, React, Node.js</tspan><tspan x="335" y="210" class="muted">. </tspan><tspan class="key">Tools.Development</tspan><tspan class="muted">: ..... </tspan><tspan class="value">Git, GitHub, Docker, Maven, Gradle</tspan><tspan x="335" y="230" class="muted">. </tspan><tspan class="key">Languages.Real</tspan><tspan class="muted">: ........ </tspan><tspan class="value">Portuguese, English</tspan><tspan x="335" y="260" class="muted">. </tspan><tspan class="key">Interests.Technology</tspan><tspan class="muted">: .. </tspan><tspan class="value">Generative AI, Web Development</tspan><tspan x="335" y="300" class="text">- Contact ─────────────────────────────────────────</tspan><tspan x="335" y="320" class="muted">. </tspan><tspan class="key">Email</tspan><tspan class="muted">: ................. </tspan><tspan class="value">pedrovyg.dev@gmail.com</tspan><tspan x="335" y="340" class="muted">. </tspan><tspan class="key">LinkedIn</tspan><tspan class="muted">: .............. </tspan><tspan class="value">linkedin.com/in/pedrovygotsky</tspan><tspan x="335" y="360" class="muted">. </tspan><tspan class="key">Instagram</tspan><tspan class="muted">: ............. </tspan><tspan class="value">instagram.com/pedrovyg</tspan><tspan x="335" y="380" class="muted">. </tspan><tspan class="key">Discord</tspan><tspan class="muted">: ............... </tspan><tspan class="value">discord.com/users/pedrovyg</tspan><tspan x="335" y="410" class="text">- GitHub Stats ─────────────────────────────────────</tspan><tspan x="335" y="430" class="muted">. </tspan><tspan class="key">Repositories</tspan><tspan class="muted">: .......... </tspan><tspan class="value">19</tspan><tspan x="335" y="450" class="muted">. </tspan><tspan class="key">Contributions (1y)</tspan><tspan class="muted">: .... </tspan><tspan class="value">154</tspan><tspan x="335" y="470" class="muted">. </tspan><tspan class="key">Public commits</tspan><tspan class="muted">: ........ </tspan><tspan class="value">148</tspan><tspan x="335" y="510" class="muted">. </tspan><tspan class="key">Updated</tspan><tspan class="muted">: ............... </tspan><tspan class="value">2026-09-07</tspan></text></svg>

@@ -1,0 +1,14 @@
+{
+  "name": "pedrovyg-readme-assets",
+  "private": true,
+  "scripts": {
+    "assets:build": "python scripts/build_assets.py",
+    "assets:test": "python -m unittest discover -s tests -v"
+  },
+  "devDependencies": {
+    "svgo": "4.1.0"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  }
+}

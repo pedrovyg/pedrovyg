@@ -10,8 +10,10 @@
 
 <a href="https://github.com/pedrovyg">
 <picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/pedrovyg/pedrovyg/main/profile/neofetch-dark.svg">
-<img src="https://raw.githubusercontent.com/pedrovyg/pedrovyg/main/profile/neofetch-light.svg" alt="Pedro Vygotsky Neofetch GitHub profile" width="100%">
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/pedrovyg/pedrovyg/main/profile/neofetch-dark.svg" type="image/svg+xml">
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/pedrovyg/pedrovyg/main/profile/neofetch-dark.png" type="image/png">
+<source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/pedrovyg/pedrovyg/main/profile/neofetch-light.svg" type="image/svg+xml">
+<img src="https://raw.githubusercontent.com/pedrovyg/pedrovyg/main/profile/neofetch-light.png" alt="Animated Neofetch profile for Pedro Vygotsky with development details and GitHub statistics" width="100%">
 </picture>
 </a>
 
