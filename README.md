@@ -15,30 +15,15 @@
 </picture>
 </a>
 
-<h3>◇ About Me</h3>
+<h4>About Me</h4>
 
-<a href="https://pedrovyg-dev.vercel.app/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/pedrovyg/notebook-verde.png/notebook-verde.png" alt="notebook verde cartoon" width="150px" align="right"/></a>
+<a href="https://pedrovyg-dev.vercel.app/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/pedrovyg/notebook-verde.png/notebook-verde.png" alt="notebook verde cartoon" width="200px" align="right"/></a>
 
-Olá, me chamo Pedro e sou um ```Desenvolvedor de Software```, com foco em **Front-End** e evolução contínua no ecossistema **Full Stack** por meio de tecnologias de **Back-end**.
+Hello, my name is Pedro. I'm a ```software developer``` with over three years of experience, focusing on **front-end** development while continuously expanding my skills across the **full-stack** ecosystem through **back-end** technologies. I am currently pursuing a bachelor's degree in ```Computer Science``` and dedicate much of my time to **programming**, **studying**, and **building** new projects. I am passionate about **technology** and **education**; outside of development, I also have a keen interest in **fitness**, **cinema**, and **music**.
 
-Atualmente curso ```Ciência da Computação``` e desenvolvo projetos utilizando tecnologias web modernas e ferramentas voltadas ao desenvolvimento, versionamento, automação e conteinerização.
+<h4>Technologies & Tools</h4>
 
-Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta de apoio ao desenvolvimento de software, prototipação, automação e criação de soluções mais eficientes.
-
-<br>
-
-<p align="center">
-  <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=pedrovyg.dev%40gmail.com" target="_blank"><img src="https://img.shields.io/badge/connect_on-Gmail-EA4335?style=flat&amp;logo=gmail&amp;logoColor=white" alt="Gmail" height="20"/></a>
-  <a href="https://www.linkedin.com/in/pedrovygotsky" target="_blank"><img src="https://img.shields.io/badge/connect_on-LinkedIn-0A66C2?style=flat&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NTV2Ni4yODZ6TTUuMzM3IDcuNDMzYy0xLjE0NCAwLTIuMDYzLS45MjYtMi4wNjMtMi4wNjUgMC0xLjEzOC45Mi0yLjA2MyAyLjA2My0yLjA2MyAxLjE0IDAgMi4wNjQuOTI1IDIuMDY0IDIuMDYzIDAgMS4xMzktLjkyNSAyLjA2NS0yLjA2NCAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAwaC4wMDN6Ii8%2BPC9zdmc%2B" alt="LinkedIn" height="20"/></a>
-  <a href="https://www.instagram.com/pedrovyg/" target="_blank"><img src="https://img.shields.io/badge/connect_on-Instagram-E4405F?style=flat&amp;logo=instagram&amp;logoColor=white" alt="Instagram" height="20"/></a>
-  <a href="https://wa.me/5581999367665" target="_blank"><img src="https://img.shields.io/badge/connect_on-WhatsApp-25D366?style=flat&amp;logo=whatsapp&amp;logoColor=white" alt="WhatsApp" height="20"/></a>
-  <a href="https://discord.com/users/1472784954671890453" target="_blank"><img src="https://img.shields.io/badge/connect_on-Discord-5865F2?style=flat&amp;logo=discord&amp;logoColor=white" alt="Discord" height="20"/></a>
-  </a>
-</p>
-
-<h3>◇ Technologies & Tools</h3>
-
-<h4>♦ Front-End</h4>
+<h6>Front-End</h6>
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="https://skillicons.dev/icons?i=html&amp;theme=dark" alt="HTML" height="48"></a>&nbsp;
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="https://skillicons.dev/icons?i=css&amp;theme=dark" alt="CSS" height="48"></a>&nbsp;
@@ -46,7 +31,7 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 <a href="https://www.typescriptlang.org/download/" target="_blank"><img src="https://skillicons.dev/icons?i=ts&amp;theme=dark" alt="TypeScript" height="48"></a>&nbsp;
 <a href="https://react.dev/" target="_blank"><img src="https://skillicons.dev/icons?i=react&amp;theme=dark" alt="React" height="48"></a>
 
-<h4>♦ Back-End & Programming</h4>
+<h6>Back-End & Programming</h6>
 
 <a href="https://nodejs.org/en/download" target="_blank"><img src="https://skillicons.dev/icons?i=nodejs&amp;theme=dark" alt="Node.js" height="48"></a>&nbsp;
 <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank"><img src="https://skillicons.dev/icons?i=java&amp;theme=dark" alt="Java" height="48"></a>&nbsp;
@@ -56,7 +41,7 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 <a href="https://gradle.org/install/" target="_blank"><img src="https://skillicons.dev/icons?i=gradle&amp;theme=dark" alt="Gradle" height="48"></a>&nbsp;
 <a href="https://swagger.io/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=swagger&amp;theme=dark" alt="REST API (OpenAPI and Swagger)" height="48"></a>
 
-<h4>♦ Development Tools</h4>
+<h6>Development Tools</h6>
 
 <a href="https://git-scm.com/downloads" target="_blank"><img src="https://skillicons.dev/icons?i=git&amp;theme=dark" alt="Git" height="48"></a>&nbsp;
 <a href="https://github.com/" target="_blank"><img src="https://skillicons.dev/icons?i=github&amp;theme=dark" alt="GitHub" height="48"></a>&nbsp;
@@ -66,8 +51,19 @@ Também estudo e utilizo **Inteligência Artificial Generativa** como ferramenta
 <a href="https://www.jetbrains.com/idea/download/" target="_blank"><img src="https://skillicons.dev/icons?i=idea&amp;theme=dark" alt="IntelliJ IDEA" height="48"></a>&nbsp;
 <a href="https://n8n.io/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=n8n&amp;theme=dark" alt="n8n" height="48"></a>
 
-<h4>♦ Design</h4>
+<h6>Design</h6>
 
 <a href="https://www.figma.com/downloads/" target="_blank"><img src="https://skillicons.dev/icons?i=figma&amp;theme=dark" alt="Figma" height="48"></a>&nbsp;
 <a href="https://www.framer.com/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=framer&amp;theme=dark" alt="Framer" height="48"></a>&nbsp;
 <a href="https://www.uxpin.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/UXPin_logo.png" alt="UXPin" width="48" height="48"></a>
+
+<h4>Network</h4>
+
+<p align="left">
+  <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=pedrovyg.dev%40gmail.com" target="_blank"><img src="https://img.shields.io/badge/connect_on-Gmail-EA4335?style=flat&amp;logo=gmail&amp;logoColor=white" alt="Gmail" height="20"/></a>
+  <a href="https://www.linkedin.com/in/pedrovygotsky" target="_blank"><img src="https://img.shields.io/badge/connect_on-LinkedIn-0A66C2?style=flat&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NTV2Ni4yODZ6TTUuMzM3IDcuNDMzYy0xLjE0NCAwLTIuMDYzLS45MjYtMi4wNjMtMi4wNjUgMC0xLjEzOC45Mi0yLjA2MyAyLjA2My0yLjA2MyAxLjE0IDAgMi4wNjQuOTI1IDIuMDY0IDIuMDYzIDAgMS4xMzktLjkyNSAyLjA2NS0yLjA2NCAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAwaC4wMDN6Ii8%2BPC9zdmc%2B" alt="LinkedIn" height="20"/></a>
+  <a href="https://www.instagram.com/pedrovyg/" target="_blank"><img src="https://img.shields.io/badge/connect_on-Instagram-E4405F?style=flat&amp;logo=instagram&amp;logoColor=white" alt="Instagram" height="20"/></a>
+  <a href="https://wa.me/5581999367665" target="_blank"><img src="https://img.shields.io/badge/connect_on-WhatsApp-25D366?style=flat&amp;logo=whatsapp&amp;logoColor=white" alt="WhatsApp" height="20"/></a>
+  <a href="https://discord.com/users/1472784954671890453" target="_blank"><img src="https://img.shields.io/badge/connect_on-Discord-5865F2?style=flat&amp;logo=discord&amp;logoColor=white" alt="Discord" height="20"/></a>
+  </a>
+</p>
