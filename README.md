@@ -55,12 +55,12 @@ I am passionate about **technology** and **education**; outside of development, 
 <a href="https://git-scm.com/downloads" target="_blank"><img src="https://skillicons.dev/icons?i=git&amp;theme=dark" alt="Git" height="48"></a>&nbsp;
 <a href="https://github.com/" target="_blank"><img src="https://skillicons.dev/icons?i=github&amp;theme=dark" alt="GitHub" height="48"></a>&nbsp;
 <a href="https://www.docker.com/products/docker-desktop/" target="_blank"><img src="https://skillicons.dev/icons?i=docker&amp;theme=dark" alt="Docker" height="48"></a>&nbsp;
-<a href="https://www.gnu.org/software/bash/" target="_blank"><img src="https://skillicons.dev/icons?i=bash&amp;theme=dark" alt="Bash" height="48"></a>&nbsp;
-<a href="https://code.visualstudio.com/download" target="_blank"><img src="https://skillicons.dev/icons?i=vscode&amp;theme=dark" alt="Visual Studio Code" height="48"></a>&nbsp;
-<a href="https://www.jetbrains.com/idea/download/" target="_blank"><img src="https://skillicons.dev/icons?i=idea&amp;theme=dark" alt="IntelliJ IDEA" height="48"></a>&nbsp;
 <a href="https://n8n.io/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=n8n&amp;theme=dark" alt="n8n" height="48"></a>&nbsp;
+<a href="https://www.gnu.org/software/bash/" target="_blank"><img src="https://skillicons.dev/icons?i=bash&amp;theme=dark" alt="Bash" height="48"></a>&nbsp;
 <a href="https://www.hostinger.com/" target="_blank"><img src="./icons/hostinger.svg" alt="Hostinger" height="48"></a>&nbsp;
 <a href="https://vercel.com/" target="_blank"><img src="https://skillicons.dev/icons?i=vercel&amp;theme=dark" alt="Vercel" height="48"></a>&nbsp;
+<a href="https://code.visualstudio.com/download" target="_blank"><img src="https://skillicons.dev/icons?i=vscode&amp;theme=dark" alt="Visual Studio Code" height="48"></a>&nbsp;
+<a href="https://www.jetbrains.com/idea/download/" target="_blank"><img src="https://skillicons.dev/icons?i=idea&amp;theme=dark" alt="IntelliJ IDEA" height="48"></a>&nbsp;
 <a href="https://openai.com/codex/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=chatgpt&amp;theme=dark" alt="Codex" height="48"></a>&nbsp;
 <a href="https://claude.com/product/claude-code" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=claude&amp;theme=dark" alt="Claude Code" height="48"></a>&nbsp;
 <a href="https://aistudio.google.com/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=gemini&amp;theme=dark" alt="Google AI Studio" height="48"></a>
