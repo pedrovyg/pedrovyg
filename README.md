@@ -35,12 +35,17 @@ I am passionate about **technology** and **education**; outside of development, 
 <a href="https://www.typescriptlang.org/download/" target="_blank"><img src="https://skillicons.dev/icons?i=ts&amp;theme=dark" alt="TypeScript" height="48"></a>&nbsp;
 <a href="https://react.dev/" target="_blank"><img src="https://skillicons.dev/icons?i=react&amp;theme=dark" alt="React" height="48"></a>
 
+<h6>Design</h6>
+
+<a href="https://www.figma.com/downloads/" target="_blank"><img src="https://skillicons.dev/icons?i=figma&amp;theme=dark" alt="Figma" height="48"></a>&nbsp;
+<a href="https://www.framer.com/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=framer&amp;theme=dark" alt="Framer" height="48"></a>&nbsp;
+
 <h6>Back-End & Programming</h6>
 
-<a href="https://nodejs.org/en/download" target="_blank"><img src="https://skillicons.dev/icons?i=nodejs&amp;theme=dark" alt="Node.js" height="48"></a>&nbsp;
 <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank"><img src="https://skillicons.dev/icons?i=java&amp;theme=dark" alt="Java" height="48"></a>&nbsp;
 <a href="https://www.python.org/downloads/" target="_blank"><img src="https://skillicons.dev/icons?i=py&amp;theme=dark" alt="Python" height="48"></a>&nbsp;
 <a href="https://spring.io/projects/spring-boot" target="_blank"><img src="https://skillicons.dev/icons?i=spring&amp;theme=dark" alt="Spring Boot" height="48"></a>&nbsp;
+<a href="https://nodejs.org/en/download" target="_blank"><img src="https://skillicons.dev/icons?i=nodejs&amp;theme=dark" alt="Node.js" height="48"></a>&nbsp;
 <a href="https://maven.apache.org/download.cgi" target="_blank"><img src="https://skillicons.dev/icons?i=maven&amp;theme=dark" alt="Apache Maven" height="48"></a>&nbsp;
 <a href="https://gradle.org/install/" target="_blank"><img src="https://skillicons.dev/icons?i=gradle&amp;theme=dark" alt="Gradle" height="48"></a>&nbsp;
 <a href="https://swagger.io/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=swagger&amp;theme=dark" alt="REST API (OpenAPI and Swagger)" height="48"></a>
@@ -54,11 +59,6 @@ I am passionate about **technology** and **education**; outside of development, 
 <a href="https://code.visualstudio.com/download" target="_blank"><img src="https://skillicons.dev/icons?i=vscode&amp;theme=dark" alt="Visual Studio Code" height="48"></a>&nbsp;
 <a href="https://www.jetbrains.com/idea/download/" target="_blank"><img src="https://skillicons.dev/icons?i=idea&amp;theme=dark" alt="IntelliJ IDEA" height="48"></a>&nbsp;
 <a href="https://n8n.io/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=n8n&amp;theme=dark" alt="n8n" height="48"></a>
-
-<h6>Design</h6>
-
-<a href="https://www.figma.com/downloads/" target="_blank"><img src="https://skillicons.dev/icons?i=figma&amp;theme=dark" alt="Figma" height="48"></a>&nbsp;
-<a href="https://www.framer.com/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=framer&amp;theme=dark" alt="Framer" height="48"></a>&nbsp;
 
 ## <h4>Network</h4>
 
