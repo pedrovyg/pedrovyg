@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import re
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
@@ -37,6 +38,14 @@ PROTECTED_ATTRIBUTES = {
     "clip-path",
     "focusable",
     XML_SPACE,
+}
+REQUIRED_CHART_IDS = {
+    "github-contrib-gradient",
+    "github-contrib-clip",
+    "github-contrib-chart",
+    "github-contrib-title",
+    "github-contrib-area",
+    "github-contrib-line",
 }
 
 
@@ -276,6 +285,53 @@ def validate_accessibility(root: ET.Element, ids: tuple[str, ...]) -> None:
         raise IntegrityError("SVG requires a meaningful <desc>")
 
 
+def validate_contribution_chart(root: ET.Element, ids: tuple[str, ...]) -> None:
+    missing = sorted(REQUIRED_CHART_IDS - set(ids))
+    if missing:
+        raise IntegrityError(f"Contribution chart is missing required IDs: {missing}")
+    chart = next(
+        element
+        for element in root.iter()
+        if element.attrib.get("id") == "github-contrib-chart"
+    )
+    if chart.attrib.get("role") != "img":
+        raise IntegrityError('Contribution chart must declare role="img"')
+    if chart.attrib.get("aria-labelledby") != "github-contrib-title":
+        raise IntegrityError("Contribution chart title reference is invalid")
+
+    raw_counts = chart.attrib.get("data-week-counts")
+    if raw_counts is None:
+        raise IntegrityError("Contribution chart is missing its cached weekly data")
+    try:
+        counts = tuple(int(value) for value in raw_counts.split(",") if value)
+    except ValueError as error:
+        raise IntegrityError(
+            "Contribution chart contains an invalid weekly count"
+        ) from error
+    if len(counts) > 52 or any(value < 0 for value in counts):
+        raise IntegrityError("Contribution chart weekly counts are outside valid bounds")
+
+    period_start = chart.attrib.get("data-period-start", "")
+    if counts:
+        try:
+            dt.date.fromisoformat(period_start)
+        except ValueError as error:
+            raise IntegrityError(
+                "Contribution chart period start must use YYYY-MM-DD"
+            ) from error
+    elif period_start:
+        raise IntegrityError("Empty contribution chart cannot declare a period start")
+
+    for element_id in ("github-contrib-area", "github-contrib-line"):
+        element = next(
+            candidate
+            for candidate in root.iter()
+            if candidate.attrib.get("id") == element_id
+        )
+        if local_name(element.tag) != "path" or not element.attrib.get("d"):
+            raise IntegrityError(f"Contribution chart path #{element_id} is invalid")
+
+
 def validate_svg(path: Path, ascii_source: Path | None = None) -> SvgSnapshot:
     root = parse_svg(path)
     data = snapshot(root)
@@ -296,6 +352,7 @@ def validate_svg(path: Path, ascii_source: Path | None = None) -> SvgSnapshot:
         raise IntegrityError(f"ASCII animation is missing from {path}")
     validate_css(data)
     validate_accessibility(root, data.ids)
+    validate_contribution_chart(root, data.ids)
     if ascii_source is not None:
         expected = expected_ascii_frames(ascii_source)
         if data.ascii_frames != expected:

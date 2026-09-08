@@ -9,12 +9,20 @@ import json
 import os
 import shutil
 import subprocess
+import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from generate_ascii_animation import write_animation
 from render_fallbacks import render_fallbacks
-from update_neofetch import load_stats, parse_date, validate_stats, write_assets
+from update_neofetch import (
+    ContributionWeek,
+    GitHubProfileData,
+    load_stats,
+    parse_date,
+    profile_data_from_mapping,
+    write_assets,
+)
 from validate_svg import validate_pair, validate_svg
 
 
@@ -36,16 +44,28 @@ def safe_reset_directory(path: Path) -> None:
     resolved.mkdir(parents=True)
 
 
-def parse_stats(stats_json: str | None) -> dict[str, int]:
+def parse_stats(
+    stats_json: str | None, current_asset: Path | None = None
+) -> GitHubProfileData:
     if stats_json is None:
-        return load_stats(os.environ.get("GITHUB_TOKEN", ""))
+        try:
+            return load_stats(os.environ.get("GITHUB_TOKEN", ""))
+        except RuntimeError as error:
+            cached = previous_profile_data(current_asset) if current_asset else None
+            if cached is None:
+                raise
+            print(
+                f"GitHub API unavailable; using the last valid SVG data: {error}",
+                file=sys.stderr,
+            )
+            return cached
     try:
         raw_stats = json.loads(stats_json)
     except json.JSONDecodeError as error:
         raise ValueError(f"Invalid --stats-json: {error}") from error
     if not isinstance(raw_stats, dict):
         raise ValueError("--stats-json must contain a JSON object")
-    return validate_stats(raw_stats)
+    return profile_data_from_mapping(raw_stats)
 
 
 def previous_card_values(asset_path: Path) -> dict[str, str]:
@@ -75,11 +95,69 @@ def previous_card_values(asset_path: Path) -> dict[str, str]:
     return values
 
 
+def previous_contribution_weeks(asset_path: Path) -> tuple[ContributionWeek, ...]:
+    """Recover the latest validated weekly series embedded in a generated SVG."""
+    if not asset_path.is_file():
+        return ()
+    try:
+        root = ET.fromstring(asset_path.read_bytes())
+    except (OSError, ET.ParseError):
+        return ()
+
+    chart = next(
+        (
+            element
+            for element in root.iter()
+            if element.attrib.get("id") == "github-contrib-chart"
+        ),
+        None,
+    )
+    if chart is None:
+        return ()
+    raw_counts = chart.attrib.get("data-week-counts", "")
+    raw_start = chart.attrib.get("data-period-start", "")
+    if not raw_counts or not raw_start:
+        return ()
+    try:
+        start = dt.date.fromisoformat(raw_start)
+        counts = tuple(int(value) for value in raw_counts.split(","))
+    except ValueError:
+        return ()
+    if len(counts) > 52 or any(value < 0 for value in counts):
+        return ()
+    return tuple(
+        ContributionWeek(start=start + dt.timedelta(days=index * 7), count=count)
+        for index, count in enumerate(counts)
+    )
+
+
+def previous_profile_data(asset_path: Path | None) -> GitHubProfileData | None:
+    """Load the last public totals and chart data for an API outage fallback."""
+    if asset_path is None:
+        return None
+    values = previous_card_values(asset_path)
+    try:
+        stats = {
+            "repos": int(values["Repositories"].replace(",", "")),
+            "commits": int(values["Public commits"].replace(",", "")),
+            "contributions": int(values["Contributions (1y)"].replace(",", "")),
+        }
+    except (KeyError, ValueError):
+        return None
+    if any(value < 0 for value in stats.values()):
+        return None
+    return GitHubProfileData(
+        stats=stats,
+        contribution_weeks=previous_contribution_weeks(asset_path),
+    )
+
+
 def resolve_render_date(
     current_asset: Path,
     stats: dict[str, int],
     requested_date: dt.date | None,
     today: dt.date,
+    contribution_weeks: tuple[ContributionWeek, ...] = (),
 ) -> dt.date:
     """Keep the displayed date stable unless the public statistics changed."""
     if requested_date is not None:
@@ -96,7 +174,12 @@ def resolve_render_date(
     except (KeyError, ValueError):
         return today
 
-    if previous_stats == stats and previous_date <= today:
+    previous_weeks = previous_contribution_weeks(current_asset)
+    if (
+        previous_stats == stats
+        and previous_weeks == contribution_weeks
+        and previous_date <= today
+    ):
         return previous_date
     return today
 
@@ -136,7 +219,7 @@ def atomic_copy(source: Path, destination: Path) -> None:
 
 def build_assets(
     build_dir: Path,
-    stats: dict[str, int],
+    profile_data: GitHubProfileData,
     rendered_on: dt.date,
     promote: bool,
 ) -> dict[str, dict[str, int]]:
@@ -149,7 +232,13 @@ def build_assets(
     fallback_dir.mkdir(parents=True)
 
     ascii_source = write_animation(raw_dir / "ascii-art.txt")
-    raw_svgs = write_assets(raw_dir, ascii_source, stats, rendered_on)
+    raw_svgs = write_assets(
+        raw_dir,
+        ascii_source,
+        profile_data.stats,
+        rendered_on,
+        profile_data.contribution_weeks,
+    )
     for raw_svg in raw_svgs:
         validate_svg(raw_svg, ascii_source)
 
@@ -203,12 +292,19 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    stats = parse_stats(args.stats_json)
+    current_asset = PROFILE_DIR / "neofetch-dark.svg"
+    profile_data = parse_stats(args.stats_json, current_asset)
     today = dt.datetime.now(dt.timezone.utc).date()
     rendered_on = resolve_render_date(
-        PROFILE_DIR / "neofetch-dark.svg", stats, args.date, today
+        current_asset,
+        profile_data.stats,
+        args.date,
+        today,
+        profile_data.contribution_weeks,
     )
-    report = build_assets(args.build_dir, stats, rendered_on, not args.no_promote)
+    report = build_assets(
+        args.build_dir, profile_data, rendered_on, not args.no_promote
+    )
     print(json.dumps(report, indent=2, sort_keys=True))
 
 
