@@ -1,0 +1,83 @@
+{
+  "cloc_version": "2.10",
+  "repositories": {
+    "pedrovyg/Projeto-Tesla": {
+      "code_lines": 139,
+      "default_branch": "main",
+      "pushed_at": "2024-10-22T03:14:36Z"
+    },
+    "pedrovyg/challenge-do-amigosecreto": {
+      "code_lines": 197,
+      "default_branch": "main",
+      "pushed_at": "2025-09-25T20:08:42Z"
+    },
+    "pedrovyg/decola-tech-avanade-2025": {
+      "code_lines": 2390,
+      "default_branch": "main",
+      "pushed_at": "2026-08-20T22:40:18Z"
+    },
+    "pedrovyg/desafio-prompt-professor-de-ingles": {
+      "code_lines": 0,
+      "default_branch": "main",
+      "pushed_at": "2026-09-04T16:08:55Z"
+    },
+    "pedrovyg/estrategias-freelancer-remotamente": {
+      "code_lines": 0,
+      "default_branch": "main",
+      "pushed_at": "2026-08-31T22:10:24Z"
+    },
+    "pedrovyg/landing-page-de-pagina-de-vendas": {
+      "code_lines": 1238,
+      "default_branch": "main",
+      "pushed_at": "2026-08-02T21:45:38Z"
+    },
+    "pedrovyg/landing-page-profissional-de-barbearia": {
+      "code_lines": 518,
+      "default_branch": "main",
+      "pushed_at": "2026-08-02T21:27:50Z"
+    },
+    "pedrovyg/notebook-verde.png": {
+      "code_lines": 0,
+      "default_branch": "main",
+      "pushed_at": "2026-09-07T22:08:06Z"
+    },
+    "pedrovyg/pedrovyg": {
+      "code_lines": 2480,
+      "default_branch": "main",
+      "pushed_at": "2026-09-08T20:36:58Z"
+    },
+    "pedrovyg/pedrovyg.dev": {
+      "code_lines": 2546,
+      "default_branch": "main",
+      "pushed_at": "2026-08-21T18:29:38Z"
+    },
+    "pedrovyg/pedrovyg.github.io": {
+      "code_lines": 343,
+      "default_branch": "main",
+      "pushed_at": "2026-09-01T04:37:33Z"
+    },
+    "pedrovyg/site-de-revenda-de-jogos": {
+      "code_lines": 2040,
+      "default_branch": "main",
+      "pushed_at": "2026-08-22T00:52:38Z"
+    },
+    "pedrovyg/site-de-sistema-de-gestao": {
+      "code_lines": 2878,
+      "default_branch": "main",
+      "pushed_at": "2026-08-03T00:03:27Z"
+    },
+    "pedrovyg/skills-code-with-codespaces": {
+      "code_lines": 225,
+      "default_branch": "main",
+      "pushed_at": "2025-12-01T07:08:18Z"
+    },
+    "pedrovyg/skills-copilot-codespaces-vscode": {
+      "code_lines": 0,
+      "default_branch": "main",
+      "pushed_at": "2025-10-18T15:17:20Z"
+    }
+  },
+  "schema": 1,
+  "total": 14994,
+  "username": "pedrovyg"
+}
