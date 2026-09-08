@@ -27,7 +27,7 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7.0.1
@@ -53,9 +53,33 @@ jobs:
       - name: Run integrity tests
         run: python -m unittest discover -s tests -v
 
+      - name: Install pinned cloc 2.10
+        env:
+          CLOC_COMMIT: eb5cef64db2b2d4380f501568cc584b7cab4ba50
+        run: |
+          curl --proto '=https' --tlsv1.2 --fail --location --retry 3 \
+            "https://raw.githubusercontent.com/AlDanial/cloc/${CLOC_COMMIT}/cloc" \
+            --output "${RUNNER_TEMP}/cloc"
+          chmod 0755 "${RUNNER_TEMP}/cloc"
+          test "$("${RUNNER_TEMP}/cloc" --version)" = "2.10"
+          echo "${RUNNER_TEMP}" >> "${GITHUB_PATH}"
+
+      - name: Calculate cached Code Lines
+        id: code_lines
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          code_lines="$(python scripts/count_code_lines.py)"
+          if [[ ! "${code_lines}" =~ ^[0-9]+$ ]]; then
+            echo "Code Lines did not return a non-negative integer."
+            exit 1
+          fi
+          echo "value=${code_lines}" >> "${GITHUB_OUTPUT}"
+
       - name: Generate, optimize, validate, and promote assets
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CODE_LINES: ${{ steps.code_lines.outputs.value }}
         run: python scripts/build_assets.py
 
       - name: Verify clean source and valid diff
@@ -73,6 +97,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
             profile/ascii-art.txt \
+            profile/code-lines.json \
             profile/neofetch-dark.svg \
             profile/neofetch-light.svg \
             profile/neofetch-dark.png \

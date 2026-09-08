@@ -9,7 +9,6 @@ import json
 import os
 import shutil
 import subprocess
-import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -44,21 +43,9 @@ def safe_reset_directory(path: Path) -> None:
     resolved.mkdir(parents=True)
 
 
-def parse_stats(
-    stats_json: str | None, current_asset: Path | None = None
-) -> GitHubProfileData:
+def parse_stats(stats_json: str | None) -> GitHubProfileData:
     if stats_json is None:
-        try:
-            return load_stats(os.environ.get("GITHUB_TOKEN", ""))
-        except RuntimeError as error:
-            cached = previous_profile_data(current_asset) if current_asset else None
-            if cached is None:
-                raise
-            print(
-                f"GitHub API unavailable; using the last valid SVG data: {error}",
-                file=sys.stderr,
-            )
-            return cached
+        return load_stats(os.environ.get("GITHUB_TOKEN", ""))
     try:
         raw_stats = json.loads(stats_json)
     except json.JSONDecodeError as error:
@@ -132,17 +119,18 @@ def previous_contribution_weeks(asset_path: Path) -> tuple[ContributionWeek, ...
 
 
 def previous_profile_data(asset_path: Path | None) -> GitHubProfileData | None:
-    """Load the last public totals and chart data for an API outage fallback."""
+    """Load generated totals and chart data used for change detection."""
     if asset_path is None:
         return None
-    values = previous_card_values(asset_path)
     try:
+        root = ET.fromstring(asset_path.read_bytes())
         stats = {
-            "repos": int(values["Repositories"].replace(",", "")),
-            "commits": int(values["Public commits"].replace(",", "")),
-            "contributions": int(values["Contributions (1y)"].replace(",", "")),
+            "repos": int(root.attrib["data-repositories"]),
+            "commits": int(root.attrib["data-public-commits"]),
+            "contributions": int(root.attrib["data-contributions"]),
+            "code_lines": int(root.attrib["data-code-lines"]),
         }
-    except (KeyError, ValueError):
+    except (KeyError, OSError, ET.ParseError, ValueError):
         return None
     if any(value < 0 for value in stats.values()):
         return None
@@ -152,6 +140,25 @@ def previous_profile_data(asset_path: Path | None) -> GitHubProfileData | None:
     )
 
 
+def previous_render_date(asset_path: Path) -> dt.date | None:
+    """Recover the internal render date without displaying it in the card."""
+    if not asset_path.is_file():
+        return None
+    try:
+        root = ET.fromstring(asset_path.read_bytes())
+        raw_date = root.attrib.get("data-rendered-on")
+        if raw_date:
+            return dt.date.fromisoformat(raw_date)
+    except (OSError, ET.ParseError, ValueError):
+        return None
+
+    # One-release migration path for cards that still rendered Updated visibly.
+    try:
+        return dt.date.fromisoformat(previous_card_values(asset_path)["Updated"])
+    except (KeyError, ValueError):
+        return None
+
+
 def resolve_render_date(
     current_asset: Path,
     stats: dict[str, int],
@@ -159,25 +166,18 @@ def resolve_render_date(
     today: dt.date,
     contribution_weeks: tuple[ContributionWeek, ...] = (),
 ) -> dt.date:
-    """Keep the displayed date stable unless the public statistics changed."""
+    """Keep the internal date stable unless generated public data changed."""
     if requested_date is not None:
         return requested_date
 
-    values = previous_card_values(current_asset)
-    try:
-        previous_stats = {
-            "repos": int(values["Repositories"].replace(",", "")),
-            "commits": int(values["Public commits"].replace(",", "")),
-            "contributions": int(values["Contributions (1y)"].replace(",", "")),
-        }
-        previous_date = dt.date.fromisoformat(values["Updated"])
-    except (KeyError, ValueError):
+    previous_profile = previous_profile_data(current_asset)
+    previous_date = previous_render_date(current_asset)
+    if previous_profile is None or previous_date is None:
         return today
 
-    previous_weeks = previous_contribution_weeks(current_asset)
     if (
-        previous_stats == stats
-        and previous_weeks == contribution_weeks
+        previous_profile.stats == stats
+        and previous_profile.contribution_weeks == contribution_weeks
         and previous_date <= today
     ):
         return previous_date
@@ -293,7 +293,7 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     current_asset = PROFILE_DIR / "neofetch-dark.svg"
-    profile_data = parse_stats(args.stats_json, current_asset)
+    profile_data = parse_stats(args.stats_json)
     today = dt.datetime.now(dt.timezone.utc).date()
     rendered_on = resolve_render_date(
         current_asset,

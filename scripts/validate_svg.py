@@ -31,6 +31,16 @@ PROTECTED_ATTRIBUTES = {
     "end",
     "dur",
     "repeatCount",
+    "attributeName",
+    "values",
+    "keyTimes",
+    "keySplines",
+    "calcMode",
+    "from",
+    "to",
+    "by",
+    "additive",
+    "accumulate",
     "fill",
     "stroke",
     "filter",
@@ -47,6 +57,28 @@ REQUIRED_CHART_IDS = {
     "github-contrib-area",
     "github-contrib-line",
 }
+TYPING_PHRASES = (
+    "Pedro Vygotsky",
+    "Full-Stack & AI Developer",
+    "Building real projects for businesses",
+)
+REQUIRED_TYPING_IDS = {
+    "readme-typing",
+    "typing-static",
+    "typing-static-phrase",
+    "typing-static-cursor",
+}.union(
+    {
+        f"typing-{kind}-{index}"
+        for index in range(len(TYPING_PHRASES))
+        for kind in ("clip", "clip-rect", "sequence", "phrase", "cursor")
+    },
+    {
+        f"typing-{kind}-{index}-animation"
+        for index in range(len(TYPING_PHRASES))
+        for kind in ("width", "cursor", "opacity")
+    },
+)
 
 
 class IntegrityError(RuntimeError):
@@ -331,6 +363,165 @@ def validate_contribution_chart(root: ET.Element, ids: tuple[str, ...]) -> None:
         if local_name(element.tag) != "path" or not element.attrib.get("d"):
             raise IntegrityError(f"Contribution chart path #{element_id} is invalid")
 
+    clip = next(
+        element
+        for element in root.iter()
+        if element.attrib.get("id") == "github-contrib-clip"
+    )
+    clip_rect = next(
+        (element for element in clip if local_name(element.tag) == "rect"), None
+    )
+    if clip_rect is None:
+        raise IntegrityError("Contribution chart clip path is empty")
+    try:
+        plot_x = float(clip_rect.attrib["x"])
+        plot_y = float(clip_rect.attrib["y"])
+        plot_width = float(clip_rect.attrib["width"])
+        plot_height = float(clip_rect.attrib["height"])
+    except (KeyError, ValueError) as error:
+        raise IntegrityError("Contribution chart has invalid plot dimensions") from error
+    if (
+        plot_x < 580
+        or plot_y < 400
+        or plot_width < 210
+        or plot_height < 70
+        or plot_x + plot_width > 833
+        or plot_y + plot_height > 515
+    ):
+        raise IntegrityError("Contribution chart does not occupy its safe enlarged box")
+
+
+def element_by_id(root: ET.Element, element_id: str) -> ET.Element:
+    element = next(
+        (candidate for candidate in root.iter() if candidate.attrib.get("id") == element_id),
+        None,
+    )
+    if element is None:
+        raise IntegrityError(f"Required SVG element #{element_id} is missing")
+    return element
+
+
+def validate_smil_animation(element: ET.Element, attribute_name: str) -> None:
+    if local_name(element.tag) != "animate":
+        raise IntegrityError(f"#{element.attrib.get('id')} must be an <animate> element")
+    if (
+        element.attrib.get("attributeName") != attribute_name
+        or element.attrib.get("calcMode") != "discrete"
+        or element.attrib.get("repeatCount") != "indefinite"
+    ):
+        raise IntegrityError(
+            f"#{element.attrib.get('id')} has invalid typing animation semantics"
+        )
+    values = element.attrib.get("values", "").split(";")
+    raw_times = element.attrib.get("keyTimes", "").split(";")
+    if len(values) < 2 or len(values) != len(raw_times):
+        raise IntegrityError(f"#{element.attrib.get('id')} has mismatched SMIL values")
+    try:
+        times = tuple(float(value) for value in raw_times)
+    except ValueError as error:
+        raise IntegrityError(f"#{element.attrib.get('id')} has invalid keyTimes") from error
+    if (
+        times[0] != 0
+        or times[-1] != 1
+        or any(left > right for left, right in zip(times, times[1:]))
+    ):
+        raise IntegrityError(f"#{element.attrib.get('id')} has non-monotonic keyTimes")
+    duration = element.attrib.get("dur", "")
+    try:
+        duration_seconds = float(duration.removesuffix("s"))
+    except ValueError as error:
+        raise IntegrityError(f"#{element.attrib.get('id')} has an invalid duration") from error
+    if not duration.endswith("s") or duration_seconds <= 0:
+        raise IntegrityError(f"#{element.attrib.get('id')} has an invalid duration")
+
+
+def validate_typing(root: ET.Element, ids: tuple[str, ...]) -> None:
+    missing = sorted(REQUIRED_TYPING_IDS - set(ids))
+    if missing:
+        raise IntegrityError(f"README typing is missing required IDs: {missing}")
+
+    for index, phrase in enumerate(TYPING_PHRASES):
+        phrase_element = element_by_id(root, f"typing-phrase-{index}")
+        cursor = element_by_id(root, f"typing-cursor-{index}")
+        clip_rect = element_by_id(root, f"typing-clip-rect-{index}")
+        if phrase_element.text != phrase:
+            raise IntegrityError(f"README typing phrase {index} changed")
+        if cursor.text != "█":
+            raise IntegrityError(f"README typing cursor {index} must use █")
+        if "typing-cursor" not in cursor.attrib.get("class", "").split():
+            raise IntegrityError(f"README typing cursor {index} lost its CSS class")
+        try:
+            clip_right = float(clip_rect.attrib["x"]) + float(clip_rect.attrib["width"])
+        except (KeyError, ValueError) as error:
+            raise IntegrityError(f"README typing clip {index} is invalid") from error
+        if clip_right > 832:
+            raise IntegrityError(f"README typing phrase {index} exceeds the safe text area")
+        validate_smil_animation(
+            element_by_id(root, f"typing-width-{index}-animation"), "width"
+        )
+        validate_smil_animation(
+            element_by_id(root, f"typing-cursor-{index}-animation"), "x"
+        )
+        validate_smil_animation(
+            element_by_id(root, f"typing-opacity-{index}-animation"), "opacity"
+        )
+
+    if element_by_id(root, "typing-static-phrase").text != TYPING_PHRASES[0]:
+        raise IntegrityError("Reduced-motion typing fallback changed")
+    if element_by_id(root, "typing-static-cursor").text != "█":
+        raise IntegrityError("Reduced-motion cursor must use █")
+    css = "\n".join(style_texts(root))
+    if "prefers-reduced-motion: reduce" not in css:
+        raise IntegrityError("README typing is missing its reduced-motion fallback")
+
+
+def validate_profile_layout(root: ET.Element) -> None:
+    background = element_by_id(root, "card-background")
+    if local_name(background.tag) != "rect" or "stroke" in background.attrib:
+        raise IntegrityError("The profile background must not render an outer border")
+    if not background.attrib.get("fill") or background.attrib.get("rx") != "15":
+        raise IntegrityError("The profile background lost its fill or rounded corners")
+
+    metadata = (
+        "data-repositories",
+        "data-contributions",
+        "data-public-commits",
+        "data-code-lines",
+    )
+    for name in metadata:
+        try:
+            value = int(root.attrib[name])
+        except (KeyError, ValueError) as error:
+            raise IntegrityError(f"SVG root is missing valid {name} metadata") from error
+        if value < 0:
+            raise IntegrityError(f"SVG root contains negative {name} metadata")
+    try:
+        dt.date.fromisoformat(root.attrib["data-rendered-on"])
+    except (KeyError, ValueError) as error:
+        raise IntegrityError("SVG root is missing a valid internal render date") from error
+
+    tspans = [element for element in root.iter() if local_name(element.tag) == "tspan"]
+    visible_text = tuple(element.text or "" for element in tspans)
+    if any("Updated" in value for value in visible_text):
+        raise IntegrityError("Updated must not be rendered in the profile card")
+    if "Code Lines" not in visible_text:
+        raise IntegrityError("GitHub Stats is missing Code Lines")
+    for label in ("Contact", "GitHub Stats"):
+        heading = next(
+            (value for value in visible_text if value.startswith(f"- {label} ")), None
+        )
+        if heading is None or not heading.endswith("─"):
+            raise IntegrityError(f"The {label} heading rule is missing")
+        heading_end = 335 + len(heading) * 8.4
+        if not 825 <= heading_end <= 840:
+            raise IntegrityError(f"The {label} heading rule does not reach the inner edge")
+
+    all_text = "".join(
+        text for element in root.iter() for text in element.itertext()
+    )
+    if "pedro@vygotsky" in all_text:
+        raise IntegrityError("The previous static title is still rendered")
+
 
 def validate_svg(path: Path, ascii_source: Path | None = None) -> SvgSnapshot:
     root = parse_svg(path)
@@ -353,6 +544,8 @@ def validate_svg(path: Path, ascii_source: Path | None = None) -> SvgSnapshot:
     validate_css(data)
     validate_accessibility(root, data.ids)
     validate_contribution_chart(root, data.ids)
+    validate_typing(root, data.ids)
+    validate_profile_layout(root)
     if ascii_source is not None:
         expected = expected_ascii_frames(ascii_source)
         if data.ascii_frames != expected:

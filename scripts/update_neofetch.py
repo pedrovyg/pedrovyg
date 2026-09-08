@@ -22,6 +22,7 @@ OUTPUT_DIR = Path("profile")
 CARD_WIDTH = 850
 CARD_HEIGHT = 530
 INFO_X = 335
+INFO_RIGHT = 832
 ASCII_ART_PATH = Path("profile/ascii-art.txt")
 ASCII_X = 18
 ASCII_TOP = 38
@@ -30,18 +31,25 @@ ASCII_LINE_HEIGHT = 8.5
 ASCII_FRAME_SEPARATOR = "\n===FRAME===\n"
 ASCII_FRAME_INTERVAL = 0.1
 ASCII_FRAME_FADE_RATIO = 1.0
-TITLE = "pedro@vygotsky"
 TEXT_CHAR_WIDTH = 8.4
-CURSOR_GAP = 5
-CURSOR_WIDTH = 8
-CURSOR_HEIGHT = 14
+TYPING_PHRASES = (
+    "Pedro Vygotsky",
+    "Full-Stack & AI Developer",
+    "Building real projects for businesses",
+)
+TYPING_Y = 30
+TYPING_CHAR_SECONDS = 0.075
+TYPING_DELETE_SECONDS = 0.04
+TYPING_HOLD_SECONDS = 1.1
+TYPING_PAUSE_SECONDS = 0.35
+CURSOR_GAP = 2
 THEMES = ("dark", "light")
 TITLE_ID = "svg-title"
 DESCRIPTION_ID = "svg-description"
-GRAPH_X = 620
-GRAPH_Y = 420
-GRAPH_WIDTH = 212
-GRAPH_HEIGHT = 96
+GRAPH_X = 585
+GRAPH_Y = 412
+GRAPH_WIDTH = 247
+GRAPH_HEIGHT = 112
 GRAPH_PADDING_LEFT = 24
 GRAPH_PADDING_RIGHT = 4
 GRAPH_PADDING_TOP = 18
@@ -250,7 +258,22 @@ def fetch_github_contribution_data(
     return total, contribution_weeks
 
 
-def load_stats(token: str) -> GitHubProfileData:
+def code_lines_from_environment() -> int:
+    raw_value = os.environ.get("CODE_LINES")
+    if raw_value is None:
+        raise RuntimeError(
+            "CODE_LINES is required for live stats; run scripts/count_code_lines.py first."
+        )
+    try:
+        value = int(raw_value)
+    except ValueError as error:
+        raise RuntimeError("CODE_LINES must be a non-negative integer") from error
+    if value < 0:
+        raise RuntimeError("CODE_LINES must be a non-negative integer")
+    return value
+
+
+def load_stats(token: str, code_lines: int | None = None) -> GitHubProfileData:
     if not token:
         raise RuntimeError(
             "GITHUB_TOKEN is required for live stats; use --stats-json for local tests."
@@ -270,6 +293,9 @@ def load_stats(token: str) -> GitHubProfileData:
             "repos": int(user["public_repos"]),
             "commits": int(commit_search["total_count"]),
             "contributions": int(contributions),
+            "code_lines": (
+                code_lines if code_lines is not None else code_lines_from_environment()
+            ),
         }
     except (KeyError, TypeError, ValueError) as error:
         raise RuntimeError("GitHub response is missing required numeric stats") from error
@@ -280,7 +306,7 @@ def load_stats(token: str) -> GitHubProfileData:
 
 def validate_stats(stats: Mapping[str, object]) -> dict[str, int]:
     """Return the supported stats after strict type and range checks."""
-    required = ("repos", "commits", "contributions")
+    required = ("repos", "commits", "contributions", "code_lines")
     validated: dict[str, int] = {}
     for key in required:
         value = stats.get(key)
@@ -321,6 +347,134 @@ def tspan(y: int, label: str, value: str, *, heading: bool = False) -> str:
         f'<tspan class="muted">: {leader} </tspan>'
         f'<tspan class="value">{html.escape(value)}</tspan>'
     )
+
+
+def section_heading(y: int, label: str) -> str:
+    """Build a heading whose terminal rule ends at the shared inner edge."""
+    prefix = f"- {label} "
+    remaining = INFO_RIGHT - (INFO_X + len(prefix) * TEXT_CHAR_WIDTH)
+    rule = "─" * max(1, math.floor(remaining / TEXT_CHAR_WIDTH))
+    return tspan(y, f"{prefix}{rule}", "", heading=True)
+
+
+def format_code_lines(value: int) -> str:
+    """Prefer the full SLOC total, compacting only when the chart needs room."""
+    if value < 10_000:
+        return f"{value:,}"
+    if value >= 999_500_000:
+        scale, suffix = 1_000_000_000, "B"
+    elif value >= 999_500:
+        scale, suffix = 1_000_000, "M"
+    else:
+        scale, suffix = 1_000, "k"
+    scaled = value / scale
+    precision = 2 if scaled < 10 else 1 if scaled < 100 else 0
+    compact = f"{scaled:.{precision}f}".rstrip("0").rstrip(".")
+    return f"{compact}{suffix}"
+
+
+def append_timeline_event(
+    events: list[tuple[float, float]], timestamp: float, value: float
+) -> None:
+    """Append one monotonic SMIL event, replacing an event at the same instant."""
+    if events and math.isclose(events[-1][0], timestamp, abs_tol=1e-9):
+        events[-1] = (timestamp, value)
+    else:
+        events.append((timestamp, value))
+
+
+def typing_schedule() -> tuple[tuple[float, float], ...]:
+    """Return each phrase's visible start and delete completion time."""
+    schedule: list[tuple[float, float]] = []
+    start = 0.0
+    for phrase in TYPING_PHRASES:
+        active_end = (
+            start
+            + len(phrase) * TYPING_CHAR_SECONDS
+            + TYPING_HOLD_SECONDS
+            + len(phrase) * TYPING_DELETE_SECONDS
+        )
+        schedule.append((start, active_end))
+        start = active_end + TYPING_PAUSE_SECONDS
+    return tuple(schedule)
+
+
+def smil_sequence(events: Sequence[tuple[float, float]], duration: float) -> tuple[str, str]:
+    values = ";".join(format_coordinate(value) for _, value in events)
+    key_times = ";".join(
+        "1" if math.isclose(timestamp, duration) else f"{timestamp / duration:.6f}"
+        for timestamp, _ in events
+    )
+    return values, key_times
+
+
+def build_typing_svg() -> tuple[str, str]:
+    """Build a JavaScript-free, looping terminal typing animation."""
+    schedule = typing_schedule()
+    duration = schedule[-1][1] + TYPING_PAUSE_SECONDS
+    definitions: list[str] = []
+    animated_groups: list[str] = []
+
+    for index, (phrase, (start, active_end)) in enumerate(
+        zip(TYPING_PHRASES, schedule)
+    ):
+        phrase_width = len(phrase) * TEXT_CHAR_WIDTH
+        type_end = start + len(phrase) * TYPING_CHAR_SECONDS
+        hold_end = type_end + TYPING_HOLD_SECONDS
+
+        width_events: list[tuple[float, float]] = [(0.0, 0.0)]
+        append_timeline_event(width_events, start, 0.0)
+        for count in range(1, len(phrase) + 1):
+            append_timeline_event(
+                width_events, start + count * TYPING_CHAR_SECONDS, count * TEXT_CHAR_WIDTH
+            )
+        append_timeline_event(width_events, hold_end, phrase_width)
+        for removed in range(1, len(phrase) + 1):
+            append_timeline_event(
+                width_events,
+                hold_end + removed * TYPING_DELETE_SECONDS,
+                (len(phrase) - removed) * TEXT_CHAR_WIDTH,
+            )
+        append_timeline_event(width_events, duration, 0.0)
+        width_values, width_times = smil_sequence(width_events, duration)
+
+        cursor_events = [
+            (timestamp, INFO_X + width + CURSOR_GAP)
+            for timestamp, width in width_events
+        ]
+        cursor_values, cursor_times = smil_sequence(cursor_events, duration)
+
+        opacity_events: list[tuple[float, float]] = [(0.0, 1.0 if index == 0 else 0.0)]
+        append_timeline_event(opacity_events, start, 1.0)
+        append_timeline_event(opacity_events, active_end, 0.0)
+        append_timeline_event(opacity_events, duration, 0.0)
+        opacity_values, opacity_times = smil_sequence(opacity_events, duration)
+
+        definitions.append(
+            f'''<clipPath id="typing-clip-{index}">
+  <rect id="typing-clip-rect-{index}" x="{INFO_X}" y="12" width="{format_coordinate(phrase_width)}" height="23">
+    <animate id="typing-width-{index}-animation" attributeName="width" values="{width_values}" keyTimes="{width_times}" calcMode="discrete" dur="{duration:.3f}s" repeatCount="indefinite"/>
+  </rect>
+</clipPath>'''
+        )
+        animated_groups.append(
+            f'''<g id="typing-sequence-{index}" class="typing-animation" opacity="{1 if index == 0 else 0}" aria-hidden="true">
+  <text id="typing-phrase-{index}" x="{INFO_X}" y="{TYPING_Y}" class="text typing-phrase" clip-path="url(#typing-clip-{index})">{html.escape(phrase)}</text>
+  <text id="typing-cursor-{index}" x="{format_coordinate(INFO_X + phrase_width + CURSOR_GAP)}" y="{TYPING_Y}" class="typing-cursor">█<animate id="typing-cursor-{index}-animation" attributeName="x" values="{cursor_values}" keyTimes="{cursor_times}" calcMode="discrete" dur="{duration:.3f}s" repeatCount="indefinite"/></text>
+  <animate id="typing-opacity-{index}-animation" attributeName="opacity" values="{opacity_values}" keyTimes="{opacity_times}" calcMode="discrete" dur="{duration:.3f}s" repeatCount="indefinite"/>
+</g>'''
+        )
+
+    first_phrase = TYPING_PHRASES[0]
+    static_cursor_x = INFO_X + len(first_phrase) * TEXT_CHAR_WIDTH + CURSOR_GAP
+    body = f'''<g id="readme-typing">
+{''.join(animated_groups)}
+<g id="typing-static" class="typing-static" aria-hidden="true">
+  <text id="typing-static-phrase" x="{INFO_X}" y="{TYPING_Y}" class="text typing-phrase">{html.escape(first_phrase)}</text>
+  <text id="typing-static-cursor" x="{format_coordinate(static_cursor_x)}" y="{TYPING_Y}" class="typing-cursor">█</text>
+</g>
+</g>'''
+    return "\n".join(definitions), body
 
 
 def format_coordinate(value: float) -> str:
@@ -467,7 +621,7 @@ def build_contribution_chart_svg(
 </clipPath>'''
     body = f'''<g id="{GRAPH_ID}" role="img" aria-labelledby="{GRAPH_TITLE_ID}" data-status="{status}" data-period-start="{period_start}" data-week-counts="{counts}">
 <title id="{GRAPH_TITLE_ID}">Weekly GitHub contributions over the last 12 months</title>
-<text class="contrib-title" x="{GRAPH_X}" y="{GRAPH_Y + 9}">contributions · last 12 months</text>
+<text class="contrib-title" x="{GRAPH_X + GRAPH_PADDING_LEFT}" y="{GRAPH_Y + 9}">contributions · last 12 months</text>
 {''.join(grid_lines)}
 <g clip-path="url(#{GRAPH_CLIP_ID})">
   <path id="github-contrib-area" class="contrib-area" d="{area_path}"/>
@@ -496,7 +650,6 @@ def render(
         "key": "#ffa657" if dark else "#bc4c00",
         "value": "#a5d6ff" if dark else "#0969da",
         "muted": "#6e7681" if dark else "#57606a",
-        "border": "#30363d" if dark else "#d0d7de",
         "cursor": "#3fb950" if dark else "#1a7f37",
         "chart": "#3fb950" if dark else "#1a7f37",
     }
@@ -542,33 +695,25 @@ def render(
         tspan(210, "Tools.Development", "Git, GitHub, Docker, Maven, Gradle"),
         tspan(230, "Languages.Real", "Portuguese, English"),
         tspan(260, "Interests.Technology", "Generative AI, Web Development"),
-        tspan(300, "- Contact ─────────────────────────────────────────", "", heading=True),
+        section_heading(300, "Contact"),
         tspan(320, "Email", "pedrovyg.dev@gmail.com"),
         tspan(340, "LinkedIn", "linkedin.com/in/pedrovygotsky"),
         tspan(360, "Instagram", "instagram.com/pedrovyg"),
         tspan(380, "Discord", "discord.com/users/pedrovyg"),
-        tspan(410, "- GitHub Stats ─────────────────────────────────────", "", heading=True),
+        section_heading(410, "GitHub Stats"),
         tspan(430, "Repositories", f'{stats["repos"]:,}'),
         tspan(450, "Contributions (1y)", f'{stats["contributions"]:,}'),
         tspan(470, "Public commits", f'{stats["commits"]:,}'),
-        tspan(510, "Updated", rendered_on.isoformat()),
+        tspan(490, "Code Lines", format_code_lines(stats["code_lines"])),
     ]
-    cursor_x = INFO_X + len(TITLE) * TEXT_CHAR_WIDTH + CURSOR_GAP
-    divider_x = cursor_x + CURSOR_WIDTH + 7
-    header = (
-        f'<text x="{INFO_X}" y="30" class="text">{TITLE}</text>'
-        f'<rect class="cursor" x="{cursor_x:.1f}" y="17" '
-        f'width="{CURSOR_WIDTH}" height="{CURSOR_HEIGHT}" fill="{colors["cursor"]}"/>'
-        f'<text x="{divider_x:.1f}" y="30" class="muted">'
-        '────────────────────────────────────────</text>'
-    )
+    typing_definitions, header = build_typing_svg()
     chart_definitions, chart_body = build_contribution_chart_svg(
         contribution_weeks, colors
     )
     return f'''<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="{CARD_HEIGHT}" viewBox="0 0 {CARD_WIDTH} {CARD_HEIGHT}" role="img" aria-labelledby="{TITLE_ID} {DESCRIPTION_ID}" focusable="false">
+<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="{CARD_HEIGHT}" viewBox="0 0 {CARD_WIDTH} {CARD_HEIGHT}" role="img" aria-labelledby="{TITLE_ID} {DESCRIPTION_ID}" focusable="false" data-rendered-on="{rendered_on.isoformat()}" data-repositories="{stats['repos']}" data-contributions="{stats['contributions']}" data-public-commits="{stats['commits']}" data-code-lines="{stats['code_lines']}">
 <title id="{TITLE_ID}">Pedro Vygotsky Neofetch profile</title>
-<desc id="{DESCRIPTION_ID}">Animated fluid diamond ASCII art with development tools, contact details, current public GitHub statistics, and a weekly contribution chart.</desc>
+<desc id="{DESCRIPTION_ID}">Animated fluid diamond ASCII art and terminal typing with the phrases Pedro Vygotsky, Full-Stack &amp; AI Developer, and Building real projects for businesses; development tools, contact details, current public GitHub statistics including Code Lines, and a weekly contribution chart.</desc>
 <style>
 @keyframes ascii-frame-motion {{
   0% {{ opacity: 0; }}
@@ -599,12 +744,17 @@ def render(
 .ascii-stop-top {{ animation: ascii-top-color 9s ease-in-out infinite; }}
 .ascii-stop-middle {{ animation: ascii-middle-color 9s ease-in-out infinite; }}
 .ascii-stop-bottom {{ animation: ascii-bottom-color 9s ease-in-out infinite; }}
-.cursor {{ animation: cursor-blink 1.1s step-end infinite; }}
+.typing-animation {{ visibility: visible; }}
+.typing-static {{ display: none; }}
+.typing-phrase {{ letter-spacing: 0; }}
+.typing-cursor {{ fill: {colors["cursor"]}; animation: cursor-blink 1.1s step-end infinite; }}
 @media (prefers-reduced-motion: reduce) {{
   .ascii-frame {{ animation: none; opacity: 0; }}
   .ascii-frame-0 {{ opacity: 1; }}
   .ascii-stop-top, .ascii-stop-middle, .ascii-stop-bottom {{ animation: none; }}
-  .cursor {{ animation: none; opacity: 1; }}
+  .typing-animation {{ display: none; }}
+  .typing-static {{ display: inline; }}
+  .typing-cursor {{ animation: none; opacity: 1; }}
 }}
 text {{ font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }}
 .ascii {{
@@ -627,8 +777,9 @@ text {{ font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }}
   <stop class="ascii-stop-bottom" offset="1" stop-color="{ascii_green[2]}"/>
 </linearGradient>
 {chart_definitions}
+{typing_definitions}
 </defs>
-<rect x="0.5" y="0.5" width="{CARD_WIDTH - 1}" height="{CARD_HEIGHT - 1}" rx="15" fill="{colors["bg"]}" stroke="{colors["border"]}"/>
+<rect id="card-background" x="0.5" y="0.5" width="{CARD_WIDTH - 1}" height="{CARD_HEIGHT - 1}" rx="15" fill="{colors["bg"]}"/>
 {ascii_layers}
 {header}
 <text>{''.join(lines)}</text>

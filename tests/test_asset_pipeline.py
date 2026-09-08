@@ -17,6 +17,13 @@ from build_assets import (  # noqa: E402
     previous_profile_data,
     resolve_render_date,
 )
+from count_code_lines import (  # noqa: E402
+    Repository,
+    cached_count,
+    calculate_code_lines,
+    parse_cloc_json,
+    repository_from_api,
+)
 from generate_ascii_animation import render_animation  # noqa: E402
 from update_neofetch import (  # noqa: E402
     GRAPH_HEIGHT,
@@ -29,38 +36,25 @@ from update_neofetch import (  # noqa: E402
     GRAPH_Y,
     ContributionWeek,
     aggregate_contributions,
+    format_code_lines,
     normalize_contribution_points,
     render,
+    section_heading,
+    typing_schedule,
     validate_stats,
 )
 from validate_svg import IntegrityError, validate_pair, validate_svg  # noqa: E402
 
 
-VALID_SVG = """<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="850" height="530" viewBox="0 0 850 530" role="img" aria-labelledby="svg-title svg-description" focusable="false">
-<title id="svg-title">Test profile card</title>
-<desc id="svg-description">Animated ASCII profile card used for integrity tests.</desc>
-<style>
-@keyframes pulse { 0%, 100% { opacity: 1; } }
-.ascii { animation: pulse 1s linear infinite; white-space: pre; }
-.ascii-frame-0 { opacity: 1; }
-.contrib-area { fill: url(#github-contrib-gradient); }
-</style>
-<defs>
-<linearGradient id="ascii-color"><stop offset="0" stop-color="#fff"/></linearGradient>
-<linearGradient id="github-contrib-gradient"><stop offset="0" stop-color="#3fb950"/></linearGradient>
-<clipPath id="github-contrib-clip"><rect x="644" y="438" width="184" height="62"/></clipPath>
-</defs>
-<text class="ascii ascii-frame-0" fill="url(#ascii-color)" xml:space="preserve"><tspan x="0" y="10">  ◆ </tspan></text>
-<g id="github-contrib-chart" role="img" aria-labelledby="github-contrib-title" data-status="unavailable" data-period-start="" data-week-counts="">
-<title id="github-contrib-title">Weekly GitHub contributions over the last 12 months</title>
-<g clip-path="url(#github-contrib-clip)">
-<path id="github-contrib-area" class="contrib-area" d="M 644 500 L 828 500 Z"/>
-<path id="github-contrib-line" d="M 644 500 L 828 500"/>
-</g>
-</g>
-</svg>
-"""
+FIXTURE_STATS = {
+    "repos": 19,
+    "commits": 157,
+    "contributions": 162,
+    "code_lines": 24_680,
+}
+VALID_SVG = render(
+    "dark", FIXTURE_STATS, [["  ◆ "]], dt.date(2026, 9, 8)
+)
 
 
 class AssetIntegrityTests(unittest.TestCase):
@@ -125,7 +119,7 @@ class AssetIntegrityTests(unittest.TestCase):
         )
         svg = render(
             "dark",
-            {"repos": 19, "commits": 153, "contributions": 159},
+            FIXTURE_STATS,
             [[" ◆ "]],
             dt.date(2026, 9, 8),
             weeks,
@@ -148,7 +142,7 @@ class AssetIntegrityTests(unittest.TestCase):
     def test_empty_contribution_series_uses_safe_chart_fallback(self) -> None:
         svg = render(
             "dark",
-            {"repos": 19, "commits": 153, "contributions": 159},
+            FIXTURE_STATS,
             [[" ◆ "]],
             dt.date(2026, 9, 8),
         )
@@ -187,7 +181,9 @@ class AssetIntegrityTests(unittest.TestCase):
     def test_missing_animation_keyframe_fails(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             directory = Path(temporary)
-            broken = VALID_SVG.replace("@keyframes pulse", "@keyframes renamed")
+            broken = VALID_SVG.replace(
+                "@keyframes ascii-frame-motion", "@keyframes renamed"
+            )
             svg = self.write_fixture(directory, "broken.svg", broken)
             with self.assertRaises(IntegrityError):
                 validate_svg(svg)
@@ -197,7 +193,9 @@ class AssetIntegrityTests(unittest.TestCase):
             directory = Path(temporary)
             before = self.write_fixture(directory, "before.svg", VALID_SVG)
             after = self.write_fixture(
-                directory, "after.svg", VALID_SVG.replace("pulse 1s", "pulse 2s")
+                directory,
+                "after.svg",
+                VALID_SVG.replace("cursor-blink 1.1s", "cursor-blink 2.2s"),
             )
             source = self.write_fixture(directory, "ascii.txt", "  ◆ \n")
             with self.assertRaises(IntegrityError):
@@ -210,7 +208,10 @@ class AssetIntegrityTests(unittest.TestCase):
             after = self.write_fixture(
                 directory,
                 "after.svg",
-                VALID_SVG.replace("integrity tests", "changed integrity tests"),
+                VALID_SVG.replace(
+                    "development tools, contact details",
+                    "changed development tools, contact details",
+                ),
             )
             source = self.write_fixture(directory, "ascii.txt", "  ◆ \n")
             with self.assertRaises(IntegrityError):
@@ -218,12 +219,16 @@ class AssetIntegrityTests(unittest.TestCase):
 
     def test_stats_reject_boolean_and_negative_values(self) -> None:
         with self.assertRaises(ValueError):
-            validate_stats({"repos": True, "commits": 1, "contributions": 1})
+            validate_stats(
+                {"repos": True, "commits": 1, "contributions": 1, "code_lines": 1}
+            )
         with self.assertRaises(ValueError):
-            validate_stats({"repos": 1, "commits": -1, "contributions": 1})
+            validate_stats(
+                {"repos": 1, "commits": -1, "contributions": 1, "code_lines": 1}
+            )
 
-    def test_api_failure_reuses_last_embedded_profile_data(self) -> None:
-        stats = {"repos": 19, "commits": 153, "contributions": 159}
+    def test_embedded_profile_data_is_recoverable_but_live_failure_is_explicit(self) -> None:
+        stats = FIXTURE_STATS.copy()
         weeks = (
             ContributionWeek(dt.date(2026, 8, 23), 4),
             ContributionWeek(dt.date(2026, 8, 30), 7),
@@ -240,10 +245,16 @@ class AssetIntegrityTests(unittest.TestCase):
             self.assertEqual(cached.stats, stats)
             self.assertEqual(cached.contribution_weeks, weeks)
             with patch("build_assets.load_stats", side_effect=RuntimeError("offline")):
-                self.assertEqual(parse_stats(None, card), cached)
+                with self.assertRaises(RuntimeError):
+                    parse_stats(None)
 
     def test_render_date_changes_only_with_public_stats(self) -> None:
-        stats = {"repos": 19, "commits": 148, "contributions": 154}
+        stats = {
+            "repos": 19,
+            "commits": 148,
+            "contributions": 154,
+            "code_lines": 24_680,
+        }
         previous_date = dt.date(2026, 9, 6)
         today = dt.date(2026, 9, 7)
         with tempfile.TemporaryDirectory() as temporary:
@@ -262,6 +273,100 @@ class AssetIntegrityTests(unittest.TestCase):
             self.assertEqual(
                 resolve_render_date(card, stats, explicit, today), explicit
             )
+
+    def test_typing_has_exact_phrases_cursor_and_continuous_schedule(self) -> None:
+        root = ET.fromstring(VALID_SVG)
+        elements = {element.attrib.get("id"): element for element in root.iter()}
+        expected = (
+            "Pedro Vygotsky",
+            "Full-Stack & AI Developer",
+            "Building real projects for businesses",
+        )
+        for index, phrase in enumerate(expected):
+            self.assertEqual(elements[f"typing-phrase-{index}"].text, phrase)
+            self.assertEqual(elements[f"typing-cursor-{index}"].text, "█")
+        schedule = typing_schedule()
+        self.assertEqual(len(schedule), 3)
+        self.assertEqual(schedule[0][0], 0)
+        self.assertTrue(
+            all(left[1] < right[0] for left, right in zip(schedule, schedule[1:]))
+        )
+        self.assertNotIn("pedro@vygotsky", VALID_SVG)
+
+    def test_requested_layout_removes_border_and_updated(self) -> None:
+        root = ET.fromstring(VALID_SVG)
+        elements = {element.attrib.get("id"): element for element in root.iter()}
+        self.assertNotIn("stroke", elements["card-background"].attrib)
+        self.assertNotIn("Updated", VALID_SVG)
+        self.assertIn("Code Lines", VALID_SVG)
+        self.assertGreaterEqual(GRAPH_WIDTH, 247)
+        self.assertGreaterEqual(GRAPH_HEIGHT, 112)
+        self.assertGreaterEqual(len(section_heading(300, "Contact")), 60)
+
+    def test_code_lines_format_only_compacts_when_space_requires_it(self) -> None:
+        self.assertEqual(format_code_lines(1_247), "1,247")
+        self.assertEqual(format_code_lines(12_485), "12.5k")
+        self.assertEqual(format_code_lines(1_249_351), "1.25M")
+
+    def test_repository_filter_accepts_only_owned_public_non_forks(self) -> None:
+        base = {
+            "full_name": "pedrovyg/project",
+            "default_branch": "main",
+            "pushed_at": "2026-09-08T12:00:00Z",
+            "size": 42,
+            "private": False,
+            "fork": False,
+            "owner": {"login": "pedrovyg"},
+        }
+        self.assertEqual(
+            repository_from_api(base),
+            Repository("pedrovyg/project", "main", "2026-09-08T12:00:00Z", 42),
+        )
+        self.assertIsNone(repository_from_api({**base, "fork": True}))
+        self.assertIsNone(repository_from_api({**base, "private": True}))
+        self.assertIsNone(
+            repository_from_api({**base, "owner": {"login": "someone-else"}})
+        )
+
+    def test_cloc_report_and_repository_cache_are_strict(self) -> None:
+        repository = Repository(
+            "pedrovyg/project", "main", "2026-09-08T12:00:00Z", 42
+        )
+        report = '{"SUM":{"blank":3,"comment":4,"code":125}}'
+        self.assertEqual(parse_cloc_json(report, repository.full_name), 125)
+        cached = {
+            repository.full_name: {
+                "code_lines": 125,
+                "default_branch": "main",
+                "pushed_at": "2026-09-08T12:00:00Z",
+            }
+        }
+        self.assertEqual(cached_count(repository, cached, "2.10", "2.10"), 125)
+        self.assertIsNone(cached_count(repository, cached, "2.08", "2.10"))
+
+    def test_code_lines_cache_avoids_recounting_unchanged_repositories(self) -> None:
+        repository = Repository(
+            "pedrovyg/project", "main", "2026-09-08T12:00:00Z", 42
+        )
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            cache = root / "code-lines.json"
+            work = root / "work"
+            with (
+                patch("count_code_lines.cloc_version", return_value="2.10"),
+                patch("count_code_lines.count_repository", return_value=321) as counter,
+            ):
+                self.assertEqual(
+                    calculate_code_lines((repository,), cache, work), 321
+                )
+                self.assertEqual(
+                    calculate_code_lines((repository,), cache, work), 321
+                )
+            counter.assert_called_once()
+
+    def test_invalid_cloc_report_fails(self) -> None:
+        with self.assertRaises(RuntimeError):
+            parse_cloc_json('{"SUM":{"code":true}}', "pedrovyg/project")
 
 
 if __name__ == "__main__":
