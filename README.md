@@ -19,10 +19,8 @@
 
 ## <h4>About Me</h4>
 
-Hello, my name is Pedro. I'm a ***software developer*** with over three years of experience, focusing on **front-end** development while continuously expanding my skills across the **full-stack** ecosystem through **back-end** technologies.
-
+> Hello, my name is Pedro. I'm a ***software developer*** with over three years of experience, focusing on **front-end** development while continuously expanding my skills across the **full-stack** ecosystem through **back-end** technologies.
 I am currently pursuing a bachelor's degree in ***Computer Science*** and dedicate much of my time to **programming**, **studying**, and **building** new projects.
-
 I am passionate about **technology** and **education**; outside of development, I also have a keen interest in **fitness**, **cinema**, and **music**.
 
 ## <h4>Technologies & Tools</h4>
