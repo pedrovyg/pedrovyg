@@ -475,6 +475,44 @@ def validate_typing(root: ET.Element, ids: tuple[str, ...]) -> None:
         raise IntegrityError("README typing is missing its reduced-motion fallback")
 
 
+def validate_metrics_dashboard(root: ET.Element) -> None:
+    from update_neofetch import format_code_lines
+
+    panel = element_by_id(root, "github-metrics")
+    metrics = (
+        ("repos", "Repositories", "data-repositories"),
+        ("contributions", "Contributions", "data-contributions"),
+        ("commits", "Public Commits", "data-public-commits"),
+        ("code_lines", "Code Lines", "data-code-lines"),
+    )
+    cells = [node for node in panel if local_name(node.tag) == "g"]
+    if len(cells) != 4:
+        raise IntegrityError("Metrics dashboard must contain four cells")
+    for key, label, attribute in metrics:
+        cell = element_by_id(panel, f"metric-{key}")
+        texts = [node for node in cell if local_name(node.tag) == "text"]
+        if len(texts) != 2:
+            raise IntegrityError(f"Metric {key} must contain a value and label")
+        value = int(root.attrib[attribute])
+        if (cell.attrib.get("data-value") != str(value)
+                or texts[0].text != format_code_lines(value)
+                or texts[1].text != label):
+            raise IntegrityError(f"Metric {key} does not match its source data")
+        for node in texts:
+            try:
+                x, y = float(node.attrib["x"]), float(node.attrib["y"])
+            except (KeyError, ValueError) as error:
+                raise IntegrityError(f"Metric {key} has invalid coordinates") from error
+            if not 351 < x < 575 or not 420 < y < 520:
+                raise IntegrityError(f"Metric {key} is outside the dashboard")
+            if node.attrib.get("text-anchor") != "middle":
+                raise IntegrityError(f"Metric {key} must be centered")
+        if texts[0].attrib["x"] != texts[1].attrib["x"]:
+            raise IntegrityError(f"Metric {key} value and label are misaligned")
+    if len([node for node in panel if local_name(node.tag) == "line"]) != 2:
+        raise IntegrityError("Metrics dashboard must retain its two dividers")
+
+
 def validate_profile_layout(root: ET.Element) -> None:
     background = element_by_id(root, "card-background")
     if local_name(background.tag) != "rect" or "stroke" in background.attrib:
@@ -504,8 +542,9 @@ def validate_profile_layout(root: ET.Element) -> None:
     visible_text = tuple(element.text or "" for element in tspans)
     if any("Updated" in value for value in visible_text):
         raise IntegrityError("Updated must not be rendered in the profile card")
-    if "Code Lines" not in visible_text:
-        raise IntegrityError("GitHub Stats is missing Code Lines")
+    if any(value in ("Repositories", "Contributions (1y)", "Public commits", "Code Lines") for value in visible_text):
+        raise IntegrityError("Legacy metric rows must not be rendered")
+    validate_metrics_dashboard(root)
     for label in ("Contact", "GitHub Stats"):
         heading = next(
             (value for value in visible_text if value.startswith(f"- {label} ")), None

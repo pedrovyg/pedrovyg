@@ -59,6 +59,10 @@ GRAPH_ID = "github-contrib-chart"
 GRAPH_TITLE_ID = "github-contrib-title"
 GRAPH_GRADIENT_ID = "github-contrib-gradient"
 GRAPH_CLIP_ID = "github-contrib-clip"
+METRICS_X = INFO_X + 16
+METRICS_Y = 420
+METRICS_WIDTH = GRAPH_X - METRICS_X - 10
+METRICS_HEIGHT = CARD_HEIGHT - METRICS_Y - 10
 
 
 @dataclass(frozen=True)
@@ -369,8 +373,40 @@ def format_code_lines(value: int) -> str:
         scale, suffix = 1_000, "k"
     scaled = value / scale
     precision = 2 if scaled < 10 else 1 if scaled < 100 else 0
-    compact = f"{scaled:.{precision}f}".rstrip("0").rstrip(".")
+    compact = f"{scaled:.{precision}f}"
+    if precision:
+        compact = compact.rstrip("0").rstrip(".")
     return f"{compact}{suffix}"
+
+
+def build_metrics_dashboard(stats: Mapping[str, int]) -> str:
+    """Present the existing totals in the reserved box beside the chart."""
+    cell_width, cell_height = METRICS_WIDTH / 2, METRICS_HEIGHT / 2
+    metrics = (
+        ("repos", "Repositories"),
+        ("contributions", "Contributions"),
+        ("commits", "Public Commits"),
+        ("code_lines", "Code Lines"),
+    )
+    cells = []
+    for index, (key, label) in enumerate(metrics):
+        x = METRICS_X + (index % 2 + 0.5) * cell_width
+        y = METRICS_Y + (index // 2) * cell_height
+        value = format_code_lines(stats[key])
+        cells.append(
+            f'<g id="metric-{key}" data-value="{stats[key]}">'
+            f'<text x="{x:g}" y="{y + 23:g}" text-anchor="middle" class="value metric-value">{value}</text>'
+            f'<text x="{x:g}" y="{y + 39:g}" text-anchor="middle" class="key metric-label">{label}</text>'
+            '</g>'
+        )
+    center_x = METRICS_X + cell_width
+    center_y = METRICS_Y + cell_height
+    return (
+        '<g id="github-metrics" role="group" aria-label="GitHub metrics; contributions over the last 12 months">'
+        f'<line class="metric-divider" x1="{center_x:g}" y1="{METRICS_Y + 4}" x2="{center_x:g}" y2="{METRICS_Y + METRICS_HEIGHT - 4}"/>'
+        f'<line class="metric-divider" x1="{METRICS_X + 4}" y1="{center_y:g}" x2="{METRICS_X + METRICS_WIDTH - 4}" y2="{center_y:g}"/>'
+        + ''.join(cells) + '</g>'
+    )
 
 
 def append_timeline_event(
@@ -701,10 +737,6 @@ def render(
         tspan(360, "Instagram", "instagram.com/pedrovyg"),
         tspan(380, "Discord", "discord.com/users/pedrovyg"),
         section_heading(410, "GitHub Stats"),
-        tspan(430, "Repositories", f'{stats["repos"]:,}'),
-        tspan(450, "Contributions (1y)", f'{stats["contributions"]:,}'),
-        tspan(470, "Public commits", f'{stats["commits"]:,}'),
-        tspan(490, "Code Lines", format_code_lines(stats["code_lines"])),
     ]
     typing_definitions, header = build_typing_svg()
     chart_definitions, chart_body = build_contribution_chart_svg(
@@ -764,6 +796,9 @@ text {{ font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }}
 }}
 .text {{ fill: {colors["text"]}; }} .key {{ fill: {colors["key"]}; }}
 .value {{ fill: {colors["value"]}; }} .muted {{ fill: {colors["muted"]}; }}
+.metric-value {{ font-size: 22px; font-weight: bold; }}
+.metric-label {{ font-size: 10px; }}
+.metric-divider {{ stroke: {colors["muted"]}; stroke-width: 0.6; opacity: 0.4; }}
 .contrib-title {{ fill: {colors["text"]}; font-size: 8px; }}
 .contrib-axis-label, .contrib-empty {{ fill: {colors["muted"]}; font-size: 7px; }}
 .contrib-grid {{ stroke: {colors["muted"]}; stroke-width: 0.6; opacity: 0.32; }}
@@ -783,6 +818,7 @@ text {{ font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }}
 {ascii_layers}
 {header}
 <text>{''.join(lines)}</text>
+{build_metrics_dashboard(stats)}
 {chart_body}
 </svg>
 '''

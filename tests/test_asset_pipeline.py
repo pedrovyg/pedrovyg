@@ -307,6 +307,33 @@ class AssetIntegrityTests(unittest.TestCase):
         self.assertEqual(format_code_lines(1_247), "1,247")
         self.assertEqual(format_code_lines(12_485), "12.5k")
         self.assertEqual(format_code_lines(1_249_351), "1.25M")
+        self.assertEqual(format_code_lines(100_000), "100k")
+        self.assertEqual(format_code_lines(150_000), "150k")
+
+    def test_dashboard_uses_existing_totals_and_handles_growth(self) -> None:
+        for value in (0, 125, 1_247, 100_000, 1_500_000):
+            stats = dict.fromkeys(FIXTURE_STATS, value)
+            svg = render("dark", stats, [["  ◆ "]], dt.date(2026, 9, 8))
+            with tempfile.TemporaryDirectory() as directory:
+                validate_svg(self.write_fixture(Path(directory), "card.svg", svg))
+            root = ET.fromstring(svg)
+            for key in stats:
+                cell = next(node for node in root.iter() if node.get("id") == f"metric-{key}")
+                self.assertEqual(cell.get("data-value"), str(value))
+                self.assertEqual(cell[0].text, format_code_lines(value))
+                self.assertEqual(cell[0].get("x"), cell[1].get("x"))
+                self.assertLess(float(cell[0].get("y")), float(cell[1].get("y")))
+
+    def test_dashboard_rejects_wrong_values_and_overlap(self) -> None:
+        for broken in (
+            VALID_SVG.replace('data-value="19"', 'data-value="20"'),
+            VALID_SVG.replace('x="407"', 'x="700"'),
+            VALID_SVG.replace('>Repositories</text>', '>Wrong label</text>'),
+        ):
+            self.assertNotEqual(broken, VALID_SVG)
+            with tempfile.TemporaryDirectory() as directory:
+                with self.assertRaises(IntegrityError):
+                    validate_svg(self.write_fixture(Path(directory), "broken.svg", broken))
 
     def test_repository_filter_accepts_only_owned_public_non_forks(self) -> None:
         base = {
