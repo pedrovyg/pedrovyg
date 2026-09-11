@@ -12,7 +12,13 @@ import subprocess
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-from generate_ascii_animation import write_animation
+from generate_ascii_animation import (
+    DEFAULT_QUALITY,
+    QUALITY_PRESETS,
+    QualityPreset,
+    get_quality,
+    write_animation,
+)
 from render_fallbacks import render_fallbacks
 from update_neofetch import (
     ContributionWeek,
@@ -222,6 +228,7 @@ def build_assets(
     profile_data: GitHubProfileData,
     rendered_on: dt.date,
     promote: bool,
+    quality: QualityPreset,
 ) -> dict[str, dict[str, int]]:
     safe_reset_directory(build_dir)
     raw_dir = build_dir / "raw"
@@ -231,13 +238,14 @@ def build_assets(
     optimized_dir.mkdir(parents=True)
     fallback_dir.mkdir(parents=True)
 
-    ascii_source = write_animation(raw_dir / "ascii-art.txt")
+    ascii_source = write_animation(raw_dir / "ascii-art.txt", quality)
     raw_svgs = write_assets(
         raw_dir,
         ascii_source,
         profile_data.stats,
         rendered_on,
         profile_data.contribution_weeks,
+        quality,
     )
     for raw_svg in raw_svgs:
         validate_svg(raw_svg, ascii_source)
@@ -266,6 +274,7 @@ def build_assets(
             "raw_svg_bytes": raw_svg.stat().st_size,
             "optimized_svg_bytes": optimized_svg.stat().st_size,
             "png_bytes": png.stat().st_size,
+            "ascii_frames": quality.frame_count,
         }
     return report
 
@@ -274,6 +283,12 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--build-dir", type=Path, default=DEFAULT_BUILD_DIR)
     parser.add_argument("--stats-json", help="Inline stats JSON for deterministic tests")
+    parser.add_argument(
+        "--quality",
+        choices=tuple(QUALITY_PRESETS),
+        default=DEFAULT_QUALITY,
+        help="ASCII motion quality; balanced is recommended for the README.",
+    )
     parser.add_argument(
         "--date",
         type=parse_date,
@@ -294,6 +309,7 @@ def main() -> None:
     args = parse_args()
     current_asset = PROFILE_DIR / "neofetch-dark.svg"
     profile_data = parse_stats(args.stats_json)
+    quality = get_quality(args.quality)
     today = dt.datetime.now(dt.timezone.utc).date()
     rendered_on = resolve_render_date(
         current_asset,
@@ -303,7 +319,7 @@ def main() -> None:
         profile_data.contribution_weeks,
     )
     report = build_assets(
-        args.build_dir, profile_data, rendered_on, not args.no_promote
+        args.build_dir, profile_data, rendered_on, not args.no_promote, quality
     )
     print(json.dumps(report, indent=2, sort_keys=True))
 

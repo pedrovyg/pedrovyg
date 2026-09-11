@@ -13,6 +13,13 @@ from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from pathlib import Path
 from urllib.error import HTTPError, URLError
+
+from generate_ascii_animation import (
+    DEFAULT_QUALITY,
+    QUALITY_PRESETS,
+    QualityPreset,
+    get_quality,
+)
 from urllib.request import Request, urlopen
 
 
@@ -29,8 +36,6 @@ ASCII_TOP = 38
 ASCII_FONT_SIZE = 12
 ASCII_LINE_HEIGHT = 8.5
 ASCII_FRAME_SEPARATOR = "\n===FRAME===\n"
-ASCII_FRAME_INTERVAL = 0.1
-ASCII_FRAME_FADE_RATIO = 1.0
 TEXT_CHAR_WIDTH = 8.4
 TYPING_PHRASES = (
     "Pedro Vygotsky",
@@ -675,7 +680,9 @@ def render(
     ascii_frames: list[list[str]],
     rendered_on: dt.date,
     contribution_weeks: Sequence[ContributionWeek] = (),
+    quality: str | QualityPreset = DEFAULT_QUALITY,
 ) -> str:
+    quality = get_quality(quality)
     if theme not in THEMES:
         raise ValueError(f"Unsupported theme: {theme}")
     stats = validate_stats(stats)
@@ -700,16 +707,14 @@ def render(
         else ("#57606a", "#424a53", "#24292f")
     )
     frame_count = len(ascii_frames)
-    motion_duration = frame_count * ASCII_FRAME_INTERVAL
+    motion_duration = quality.animation_duration
+    frame_interval = motion_duration / frame_count
     frame_step = 100 / frame_count
-    fade_step = frame_step * ASCII_FRAME_FADE_RATIO
-    frame_styles = "".join(
-        f'.ascii-frame-{index}{{animation-delay:'
-        f'{index * ASCII_FRAME_INTERVAL - motion_duration:.2f}s}}'
-        for index in range(frame_count)
-    )
+    fade_step = frame_step * quality.transition_ratio
     ascii_layers = "\n".join(
         f'<text class="ascii ascii-frame ascii-frame-{frame_index}" '
+        f'style="animation-delay:'
+        f'{frame_index * frame_interval - motion_duration:.3f}s" '
         f'fill="url(#ascii-color)">'
         + "\n".join(
             f'<tspan x="{ASCII_X}" '
@@ -743,7 +748,7 @@ def render(
         contribution_weeks, colors
     )
     return f'''<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="{CARD_HEIGHT}" viewBox="0 0 {CARD_WIDTH} {CARD_HEIGHT}" role="img" aria-labelledby="{TITLE_ID} {DESCRIPTION_ID}" focusable="false" data-rendered-on="{rendered_on.isoformat()}" data-repositories="{stats['repos']}" data-contributions="{stats['contributions']}" data-public-commits="{stats['commits']}" data-code-lines="{stats['code_lines']}">
+<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="{CARD_HEIGHT}" viewBox="0 0 {CARD_WIDTH} {CARD_HEIGHT}" role="img" aria-labelledby="{TITLE_ID} {DESCRIPTION_ID}" focusable="false" data-rendered-on="{rendered_on.isoformat()}" data-repositories="{stats['repos']}" data-contributions="{stats['contributions']}" data-public-commits="{stats['commits']}" data-code-lines="{stats['code_lines']}" data-ascii-quality="{quality.name}" data-ascii-frame-count="{frame_count}">
 <title id="{TITLE_ID}">Pedro Vygotsky Neofetch profile</title>
 <desc id="{DESCRIPTION_ID}">Animated fluid diamond ASCII art and terminal typing with the phrases Pedro Vygotsky, Full-Stack &amp; AI Developer, and Building real projects for businesses; development tools, contact details, current public GitHub statistics including Code Lines, and a weekly contribution chart.</desc>
 <style>
@@ -769,9 +774,8 @@ def render(
 @keyframes cursor-blink {{ 50% {{ opacity: 0; }} }}
 .ascii-frame {{
   opacity: 0;
-  animation: ascii-frame-motion {motion_duration:.1f}s ease-in-out infinite;
+  animation: ascii-frame-motion {motion_duration:.1f}s linear infinite;
 }}
-{frame_styles}
 .ascii-frame-0 {{ opacity: 1; }}
 .ascii-stop-top {{ animation: ascii-top-color 9s ease-in-out infinite; }}
 .ascii-stop-middle {{ animation: ascii-middle-color 9s ease-in-out infinite; }}
@@ -830,8 +834,10 @@ def write_assets(
     stats: Mapping[str, int],
     rendered_on: dt.date,
     contribution_weeks: Sequence[ContributionWeek] = (),
+    quality: str | QualityPreset = DEFAULT_QUALITY,
 ) -> list[Path]:
     """Render both themes with explicit inputs and stable LF line endings."""
+    quality = get_quality(quality)
     frames = read_ascii_frames(ascii_art_path)
     output_dir.mkdir(parents=True, exist_ok=True)
     outputs: list[Path] = []
@@ -839,7 +845,7 @@ def write_assets(
         output_path = output_dir / f"neofetch-{theme}.svg"
         with output_path.open("w", encoding="utf-8", newline="\n") as output:
             output.write(
-                render(theme, stats, frames, rendered_on, contribution_weeks)
+                render(theme, stats, frames, rendered_on, contribution_weeks, quality)
             )
         outputs.append(output_path)
     return outputs
@@ -856,6 +862,12 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, default=OUTPUT_DIR)
     parser.add_argument("--ascii-art", type=Path, default=ASCII_ART_PATH)
+    parser.add_argument(
+        "--quality",
+        choices=tuple(QUALITY_PRESETS),
+        default=DEFAULT_QUALITY,
+        help="Playback preset matching the generated ASCII source.",
+    )
     parser.add_argument(
         "--date",
         type=parse_date,
@@ -887,6 +899,7 @@ def main() -> None:
         profile_data.stats,
         args.date,
         profile_data.contribution_weeks,
+        args.quality,
     )
 
 

@@ -5,10 +5,13 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import math
 import re
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from pathlib import Path
+
+from generate_ascii_animation import QUALITY_PRESETS, get_quality
 
 
 SVG_NAMESPACE = "http://www.w3.org/2000/svg"
@@ -43,6 +46,7 @@ PROTECTED_ATTRIBUTES = {
     "accumulate",
     "fill",
     "stroke",
+    "style",
     "filter",
     "mask",
     "clip-path",
@@ -288,7 +292,11 @@ def validate_css(snapshot_data: SvgSnapshot) -> None:
         for _, class_value in snapshot_data.classes
         for class_name in class_value.split()
     }
-    missing_classes = sorted(used_classes - defined_classes)
+    missing_classes = sorted(
+        name
+        for name in used_classes - defined_classes
+        if not re.fullmatch(r"ascii-frame-\d+", name)
+    )
     if missing_classes:
         raise IntegrityError(f"CSS classes are used but not defined: {missing_classes}")
 
@@ -562,6 +570,41 @@ def validate_profile_layout(root: ET.Element) -> None:
         raise IntegrityError("The previous static title is still rendered")
 
 
+def validate_ascii_motion(root: ET.Element, data: SvgSnapshot) -> None:
+    quality_name = root.attrib.get("data-ascii-quality", "")
+    if quality_name not in QUALITY_PRESETS:
+        raise IntegrityError("SVG is missing a valid ASCII quality preset")
+    quality = get_quality(quality_name)
+    try:
+        declared_count = int(root.attrib["data-ascii-frame-count"])
+    except (KeyError, ValueError) as error:
+        raise IntegrityError("SVG is missing a valid ASCII frame count") from error
+    if declared_count != len(data.ascii_frames) or declared_count <= 0:
+        raise IntegrityError("ASCII frame metadata does not match rendered layers")
+
+    frame_elements = [
+        element
+        for element in root.iter()
+        if local_name(element.tag) == "text"
+        and "ascii-frame" in element.attrib.get("class", "").split()
+    ]
+    interval = quality.animation_duration / declared_count
+    for index, element in enumerate(frame_elements):
+        style = element.attrib.get("style", "")
+        match = re.fullmatch(r"animation-delay:([-+]?[0-9]*\.?[0-9]+)s", style)
+        if not match:
+            raise IntegrityError(f"ASCII frame {index} has no deterministic delay")
+        actual = float(match.group(1))
+        expected = index * interval - quality.animation_duration
+        if not math.isclose(actual, expected, abs_tol=0.0011):
+            raise IntegrityError(f"ASCII frame {index} has an irregular delay")
+
+    css = "\n".join(data.styles)
+    duration = f"{quality.animation_duration:.1f}s"
+    pattern = rf"animation\s*:\s*ascii-frame-motion\s+{re.escape(duration)}\s+linear\s+infinite"
+    if not re.search(pattern, css):
+        raise IntegrityError("ASCII crossfade must use a linear, preset-timed cadence")
+
 def validate_svg(path: Path, ascii_source: Path | None = None) -> SvgSnapshot:
     root = parse_svg(path)
     data = snapshot(root)
@@ -581,6 +624,7 @@ def validate_svg(path: Path, ascii_source: Path | None = None) -> SvgSnapshot:
     if not data.ascii_frames:
         raise IntegrityError(f"ASCII animation is missing from {path}")
     validate_css(data)
+    validate_ascii_motion(root, data)
     validate_accessibility(root, data.ids)
     validate_contribution_chart(root, data.ids)
     validate_typing(root, data.ids)

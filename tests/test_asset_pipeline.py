@@ -24,7 +24,13 @@ from count_code_lines import (  # noqa: E402
     parse_cloc_json,
     repository_from_api,
 )
-from generate_ascii_animation import render_animation  # noqa: E402
+from generate_ascii_animation import (  # noqa: E402
+    DEFAULT_QUALITY,
+    QUALITY_PRESETS,
+    get_quality,
+    quantize_cycle,
+    render_animation,
+)
 from update_neofetch import (  # noqa: E402
     GRAPH_HEIGHT,
     GRAPH_PADDING_BOTTOM,
@@ -69,6 +75,67 @@ class AssetIntegrityTests(unittest.TestCase):
         self.assertEqual(first, second)
         self.assertTrue(first.endswith("\n"))
         self.assertNotIn("\r", first)
+
+    def test_all_quality_presets_generate_valid_deterministic_svg(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            for name, quality in QUALITY_PRESETS.items():
+                first = render_animation(name)
+                second = render_animation(name)
+                self.assertEqual(first, second)
+                source = self.write_fixture(directory, f"{name}.txt", first)
+                frames = [
+                    frame.split("\n")
+                    for frame in first[:-1].split("\n===FRAME===\n")
+                ]
+                self.assertEqual(len(frames), quality.frame_count)
+                svg = self.write_fixture(
+                    directory,
+                    f"{name}.svg",
+                    render(
+                        "dark",
+                        FIXTURE_STATS,
+                        frames,
+                        dt.date(2026, 9, 8),
+                        quality=name,
+                    ),
+                )
+                validate_svg(svg, source)
+
+    def test_quality_presets_preserve_density_and_scale_temporal_cost(self) -> None:
+        high = get_quality("high")
+        balanced = get_quality(DEFAULT_QUALITY)
+        low = get_quality("low")
+        self.assertEqual(DEFAULT_QUALITY, "balanced")
+        self.assertEqual(
+            {(item.width, item.height) for item in QUALITY_PRESETS.values()},
+            {(40, 55)},
+        )
+        self.assertGreater(high.frame_count, balanced.frame_count)
+        self.assertGreater(balanced.frame_count, low.frame_count)
+        self.assertEqual(high.glyphs, balanced.glyphs)
+        self.assertEqual(balanced.glyphs, low.glyphs)
+
+    def test_hysteresis_suppresses_threshold_chatter(self) -> None:
+        quality = get_quality("balanced")
+        around_threshold = [0.471, 0.489, 0.474, 0.486] * 3
+        states = quantize_cycle(around_threshold, quality)
+        self.assertEqual(len(set(states)), 1)
+
+    def test_ascii_render_uses_linear_even_frame_delays(self) -> None:
+        frames = [[" ◆ "]] * 4
+        svg = render(
+            "dark",
+            FIXTURE_STATS,
+            frames,
+            dt.date(2026, 9, 8),
+            quality="balanced",
+        )
+        self.assertIn("ascii-frame-motion 7.2s linear infinite", svg)
+        self.assertIn('data-ascii-quality="balanced"', svg)
+        self.assertIn('data-ascii-frame-count="4"', svg)
+        self.assertIn('animation-delay:-7.200s', svg)
+        self.assertIn('animation-delay:-1.800s', svg)
 
     def test_contribution_days_are_aggregated_into_recent_52_weeks(self) -> None:
         first_day = dt.date(2025, 8, 31)
