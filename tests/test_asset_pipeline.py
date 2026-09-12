@@ -32,6 +32,7 @@ from generate_ascii_animation import (  # noqa: E402
     render_animation,
 )
 from update_neofetch import (  # noqa: E402
+    PROFILE_VIEWS_BASELINE,
     GRAPH_HEIGHT,
     GRAPH_PADDING_BOTTOM,
     GRAPH_PADDING_LEFT,
@@ -42,9 +43,14 @@ from update_neofetch import (  # noqa: E402
     GRAPH_Y,
     ContributionWeek,
     aggregate_contributions,
+    fetch_profile_views,
     format_code_lines,
+    format_profile_views,
+    load_profile_views,
     normalize_contribution_points,
+    parse_profile_views_svg,
     render,
+    resolve_profile_views,
     section_heading,
     typing_schedule,
     validate_stats,
@@ -136,6 +142,59 @@ class AssetIntegrityTests(unittest.TestCase):
         self.assertIn('data-ascii-frame-count="4"', svg)
         self.assertIn('animation-delay:-7.200s', svg)
         self.assertIn('animation-delay:-1.800s', svg)
+
+    def test_komarev_svg_is_parsed_structurally(self) -> None:
+        payload = b"""<svg xmlns="http://www.w3.org/2000/svg">
+          <text>profile views</text><text>812</text><text>812</text>
+        </svg>"""
+        self.assertEqual(parse_profile_views_svg(payload), 812)
+        with self.assertRaises(RuntimeError):
+            parse_profile_views_svg(b"<svg><text>unknown</text></svg>")
+
+    def test_profile_views_fallback_and_monotonicity(self) -> None:
+        self.assertEqual(resolve_profile_views(120), PROFILE_VIEWS_BASELINE)
+        self.assertEqual(resolve_profile_views(812, 790), 812)
+        self.assertEqual(resolve_profile_views(780, 812), 812)
+        self.assertEqual(resolve_profile_views(None, None), PROFILE_VIEWS_BASELINE)
+        with patch(
+            "update_neofetch.fetch_profile_views", side_effect=RuntimeError("offline")
+        ):
+            self.assertEqual(load_profile_views(812), 812)
+            self.assertEqual(load_profile_views(), PROFILE_VIEWS_BASELINE)
+
+    def test_profile_views_component_uses_reserved_header_area(self) -> None:
+        svg = render(
+            "dark",
+            FIXTURE_STATS,
+            [["  ◆ "]],
+            dt.date(2026, 9, 8),
+            profile_views=1_093,
+        )
+        root = ET.fromstring(svg)
+        elements = {element.attrib.get("id"): element for element in root.iter()}
+        component = elements["profile-views"]
+        self.assertEqual(root.attrib["data-profile-views"], "1093")
+        self.assertEqual(component.attrib["data-value"], "1093")
+        self.assertEqual(component[0].text, "Profile Views")
+        self.assertEqual(component[1].text, "1,093")
+        self.assertEqual(component[0].attrib["x"], "820")
+        self.assertEqual(component[1].attrib["y"], "34")
+        self.assertEqual(format_profile_views(1_093), "1,093")
+
+    def test_fetch_profile_views_uses_a_bounded_http_request(self) -> None:
+        class Response:
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *_args):
+                return None
+
+            def read(self, _limit):
+                return b'<svg xmlns="http://www.w3.org/2000/svg"><text>900</text></svg>'
+
+        with patch("update_neofetch.urlopen", return_value=Response()) as opener:
+            self.assertEqual(fetch_profile_views(timeout=3), 900)
+        self.assertEqual(opener.call_args.kwargs["timeout"], 3)
 
     def test_contribution_days_are_aggregated_into_recent_52_weeks(self) -> None:
         first_day = dt.date(2025, 8, 31)

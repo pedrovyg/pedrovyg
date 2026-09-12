@@ -9,6 +9,8 @@ import html
 import json
 import math
 import os
+import re
+import xml.etree.ElementTree as ET
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from pathlib import Path
@@ -25,6 +27,15 @@ from urllib.request import Request, urlopen
 
 USERNAME = "pedrovyg"
 BIRTHDAY = dt.date(2001, 10, 5)
+PROFILE_VIEWS_BASELINE = 764
+PROFILE_VIEWS_TIMEOUT = 5
+PROFILE_VIEWS_URL = (
+    "https://komarev.com/ghpvc/"
+    "?username=pedrovyg&label=profile%20views&color=green&style=flat"
+)
+PROFILE_VIEWS_X = 820
+PROFILE_VIEWS_LABEL_Y = 15
+PROFILE_VIEWS_VALUE_Y = 34
 OUTPUT_DIR = Path("profile")
 CARD_WIDTH = 850
 CARD_HEIGHT = 530
@@ -84,6 +95,69 @@ class GitHubProfileData:
 
     stats: dict[str, int]
     contribution_weeks: tuple[ContributionWeek, ...] = ()
+    profile_views: int = PROFILE_VIEWS_BASELINE
+
+
+def parse_profile_views_svg(payload: bytes) -> int:
+    """Extract the integer rendered by Komarev without relying on SVG positions."""
+    if not payload or len(payload) > 65_536:
+        raise RuntimeError("Komarev returned an empty or oversized response")
+    try:
+        root = ET.fromstring(payload)
+    except ET.ParseError as error:
+        raise RuntimeError("Komarev returned invalid SVG") from error
+    if root.tag.rsplit("}", 1)[-1] != "svg":
+        raise RuntimeError("Komarev response is not an SVG")
+
+    values: set[int] = set()
+    for element in root.iter():
+        if element.tag.rsplit("}", 1)[-1] != "text":
+            continue
+        text = "".join(element.itertext()).strip()
+        if re.fullmatch(r"(?:\d{1,3}(?:,\d{3})*|\d+)", text):
+            values.add(int(text.replace(",", "")))
+    if len(values) != 1:
+        raise RuntimeError("Komarev SVG does not contain one unambiguous view count")
+    return values.pop()
+
+
+def fetch_profile_views(timeout: int = PROFILE_VIEWS_TIMEOUT) -> int:
+    """Fetch the current public Komarev counter with a bounded request."""
+    request = Request(
+        PROFILE_VIEWS_URL,
+        headers={
+            "Accept": "image/svg+xml",
+            "User-Agent": "pedrovyg-neofetch-profile",
+        },
+    )
+    try:
+        with urlopen(request, timeout=timeout) as response:
+            payload = response.read(65_537)
+    except HTTPError as error:
+        raise RuntimeError(f"Komarev returned HTTP {error.code}") from error
+    except (URLError, TimeoutError, OSError) as error:
+        raise RuntimeError(f"Komarev request failed: {error}") from error
+    return parse_profile_views_svg(payload)
+
+
+def resolve_profile_views(
+    fetched_value: object | None, cached_value: object | None = None
+) -> int:
+    """Keep the public counter monotonic and never below the migration baseline."""
+    values = [PROFILE_VIEWS_BASELINE]
+    for value in (cached_value, fetched_value):
+        if isinstance(value, int) and not isinstance(value, bool) and value >= 0:
+            values.append(value)
+    return max(values)
+
+
+def load_profile_views(cached_value: int | None = None) -> int:
+    """Use the live counter when available and the embedded value when offline."""
+    try:
+        fetched_value: int | None = fetch_profile_views()
+    except RuntimeError:
+        fetched_value = None
+    return resolve_profile_views(fetched_value, cached_value)
 
 
 def github_request(url: str, token: str, payload: dict | None = None) -> dict:
@@ -214,6 +288,7 @@ def profile_data_from_mapping(raw_data: Mapping[str, object]) -> GitHubProfileDa
         contribution_weeks=validate_contribution_weeks(
             raw_data.get("contribution_weeks")
         ),
+        profile_views=resolve_profile_views(raw_data.get("profile_views")),
     )
 
 
@@ -282,7 +357,11 @@ def code_lines_from_environment() -> int:
     return value
 
 
-def load_stats(token: str, code_lines: int | None = None) -> GitHubProfileData:
+def load_stats(
+    token: str,
+    code_lines: int | None = None,
+    cached_profile_views: int | None = None,
+) -> GitHubProfileData:
     if not token:
         raise RuntimeError(
             "GITHUB_TOKEN is required for live stats; use --stats-json for local tests."
@@ -309,7 +388,9 @@ def load_stats(token: str, code_lines: int | None = None) -> GitHubProfileData:
     except (KeyError, TypeError, ValueError) as error:
         raise RuntimeError("GitHub response is missing required numeric stats") from error
     return GitHubProfileData(
-        stats=validate_stats(stats), contribution_weeks=contribution_weeks
+        stats=validate_stats(stats),
+        contribution_weeks=contribution_weeks,
+        profile_views=load_profile_views(cached_profile_views),
     )
 
 
@@ -382,6 +463,29 @@ def format_code_lines(value: int) -> str:
     if precision:
         compact = compact.rstrip("0").rstrip(".")
     return f"{compact}{suffix}"
+
+
+def format_profile_views(value: int) -> str:
+    """Prefer the full counter while it fits the compact header component."""
+    value = resolve_profile_views(value)
+    if value < 1_000_000_000:
+        return f"{value:,}"
+    return format_code_lines(value)
+
+
+def build_profile_views_svg(profile_views: int) -> str:
+    """Render the compact, native Profile Views component in the free header area."""
+    profile_views = resolve_profile_views(profile_views)
+    display_value = format_profile_views(profile_views)
+    return (
+        f'<g id="profile-views" role="group" '
+        f'aria-label="Profile Views: {display_value}" data-value="{profile_views}">'
+        f'<text x="{PROFILE_VIEWS_X}" y="{PROFILE_VIEWS_LABEL_Y}" '
+        f'text-anchor="end" class="profile-views-label">Profile Views</text>'
+        f'<text x="{PROFILE_VIEWS_X}" y="{PROFILE_VIEWS_VALUE_Y}" '
+        f'text-anchor="end" class="profile-views-value">{display_value}</text>'
+        '</g>'
+    )
 
 
 def build_metrics_dashboard(stats: Mapping[str, int]) -> str:
@@ -681,11 +785,13 @@ def render(
     rendered_on: dt.date,
     contribution_weeks: Sequence[ContributionWeek] = (),
     quality: str | QualityPreset = DEFAULT_QUALITY,
+    profile_views: int = PROFILE_VIEWS_BASELINE,
 ) -> str:
     quality = get_quality(quality)
     if theme not in THEMES:
         raise ValueError(f"Unsupported theme: {theme}")
     stats = validate_stats(stats)
+    profile_views = resolve_profile_views(profile_views)
     dark = theme == "dark"
     colors = {
         "bg": "#161b22" if dark else "#f6f8fa",
@@ -748,9 +854,9 @@ def render(
         contribution_weeks, colors
     )
     return f'''<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="{CARD_HEIGHT}" viewBox="0 0 {CARD_WIDTH} {CARD_HEIGHT}" role="img" aria-labelledby="{TITLE_ID} {DESCRIPTION_ID}" focusable="false" data-rendered-on="{rendered_on.isoformat()}" data-repositories="{stats['repos']}" data-contributions="{stats['contributions']}" data-public-commits="{stats['commits']}" data-code-lines="{stats['code_lines']}" data-ascii-quality="{quality.name}" data-ascii-frame-count="{frame_count}">
+<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_WIDTH}" height="{CARD_HEIGHT}" viewBox="0 0 {CARD_WIDTH} {CARD_HEIGHT}" role="img" aria-labelledby="{TITLE_ID} {DESCRIPTION_ID}" focusable="false" data-rendered-on="{rendered_on.isoformat()}" data-repositories="{stats['repos']}" data-contributions="{stats['contributions']}" data-public-commits="{stats['commits']}" data-code-lines="{stats['code_lines']}" data-profile-views="{profile_views}" data-ascii-quality="{quality.name}" data-ascii-frame-count="{frame_count}">
 <title id="{TITLE_ID}">Pedro Vygotsky Neofetch profile</title>
-<desc id="{DESCRIPTION_ID}">Animated fluid diamond ASCII art and terminal typing with the phrases Pedro Vygotsky, Full-Stack &amp; AI Developer, and Building real projects for businesses; development tools, contact details, current public GitHub statistics including Code Lines, and a weekly contribution chart.</desc>
+<desc id="{DESCRIPTION_ID}">Animated fluid diamond ASCII art and terminal typing with the phrases Pedro Vygotsky, Full-Stack &amp; AI Developer, and Building real projects for businesses; Profile Views, development tools, contact details, current public GitHub statistics including Code Lines, and a weekly contribution chart.</desc>
 <style>
 @keyframes ascii-frame-motion {{
   0% {{ opacity: 0; }}
@@ -803,6 +909,8 @@ text {{ font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }}
 .metric-value {{ font-size: 22px; font-weight: bold; }}
 .metric-label {{ font-size: 10px; }}
 .metric-divider {{ stroke: {colors["muted"]}; stroke-width: 0.6; opacity: 0.4; }}
+.profile-views-label {{ fill: {colors["key"]}; font-size: 9px; }}
+.profile-views-value {{ fill: {colors["value"]}; font-size: 18px; font-weight: bold; }}
 .contrib-title {{ fill: {colors["text"]}; font-size: 8px; }}
 .contrib-axis-label, .contrib-empty {{ fill: {colors["muted"]}; font-size: 7px; }}
 .contrib-grid {{ stroke: {colors["muted"]}; stroke-width: 0.6; opacity: 0.32; }}
@@ -821,6 +929,7 @@ text {{ font: 14px Consolas, "Liberation Mono", monospace; white-space: pre; }}
 <rect id="card-background" x="0.5" y="0.5" width="{CARD_WIDTH - 1}" height="{CARD_HEIGHT - 1}" rx="15" fill="{colors["bg"]}"/>
 {ascii_layers}
 {header}
+{build_profile_views_svg(profile_views)}
 <text>{''.join(lines)}</text>
 {build_metrics_dashboard(stats)}
 {chart_body}
@@ -835,6 +944,7 @@ def write_assets(
     rendered_on: dt.date,
     contribution_weeks: Sequence[ContributionWeek] = (),
     quality: str | QualityPreset = DEFAULT_QUALITY,
+    profile_views: int = PROFILE_VIEWS_BASELINE,
 ) -> list[Path]:
     """Render both themes with explicit inputs and stable LF line endings."""
     quality = get_quality(quality)
@@ -845,7 +955,15 @@ def write_assets(
         output_path = output_dir / f"neofetch-{theme}.svg"
         with output_path.open("w", encoding="utf-8", newline="\n") as output:
             output.write(
-                render(theme, stats, frames, rendered_on, contribution_weeks, quality)
+                render(
+                    theme,
+                    stats,
+                    frames,
+                    rendered_on,
+                    contribution_weeks,
+                    quality,
+                    profile_views,
+                )
             )
         outputs.append(output_path)
     return outputs
@@ -900,6 +1018,7 @@ def main() -> None:
         args.date,
         profile_data.contribution_weeks,
         args.quality,
+        profile_data.profile_views,
     )
 
 

@@ -521,6 +521,49 @@ def validate_metrics_dashboard(root: ET.Element) -> None:
         raise IntegrityError("Metrics dashboard must retain its two dividers")
 
 
+def validate_profile_views_component(root: ET.Element) -> None:
+    from update_neofetch import (
+        PROFILE_VIEWS_BASELINE,
+        PROFILE_VIEWS_LABEL_Y,
+        PROFILE_VIEWS_VALUE_Y,
+        PROFILE_VIEWS_X,
+        format_profile_views,
+    )
+
+    try:
+        value = int(root.attrib["data-profile-views"])
+    except (KeyError, ValueError) as error:
+        raise IntegrityError("SVG root is missing valid Profile Views metadata") from error
+    if value < PROFILE_VIEWS_BASELINE:
+        raise IntegrityError("Profile Views is below its migration baseline")
+
+    component = element_by_id(root, "profile-views")
+    texts = [node for node in component if local_name(node.tag) == "text"]
+    display_value = format_profile_views(value)
+    if (
+        component.attrib.get("role") != "group"
+        or component.attrib.get("aria-label") != f"Profile Views: {display_value}"
+        or component.attrib.get("data-value") != str(value)
+        or len(texts) != 2
+    ):
+        raise IntegrityError("Profile Views metadata or accessibility is inconsistent")
+    expected = (
+        ("Profile Views", "profile-views-label", PROFILE_VIEWS_LABEL_Y),
+        (display_value, "profile-views-value", PROFILE_VIEWS_VALUE_Y),
+    )
+    for node, (text, css_class, y) in zip(texts, expected):
+        if (
+            node.text != text
+            or node.attrib.get("class") != css_class
+            or node.attrib.get("x") != str(PROFILE_VIEWS_X)
+            or node.attrib.get("y") != str(y)
+            or node.attrib.get("text-anchor") != "end"
+        ):
+            raise IntegrityError("Profile Views text or position is invalid")
+    if not (700 <= PROFILE_VIEWS_X <= 832 and 0 < PROFILE_VIEWS_LABEL_Y < PROFILE_VIEWS_VALUE_Y < 40):
+        raise IntegrityError("Profile Views is outside the reserved header area")
+
+
 def validate_profile_layout(root: ET.Element) -> None:
     background = element_by_id(root, "card-background")
     if local_name(background.tag) != "rect" or "stroke" in background.attrib:
@@ -533,6 +576,7 @@ def validate_profile_layout(root: ET.Element) -> None:
         "data-contributions",
         "data-public-commits",
         "data-code-lines",
+        "data-profile-views",
     )
     for name in metadata:
         try:
@@ -553,6 +597,7 @@ def validate_profile_layout(root: ET.Element) -> None:
     if any(value in ("Repositories", "Contributions (1y)", "Public commits", "Code Lines") for value in visible_text):
         raise IntegrityError("Legacy metric rows must not be rendered")
     validate_metrics_dashboard(root)
+    validate_profile_views_component(root)
     for label in ("Contact", "GitHub Stats"):
         heading = next(
             (value for value in visible_text if value.startswith(f"- {label} ")), None

@@ -21,11 +21,13 @@ from generate_ascii_animation import (
 )
 from render_fallbacks import render_fallbacks
 from update_neofetch import (
+    PROFILE_VIEWS_BASELINE,
     ContributionWeek,
     GitHubProfileData,
     load_stats,
     parse_date,
     profile_data_from_mapping,
+    resolve_profile_views,
     write_assets,
 )
 from validate_svg import validate_pair, validate_svg
@@ -49,16 +51,28 @@ def safe_reset_directory(path: Path) -> None:
     resolved.mkdir(parents=True)
 
 
-def parse_stats(stats_json: str | None) -> GitHubProfileData:
+def parse_stats(
+    stats_json: str | None, cached_profile_views: int | None = None
+) -> GitHubProfileData:
     if stats_json is None:
-        return load_stats(os.environ.get("GITHUB_TOKEN", ""))
+        return load_stats(
+            os.environ.get("GITHUB_TOKEN", ""),
+            cached_profile_views=cached_profile_views,
+        )
     try:
         raw_stats = json.loads(stats_json)
     except json.JSONDecodeError as error:
         raise ValueError(f"Invalid --stats-json: {error}") from error
     if not isinstance(raw_stats, dict):
         raise ValueError("--stats-json must contain a JSON object")
-    return profile_data_from_mapping(raw_stats)
+    parsed = profile_data_from_mapping(raw_stats)
+    return GitHubProfileData(
+        stats=parsed.stats,
+        contribution_weeks=parsed.contribution_weeks,
+        profile_views=resolve_profile_views(
+            parsed.profile_views, cached_profile_views
+        ),
+    )
 
 
 def previous_card_values(asset_path: Path) -> dict[str, str]:
@@ -136,6 +150,9 @@ def previous_profile_data(asset_path: Path | None) -> GitHubProfileData | None:
             "contributions": int(root.attrib["data-contributions"]),
             "code_lines": int(root.attrib["data-code-lines"]),
         }
+        profile_views = resolve_profile_views(
+            int(root.attrib.get("data-profile-views", PROFILE_VIEWS_BASELINE))
+        )
     except (KeyError, OSError, ET.ParseError, ValueError):
         return None
     if any(value < 0 for value in stats.values()):
@@ -143,6 +160,7 @@ def previous_profile_data(asset_path: Path | None) -> GitHubProfileData | None:
     return GitHubProfileData(
         stats=stats,
         contribution_weeks=previous_contribution_weeks(asset_path),
+        profile_views=profile_views,
     )
 
 
@@ -171,6 +189,7 @@ def resolve_render_date(
     requested_date: dt.date | None,
     today: dt.date,
     contribution_weeks: tuple[ContributionWeek, ...] = (),
+    profile_views: int = PROFILE_VIEWS_BASELINE,
 ) -> dt.date:
     """Keep the internal date stable unless generated public data changed."""
     if requested_date is not None:
@@ -184,6 +203,7 @@ def resolve_render_date(
     if (
         previous_profile.stats == stats
         and previous_profile.contribution_weeks == contribution_weeks
+        and previous_profile.profile_views == resolve_profile_views(profile_views)
         and previous_date <= today
     ):
         return previous_date
@@ -246,6 +266,7 @@ def build_assets(
         rendered_on,
         profile_data.contribution_weeks,
         quality,
+        profile_data.profile_views,
     )
     for raw_svg in raw_svgs:
         validate_svg(raw_svg, ascii_source)
@@ -275,6 +296,7 @@ def build_assets(
             "optimized_svg_bytes": optimized_svg.stat().st_size,
             "png_bytes": png.stat().st_size,
             "ascii_frames": quality.frame_count,
+            "profile_views": profile_data.profile_views,
         }
     return report
 
@@ -308,7 +330,11 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     current_asset = PROFILE_DIR / "neofetch-dark.svg"
-    profile_data = parse_stats(args.stats_json)
+    previous_profile = previous_profile_data(current_asset)
+    cached_profile_views = (
+        previous_profile.profile_views if previous_profile is not None else None
+    )
+    profile_data = parse_stats(args.stats_json, cached_profile_views)
     quality = get_quality(args.quality)
     today = dt.datetime.now(dt.timezone.utc).date()
     rendered_on = resolve_render_date(
@@ -317,6 +343,7 @@ def main() -> None:
         args.date,
         today,
         profile_data.contribution_weeks,
+        profile_data.profile_views,
     )
     report = build_assets(
         args.build_dir, profile_data, rendered_on, not args.no_promote, quality

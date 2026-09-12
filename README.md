@@ -1,7 +1,3 @@
-<a href="https://github.com/pedrovyg" target="_blank"><img src="https://komarev.com/ghpvc/?username=pedrovyg&amp;label=profile%20views&amp;color=green&amp;style=flat" alt="Profile views" height="20" align="right"/></a>
-
-<br>
-
 <a href="https://github.com/pedrovyg">
 <picture>
 <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/pedrovyg/pedrovyg/main/profile/neofetch-dark.svg" type="image/svg+xml">
@@ -74,3 +70,5 @@ I am passionate about **technology** and **education**; outside of development, 
   <a href="https://discord.com/users/1472784954671890453" target="_blank"><img src="https://img.shields.io/badge/connect_on-Discord-5865F2?style=flat&amp;logo=discord&amp;logoColor=white" alt="Discord" height="20"/></a>
   </a>
 </p>
+
+<img src="https://komarev.com/ghpvc/?username=pedrovyg&amp;style=pixel" alt="" width="1" height="1"/>
