@@ -11,22 +11,22 @@
 </picture>
 </a>
 
-<div align="left">
+<div align="center">
   <a href="https://discord.com/users/1472784954671890453" target="_blank"><img src="https://api.statusbadges.me/badge/status/1472784954671890453?style=flat" alt="Discord presence" height="20"/></a>
   <a href="https://github.com/pedrovyg?tab=repositories" target="_blank"><img src="https://api.statusbadges.me/badge/vscode/1472784954671890453?style=flat" alt="Visual Studio Code activity" height="20"/></a>
   <a href="https://github.com/pedrovyg?tab=repositories" target="_blank"><img src="https://api.statusbadges.me/badge/intellij/1472784954671890453?style=flat" alt="IntelliJ IDEA activity" height="20"/></a>
   <a href="https://open.spotify.com/user/3133x6sj6gqlej6cnrq2ub4g27ru" target="_blank"><img src="https://api.statusbadges.me/badge/spotify/1472784954671890453?style=flat" alt="Spotify activity" height="20"/></a>
 </div>
 
-## <h4>About Me</h4>
+## About Me
 
 > Hello, my name is Pedro. I'm a ***software developer*** with over three years of experience, focusing on **front-end** development while continuously expanding my skills across the **full-stack** ecosystem through **back-end** technologies.
 I am currently pursuing a bachelor's degree in ***Computer Science*** and dedicate much of my time to **programming**, **studying**, and **building** new projects.
 I am passionate about **technology** and **education**; outside of development, I also have a keen interest in **fitness**, **cinema**, and **music**.
 
-## <h4>Technologies & Tools</h4>
+## Technologies & Tools
 
-> <h6>Front-End</h6>
+> Front-End
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="https://skillicons.dev/icons?i=html&amp;theme=dark" alt="HTML" height="48"></a>&nbsp;
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="https://skillicons.dev/icons?i=css&amp;theme=dark" alt="CSS" height="48"></a>&nbsp;
@@ -34,12 +34,12 @@ I am passionate about **technology** and **education**; outside of development, 
 <a href="https://www.typescriptlang.org/download/" target="_blank"><img src="https://skillicons.dev/icons?i=ts&amp;theme=dark" alt="TypeScript" height="48"></a>&nbsp;
 <a href="https://react.dev/" target="_blank"><img src="https://skillicons.dev/icons?i=react&amp;theme=dark" alt="React" height="48"></a>
 
-> <h6>Design</h6>
+> Design
 
 <a href="https://www.figma.com/downloads/" target="_blank"><img src="https://skillicons.dev/icons?i=figma&amp;theme=dark" alt="Figma" height="48"></a>&nbsp;
 <a href="https://www.framer.com/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=framer&amp;theme=dark" alt="Framer" height="48"></a>&nbsp;
 
-> <h6>Back-End & Programming</h6>
+> Back-End & Programming
 
 <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank"><img src="https://skillicons.dev/icons?i=java&amp;theme=dark" alt="Java" height="48"></a>&nbsp;
 <a href="https://www.python.org/downloads/" target="_blank"><img src="https://skillicons.dev/icons?i=py&amp;theme=dark" alt="Python" height="48"></a>&nbsp;
@@ -49,7 +49,7 @@ I am passionate about **technology** and **education**; outside of development, 
 <a href="https://gradle.org/install/" target="_blank"><img src="https://skillicons.dev/icons?i=gradle&amp;theme=dark" alt="Gradle" height="48"></a>&nbsp;
 <a href="https://swagger.io/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=swagger&amp;theme=dark" alt="REST API (OpenAPI and Swagger)" height="48"></a>
 
-> <h6>Development Tools</h6>
+> Development Tools
 
 <a href="https://git-scm.com/downloads" target="_blank"><img src="https://skillicons.dev/icons?i=git&amp;theme=dark" alt="Git" height="48"></a>&nbsp;
 <a href="https://github.com/" target="_blank"><img src="https://skillicons.dev/icons?i=github&amp;theme=dark" alt="GitHub" height="48"></a>&nbsp;
@@ -64,7 +64,7 @@ I am passionate about **technology** and **education**; outside of development, 
 <a href="https://claude.com/product/claude-code" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=claude&amp;theme=dark" alt="Claude Code" height="48"></a>&nbsp;
 <a href="https://aistudio.google.com/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=gemini&amp;theme=dark" alt="Google AI Studio" height="48"></a>
 
-## <h4>Network</h4>
+## Network
 
 <p align="left">
   <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=pedrovyg.dev%40gmail.com" target="_blank"><img src="https://img.shields.io/badge/connect_on-Gmail-EA4335?style=flat&amp;logo=gmail&amp;logoColor=white" alt="Gmail" height="20"/></a>
