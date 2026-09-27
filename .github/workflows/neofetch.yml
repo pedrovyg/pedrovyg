@@ -82,6 +82,11 @@ jobs:
           CODE_LINES: ${{ steps.code_lines.outputs.value }}
         run: python scripts/build_assets.py
 
+      - name: Generate and validate About profile cards
+        run: |
+          python scripts/generate_about_card.py --output-dir profile
+          python scripts/validate_about_card.py profile/about-dark.svg profile/about-light.svg
+
       - name: Verify clean source and valid diff
         run: |
           git diff --check
@@ -101,7 +106,11 @@ jobs:
             profile/neofetch-dark.svg \
             profile/neofetch-light.svg \
             profile/neofetch-dark.png \
-            profile/neofetch-light.png
+            profile/neofetch-light.png \
+            profile/about-dark.svg \
+            profile/about-light.svg \
+            profile/about-dark.png \
+            profile/about-light.png
           if git diff --cached --quiet; then
             echo "No generated asset changes detected."
             exit 0

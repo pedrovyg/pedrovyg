@@ -7,68 +7,35 @@
 </picture>
 </a>
 
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/pedrovyg/pedrovyg/main/profile/about-dark.svg" type="image/svg+xml">
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/pedrovyg/pedrovyg/main/profile/about-dark.png" type="image/png">
+<source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/pedrovyg/pedrovyg/main/profile/about-light.svg" type="image/svg+xml">
+<img src="https://raw.githubusercontent.com/pedrovyg/pedrovyg/main/profile/about-light.png" alt="Developer profile card for Pedro Vygotsky with about information, technologies, tools, and network channels" width="100%">
+</picture>
+
+<!-- about-card-links:start -->
+<details>
+<summary>Technology &amp; Network links</summary>
+
+**Front-End:** [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML) · [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) · [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) · [TypeScript](https://www.typescriptlang.org/download/) · [React](https://react.dev/)
+
+**Design:** [Figma](https://www.figma.com/downloads/) · [Framer](https://www.framer.com/)
+
+**Back-End & Programming:** [Java](https://www.oracle.com/java/technologies/downloads/) · [Python](https://www.python.org/downloads/) · [Spring Boot](https://spring.io/projects/spring-boot) · [Node.js](https://nodejs.org/en/download) · [Apache Maven](https://maven.apache.org/download.cgi) · [Gradle](https://gradle.org/install/) · [REST API (OpenAPI and Swagger)](https://swagger.io/)
+
+**Development Tools:** [Git](https://git-scm.com/downloads) · [GitHub](https://github.com/) · [Docker](https://www.docker.com/products/docker-desktop/) · [n8n](https://n8n.io/) · [Bash](https://www.gnu.org/software/bash/) · [Hostinger](https://www.hostinger.com/) · [Vercel](https://vercel.com/) · [Visual Studio Code](https://code.visualstudio.com/download) · [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) · [Codex](https://openai.com/codex/) · [Claude Code](https://claude.com/product/claude-code) · [Google AI Studio](https://aistudio.google.com/)
+
+**Network:** [Gmail](https://mail.google.com/mail/?view=cm&fs=1&to=pedrovyg.dev%40gmail.com) · [LinkedIn](https://www.linkedin.com/in/pedrovygotsky) · [Instagram](https://www.instagram.com/pedrovyg/) · [WhatsApp](https://wa.me/5581999367665) · [Discord](https://discord.com/users/1472784954671890453)
+
+</details>
+<!-- about-card-links:end -->
+
 <div align="center">
   <a href="https://discord.com/users/1472784954671890453" target="_blank"><img src="https://api.statusbadges.me/badge/status/1472784954671890453?style=flat" alt="Discord presence" height="20"/></a>
   <a href="https://github.com/pedrovyg?tab=repositories" target="_blank"><img src="https://api.statusbadges.me/badge/vscode/1472784954671890453?style=flat" alt="Visual Studio Code activity" height="20"/></a>
   <a href="https://github.com/pedrovyg?tab=repositories" target="_blank"><img src="https://api.statusbadges.me/badge/intellij/1472784954671890453?style=flat" alt="IntelliJ IDEA activity" height="20"/></a>
   <a href="https://open.spotify.com/user/3133x6sj6gqlej6cnrq2ub4g27ru" target="_blank"><img src="https://api.statusbadges.me/badge/spotify/1472784954671890453?style=flat" alt="Spotify activity" height="20"/></a>
 </div>
-
-## About Me
-
-> Hello, my name is Pedro. I'm a ***software developer*** with over three years of experience, focusing on **front-end** development while continuously expanding my skills across the **full-stack** ecosystem through **back-end** technologies.
-I am currently pursuing a bachelor's degree in ***Computer Science*** and dedicate much of my time to **programming**, **studying**, and **building** new projects.
-I am passionate about **technology** and **education**; outside of development, I also have a keen interest in **fitness**, **cinema**, and **music**.
-
-## Technologies & Tools
-
-> Front-End
-
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="https://skillicons.dev/icons?i=html&amp;theme=dark" alt="HTML" height="48"></a>&nbsp;
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="https://skillicons.dev/icons?i=css&amp;theme=dark" alt="CSS" height="48"></a>&nbsp;
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="https://skillicons.dev/icons?i=js&amp;theme=dark" alt="JavaScript" height="48"></a>&nbsp;
-<a href="https://www.typescriptlang.org/download/" target="_blank"><img src="https://skillicons.dev/icons?i=ts&amp;theme=dark" alt="TypeScript" height="48"></a>&nbsp;
-<a href="https://react.dev/" target="_blank"><img src="https://skillicons.dev/icons?i=react&amp;theme=dark" alt="React" height="48"></a>
-
-> Design
-
-<a href="https://www.figma.com/downloads/" target="_blank"><img src="https://skillicons.dev/icons?i=figma&amp;theme=dark" alt="Figma" height="48"></a>&nbsp;
-<a href="https://www.framer.com/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=framer&amp;theme=dark" alt="Framer" height="48"></a>&nbsp;
-
-> Back-End & Programming
-
-<a href="https://www.oracle.com/java/technologies/downloads/" target="_blank"><img src="https://skillicons.dev/icons?i=java&amp;theme=dark" alt="Java" height="48"></a>&nbsp;
-<a href="https://www.python.org/downloads/" target="_blank"><img src="https://skillicons.dev/icons?i=py&amp;theme=dark" alt="Python" height="48"></a>&nbsp;
-<a href="https://spring.io/projects/spring-boot" target="_blank"><img src="https://skillicons.dev/icons?i=spring&amp;theme=dark" alt="Spring Boot" height="48"></a>&nbsp;
-<a href="https://nodejs.org/en/download" target="_blank"><img src="https://skillicons.dev/icons?i=nodejs&amp;theme=dark" alt="Node.js" height="48"></a>&nbsp;
-<a href="https://maven.apache.org/download.cgi" target="_blank"><img src="https://skillicons.dev/icons?i=maven&amp;theme=dark" alt="Apache Maven" height="48"></a>&nbsp;
-<a href="https://gradle.org/install/" target="_blank"><img src="https://skillicons.dev/icons?i=gradle&amp;theme=dark" alt="Gradle" height="48"></a>&nbsp;
-<a href="https://swagger.io/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=swagger&amp;theme=dark" alt="REST API (OpenAPI and Swagger)" height="48"></a>
-
-> Development Tools
-
-<a href="https://git-scm.com/downloads" target="_blank"><img src="https://skillicons.dev/icons?i=git&amp;theme=dark" alt="Git" height="48"></a>&nbsp;
-<a href="https://github.com/" target="_blank"><img src="https://skillicons.dev/icons?i=github&amp;theme=dark" alt="GitHub" height="48"></a>&nbsp;
-<a href="https://www.docker.com/products/docker-desktop/" target="_blank"><img src="https://skillicons.dev/icons?i=docker&amp;theme=dark" alt="Docker" height="48"></a>&nbsp;
-<a href="https://n8n.io/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=n8n&amp;theme=dark" alt="n8n" height="48"></a>&nbsp;
-<a href="https://www.gnu.org/software/bash/" target="_blank"><img src="https://skillicons.dev/icons?i=bash&amp;theme=dark" alt="Bash" height="48"></a>&nbsp;
-<a href="https://www.hostinger.com/" target="_blank"><img src="./icons/hostinger.svg" alt="Hostinger" height="48"></a>&nbsp;
-<a href="https://vercel.com/" target="_blank"><img src="https://skillicons.dev/icons?i=vercel&amp;theme=dark" alt="Vercel" height="48"></a>&nbsp;
-<a href="https://code.visualstudio.com/download" target="_blank"><img src="https://skillicons.dev/icons?i=vscode&amp;theme=dark" alt="Visual Studio Code" height="48"></a>&nbsp;
-<a href="https://www.jetbrains.com/idea/download/" target="_blank"><img src="https://skillicons.dev/icons?i=idea&amp;theme=dark" alt="IntelliJ IDEA" height="48"></a>&nbsp;
-<a href="https://openai.com/codex/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=chatgpt&amp;theme=dark" alt="Codex" height="48"></a>&nbsp;
-<a href="https://claude.com/product/claude-code" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=claude&amp;theme=dark" alt="Claude Code" height="48"></a>&nbsp;
-<a href="https://aistudio.google.com/" target="_blank"><img src="https://go-skill-icons.vercel.app/api/icons?i=gemini&amp;theme=dark" alt="Google AI Studio" height="48"></a>
-
-## Network
-
-<p align="left">
-  <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=pedrovyg.dev%40gmail.com" target="_blank"><img src="https://img.shields.io/badge/connect_on-Gmail-EA4335?style=flat&amp;logo=gmail&amp;logoColor=white" alt="Gmail" height="20"/></a>
-  <a href="https://www.linkedin.com/in/pedrovygotsky" target="_blank"><img src="https://img.shields.io/badge/connect_on-LinkedIn-0A66C2?style=flat&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NTV2Ni4yODZ6TTUuMzM3IDcuNDMzYy0xLjE0NCAwLTIuMDYzLS45MjYtMi4wNjMtMi4wNjUgMC0xLjEzOC45Mi0yLjA2MyAyLjA2My0yLjA2MyAxLjE0IDAgMi4wNjQuOTI1IDIuMDY0IDIuMDYzIDAgMS4xMzktLjkyNSAyLjA2NS0yLjA2NCAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAwaC4wMDN6Ii8%2BPC9zdmc%2B" alt="LinkedIn" height="20"/></a>
-  <a href="https://www.instagram.com/pedrovyg/" target="_blank"><img src="https://img.shields.io/badge/connect_on-Instagram-E4405F?style=flat&amp;logo=instagram&amp;logoColor=white" alt="Instagram" height="20"/></a>
-  <a href="https://wa.me/5581999367665" target="_blank"><img src="https://img.shields.io/badge/connect_on-WhatsApp-25D366?style=flat&amp;logo=whatsapp&amp;logoColor=white" alt="WhatsApp" height="20"/></a>
-  <a href="https://discord.com/users/1472784954671890453" target="_blank"><img src="https://img.shields.io/badge/connect_on-Discord-5865F2?style=flat&amp;logo=discord&amp;logoColor=white" alt="Discord" height="20"/></a>
-  </a>
-</p>
 
 <img src="https://komarev.com/ghpvc/?username=pedrovyg&amp;style=pixel" alt="" width="1" height="1"/>
